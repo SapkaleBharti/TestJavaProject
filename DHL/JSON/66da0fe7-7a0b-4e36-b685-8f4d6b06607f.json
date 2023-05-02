@@ -1,0 +1,493 @@
+[
+  {
+    "ShpInfReqDef": {
+      "Id": "66da0fe7-7a0b-4e36-b685-8f4d6b06607f",
+      "Nm": "Proof of identification - GR",
+      "Dsc": "For customs clearance of shipments where the goods value is greater than EUR 999",
+      "DrvdFromShpInfReqDef": {},
+      "LedOwnOrgn": {
+        "CtryCd": "GR"
+      },
+      "ApplyAllInd": false,
+      "PrsnDatSenstyClssLvl": "Low",
+      "QuickGuideEnabledInd": false,
+      "UICmpt": {
+        "CmptNm": "POI",
+        "DisplayTtl": "Proof of identification ",
+        "Tooltip": "",
+        "CmptTy": "Composed",
+        "DisplayDsc": {
+          "DisplayTxt": ""
+        },
+        "Hint": ""
+      },
+      "Ent": [
+        {
+          "Id": "164c6ef3-475b-40a8-8390-269d19d83f8f",
+          "Nm": "Proof of identification",
+          "Dsc": "Proof of identification entity",
+          "isImg": false,
+          "isExcl": false,
+          "isMan": true,
+          "Ent": [
+            {
+              "Id": "f271dc67-495d-4663-af27-404f7e87d32e",
+              "Nm": "Shipment Customer",
+              "Dsc": "Shipment Customer Entity",
+              "isImg": false,
+              "isExcl": false,
+              "isMan": true,
+              "Ent": [
+                {
+                  "Id": "4968aaba-b057-4b7e-b1a1-b7dc7779fe5f",
+                  "Nm": "Business Party",
+                  "Dsc": "Business Party Entity",
+                  "isImg": false,
+                  "isExcl": false,
+                  "isMan": true,
+                  "Ent": [
+                    {
+                      "Id": "f8d5dc69-fb5d-4a1b-85f1-56b9b6a45e57",
+                      "Nm": "Individual Customer",
+                      "Dsc": "Individual Customer Entity",
+                      "isImg": false,
+                      "isExcl": false,
+                      "isMan": true,
+                      "Ent": [
+                        {
+                          "Id": "dc172540-2f91-415d-8999-01a34c997e43",
+                          "Nm": "Consent for Shipment Cost",
+                          "Dsc": "Consent for Shipment Cost Entity",
+                          "isImg": false,
+                          "isExcl": false,
+                          "isMan": true,
+                          "Ent": [
+                            {
+                              "Id": "084aea42-826c-4764-a086-b6960985aa1b",
+                              "Nm": "Consent Shipment Cost Category ",
+                              "Dsc": "Consent Category Entity",
+                              "isImg": false,
+                              "isExcl": false,
+                              "isMan": true,
+                              "Att": [
+                                {
+                                  "Id": "4420542e-e822-4cdc-9236-fd0b15ba4287",
+                                  "Nm": "Consent Category Code",
+                                  "Dsc": "The unique identificaiton of the Consent Purpose",
+                                  "AttTy": "Constant",
+                                  "DflVal": "CSTMS"
+                                },
+                                {
+                                  "Id": "fd6109ba-c475-4404-b82f-4001c0619481",
+                                  "Nm": "Consent Category Name",
+                                  "Dsc": "Consent Category Name",
+                                  "AttTy": "Constant",
+                                  "DflVal": "Customs Consents"
+                                },
+                                {
+                                  "Id": "257647d4-43eb-4ad8-a921-75f2dad356c6",
+                                  "Nm": "Consent Category Description",
+                                  "Dsc": "Consent Category Desc",
+                                  "AttTy": "Constant",
+                                  "DflVal": "Captures Customs Consents from User"
+                                }
+                              ]
+                            },
+                            {
+                              "Id": "b695668c-9608-4438-a1b8-76659d00f5b1",
+                              "Nm": "Consent Purpose Shipment Cost - Radio button",
+                              "Dsc": "Consent purpose with a radiobutton component",
+                              "isImg": false,
+                              "isExcl": false,
+                              "isMan": true,
+                              "Att": [
+                                {
+                                  "Id": "6a2f893d-8c39-42ed-9b9e-450d21092907",
+                                  "Nm": "Shipment Cost radio button",
+                                  "Dsc": "Shipment Cost radio button description",
+                                  "AttTy": "UserEntry",
+                                  "isExcl": false,
+                                  "isMan": true,
+                                  "UICmpt": {
+                                    "Order": 1,
+                                    "CmptNm": "ShipCostBtn",
+                                    "DisplayTtl": "",
+                                    "Tooltip": "",
+                                    "CmptTy": "RadioButton",
+                                    "DisplayDsc": {
+                                      "DisplayTxt": "Does your shipment cost more than 999 Euros?"
+                                    },
+                                    "ValTy": "Standard"
+                                  },
+                                  "Enum": [
+                                    {
+                                      "Val": "Yes",
+                                      "DisplayTxt": "Yes",
+                                      "SrtOrd": 1,
+                                      "Nm": "Opt1"
+                                    },
+                                    {
+                                      "Val": "No",
+                                      "DisplayTxt": "No",
+                                      "SrtOrd": 2,
+                                      "Nm": "Opt2"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "Id": "f5596d97-17a0-4f52-acbc-c0f598e57c3d",
+                                  "Nm": "Purpose Name - Radio button",
+                                  "Dsc": "Purpose Name with a radiobutton component",
+                                  "AttTy": "Constant",
+                                  "DflVal": "Agree to Does your shipment cost more than 999 Euros",
+                                  "isExcl": false,
+                                  "isMan": true,
+                                  "Rul": [
+                                    {
+                                      "RulId": "e74fa4ae-a5f6-4d08-b583-f96373e3b958",
+                                      "Nm": "Not agree purpose",
+                                      "Cond": "**.Att[Id='6a2f893d-8c39-42ed-9b9e-450d21092907'].Val='Opt2'",
+                                      "AttrMtdt": [
+                                        {
+                                          "DflVal": "Not Agree to Does your shipment cost more than 999 Euros"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "Id": "6af68f3b-0c02-4c3a-8774-6132aa38d3d7",
+                                  "Nm": "Purpose Description - Radio button",
+                                  "Dsc": "Purpose Description with a radiobutton component",
+                                  "AttTy": "Constant",
+                                  "DflVal": "Not agree to Does your shipment cost more than 999 Euros?",
+                                  "isExcl": false,
+                                  "isMan": true,
+                                  "Rul": [
+                                    {
+                                      "RulId": "ed7d5c64-cab3-4b19-a4c7-13825ac3ee3d",
+                                      "Nm": "Not agree Purpose Description",
+                                      "Cond": "**.'6a2f893d-8c39-42ed-9b9e-450d21092907'].Val='Opt1'",
+                                      "AttrMtdt": [
+                                        {
+                                          "DflVal": "Agree to Does your shipment cost more than 999 Euros?"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "Id": "5799fa1d-9b86-438d-b91c-f5a381e094dd",
+                          "Nm": "Consent for Greek vat number entity",
+                          "Dsc": "Consent for Greek vat number desc",
+                          "isImg": false,
+                          "isExcl": false,
+                          "isMan": false,
+                          "Ent": [
+                            {
+                              "Id": "6a2708b4-2735-45f2-9cfc-e566935a98c9",
+                              "Nm": "Consent for Greek vat number Category",
+                              "Dsc": "Consent Category Entity",
+                              "isImg": false,
+                              "isExcl": false,
+                              "isMan": false,
+                              "Att": [
+                                {
+                                  "Id": "3b1d09ca-bcce-4572-bf08-5e74f103ae44",
+                                  "Nm": "Consent Category Code",
+                                  "Dsc": "The unique identificaiton of the Consent Purpose",
+                                  "AttTy": "Constant",
+                                  "DflVal": "CSTMS"
+                                },
+                                {
+                                  "Id": "0c36dbe8-4bc1-47dc-8582-8af4dbfc394e",
+                                  "Nm": "Consent Category Name",
+                                  "Dsc": "Consent Category Name",
+                                  "AttTy": "Constant",
+                                  "DflVal": "Customs Consents"
+                                },
+                                {
+                                  "Id": "31e024eb-d270-4074-be28-4ee279a5c544",
+                                  "Nm": "Consent Category Description",
+                                  "Dsc": "Consent Category Desc",
+                                  "AttTy": "Constant",
+                                  "DflVal": "Captures Customs Consents from User"
+                                }
+                              ],
+                              "Rul": [
+                                {
+                                  "RulId": "2c228c8a-5ec3-4cea-922a-1e9348d47bbd",
+                                  "Nm": "Rule condition to Greek vat number",
+                                  "Cond": "**.Att[Id='6a2f893d-8c39-42ed-9b9e-450d21092907'].Val='Opt1'",
+                                  "AttrMtdt": [
+                                    {
+                                      "isMan": true
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Id": "4829cfe1-fcbb-48d2-9344-d8468de1f41d",
+                              "Nm": "Greek Vat number - Radio button",
+                              "Dsc": "Greek Vat number Radio button desc",
+                              "isImg": false,
+                              "isExcl": false,
+                              "isMan": false,
+                              "Att": [
+                                {
+                                  "Id": "0da3ad86-cc40-44ff-9ad4-60780be50fc8",
+                                  "Nm": "Do you have a Greek VAT number?",
+                                  "Dsc": "For customs clearance of shipments where the goods value is greater than EUR 999, Greece customs authorities require an EORI number.",
+                                  "AttTy": "UserEntry",
+                                  "isExcl": false,
+                                  "isMan": false,
+                                  "isHidden": true,
+                                  "UICmpt": {
+                                    "Order": 2,
+                                    "CmptNm": "PORadioBtn",
+                                    "DisplayTtl": "",
+                                    "Tooltip": "",
+                                    "CmptTy": "RadioButton",
+                                    "DisplayDsc": {
+                                      "DisplayTxt": "Do you have a Greek VAT number??"
+                                    },
+                                    "ValTy": "Standard"
+                                  },
+                                  "Enum": [
+                                    {
+                                      "Val": "Yes",
+                                      "DisplayTxt": "Yes",
+                                      "SrtOrd": 1,
+                                      "Nm": "Opt1"
+                                    },
+                                    {
+                                      "Val": "No",
+                                      "DisplayTxt": "No",
+                                      "SrtOrd": 2,
+                                      "Nm": "Opt2"
+                                    }
+                                  ],
+                                  "Rul": [
+                                    {
+                                      "RulId": "55b3c76f-cf7e-4a24-abeb-57694b7cd4ef",
+                                      "Nm": "Rule condition to Greek vat number",
+                                      "Cond": "**.Att[Id='6a2f893d-8c39-42ed-9b9e-450d21092907'].Val='Opt1'",
+                                      "AttrMtdt": [
+                                        {
+                                          "isMan": true,
+                                          "isHidden": false
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "Id": "471e0fbd-42e4-452c-b8da-1a47a0c82d3e",
+                                  "Nm": "Do you have a Greek VAT number- Radio button",
+                                  "Dsc": "Do you have a Greek VAT number component",
+                                  "AttTy": "Constant",
+                                  "DflVal": "Agree to  Do you have a Greek VAT number?",
+                                  "isExcl": false,
+                                  "isMan": false,
+                                  "Rul": [
+                                    {
+                                      "RulId": "e9082d77-d449-427e-b7cc-bdbd1101a8c6",
+                                      "Nm": "Not agree purpose",
+                                      "Cond": "**.Att[Id='0da3ad86-cc40-44ff-9ad4-60780be50fc8'].Val='Opt2'",
+                                      "AttrMtdt": [
+                                        {
+                                          "DflVal": "Not Agree to Do you have a Greek VAT number?"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "Id": "b5438bd1-82cd-4617-a280-f1cb172a0128",
+                                  "Nm": "Do you have a Greek VAT number - Radio button",
+                                  "Dsc": "Do you have a Greek VAT number radiobutton component",
+                                  "AttTy": "Constant",
+                                  "DflVal": "Not agree to Do you have a Greek VAT number?",
+                                  "isExcl": false,
+                                  "isMan": false,
+                                  "Rul": [
+                                    {
+                                      "RulId": "ed7d5c64-cab3-4b19-a4c7-13825ac3ee3d",
+                                      "Nm": "Not agree Do you have a Greek VAT number Description",
+                                      "Cond": "**.'0da3ad86-cc40-44ff-9ad4-60780be50fc8'].Val='Opt1'",
+                                      "AttrMtdt": [
+                                        {
+                                          "DflVal": "Agree to Do you have a Greek VAT number?"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "Id": "406cd9e6-2a29-4872-9818-c4c5d1a02e70",
+                          "Nm": "Greek VAT number - TextInput",
+                          "Dsc": "Greek VAT number - TextInput",
+                          "isImg": false,
+                          "isExcl": false,
+                          "isMan": false,
+                          "Att": [
+                            {
+                              "Id": "efcc78d7-7c79-43be-8b34-0714a2583a77",
+                              "Nm": "Registration Number Type",
+                              "Dsc": "Registration type code.The discriminator for the different types of registered numbers that may be assigned to a business party.",
+                              "AttTy": "Constant",
+                              "DflVal": "NID",
+                              "isExcl": false,
+                              "isMan": false,
+                              "AttMsgPos": [
+                                {
+                                  "Ver": "12.030",
+                                  "MsgTyCd": "ShpPcdDetailsMsg",
+                                  "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpCust/Rgs/TyCd"
+                                }
+                              ],
+                              "Rul": [
+                                {
+                                  "RulId": "49f6542b-bd57-4a14-a656-0d95c36195d6",
+                                  "Nm": "Show Greek VAT number",
+                                  "Cond": "**.Att[Id='0da3ad86-cc40-44ff-9ad4-60780be50fc8'].Val='Opt1'",
+                                  "AttrMtdt": [
+                                    {
+                                      "isMan": true
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Id": "066fdad5-6021-4f08-83e3-16ec241d359c",
+                              "Nm": "Greek VAT number entity",
+                              "Dsc": "Greek VAT number descripption",
+                              "AttTy": "UserEntry",
+                              "isExcl": false,
+                              "isMan": false,
+                              "isHidden": true,
+                              "RegEx": "^\\d{9}$",
+                              "UICmpt": {
+                                "Order": 4,
+                                "CmptNm": "GreekNum",
+                                "Hint": "",
+                                "DisplayTtl": "",
+                                "Tooltip": "",
+                                "CmptTy": "TextInput",
+                                "DisplayDsc": {
+                                  "DisplayTxt": "ID Description text"
+                                },
+                                "ValTy": "Regex"
+                              },
+                              "AttMsgPos": [
+                                {
+                                  "Ver": "12.030",
+                                  "MsgTyCd": "ShpPcdDetailsMsg",
+                                  "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpCust/Rgs/No"
+                                }
+                              ],
+                              "Rul": [
+                                {
+                                  "RulId": "8055b93c-eeb8-4d3b-a183-e49cda0f0cb3",
+                                  "Nm": "Rule conditio for Greek VAT number",
+                                  "Cond": "**.Att[Id='0da3ad86-cc40-44ff-9ad4-60780be50fc8'].Val='Opt1'",
+                                  "AttrMtdt": [
+                                    {
+                                      "isMan": true,
+                                      "isHidden": false
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "Id": "119d460c-b178-4e13-b3c0-5941591f0af6",
+                          "Nm": "EORI number - TextInput",
+                          "Dsc": "EORI number - TextInput",
+                          "isImg": false,
+                          "isExcl": false,
+                          "isMan": false,
+                          "Att": [
+                            {
+                              "Id": "37eb5906-3f3c-41ed-90ff-7b0c988f9d9a",
+                              "Nm": "Registration Number Type",
+                              "Dsc": "Registration type code.The discriminator for the different types of registered numbers that may be assigned to a business party.",
+                              "AttTy": "Constant",
+                              "DflVal": "NID",
+                              "isExcl": false,
+                              "isMan": false,
+                              "AttMsgPos": [
+                                {
+                                  "Ver": "12.030",
+                                  "MsgTyCd": "ShpPcdDetailsMsg",
+                                  "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpCust/Rgs/TyCd"
+                                }
+                              ]
+                            },
+                            {
+                              "Id": "9c155005-0ac7-4e6e-882c-810b07a31496",
+                              "Nm": "EORI number entity",
+                              "Dsc": "EORI number descripption",
+                              "AttTy": "UserEntry",
+                              "isExcl": false,
+                              "isMan": false,
+                              "isHidden": true,
+                              "RegEx": "^\\d[9]$",
+                              "UICmpt": {
+                                "Order": 3,
+                                "CmptNm": "EORINum",
+                                "Hint": "",
+                                "DisplayTtl": "",
+                                "Tooltip": "",
+                                "CmptTy": "TextInput",
+                                "DisplayDsc": {
+                                  "DisplayTxt": "ID Description text"
+                                },
+                                "ValTy": "Regex"
+                              },
+                              "AttMsgPos": [
+                                {
+                                  "Ver": "12.030",
+                                  "MsgTyCd": "ShpPcdDetailsMsg",
+                                  "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpCust/Rgs/No"
+                                }
+                              ],
+                              "Rul": [
+                                {
+                                  "RulId": "641cef53-bc52-48d9-99ff-18a4c78056b6",
+                                  "Nm": "Rule conditio for Greek VAT number",
+                                  "Cond": "**.Att[Id='0da3ad86-cc40-44ff-9ad4-60780be50fc8'].Val='Opt1'",
+                                  "AttrMtdt": [
+                                    {
+                                      "isHidden": false
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+]
