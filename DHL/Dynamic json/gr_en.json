@@ -1,0 +1,85 @@
+{
+    "SIR": {
+        "POI": {
+            "toolTip": "",
+            "PORadioBtn": {
+                "description": "Do you have a Greek VAT number?<br>1. Yes<br>2. No.  We will reach out to you for further instructions.",
+                "title": "",
+                "toolTip": ""
+            },
+            "GreekNum": {
+                "toolTip": "",
+                "title": "",
+                "description": "Please enter your Greek VAT number.",
+                "validationErrorMessage": "9 digits"
+            },
+            "EORINum": {
+                "title": "",
+                "toolTip": "",
+                "validationErrorMessage": "\"GR\" + 9 digits\"",
+                "links": {
+                    "here": {
+                        "displayText": "Ο αριθμός EORI σας πρέπει να ξεκινά με δύο γράμματα \"GR\" και μπορεί να ακολουθείται από το πολύ 9 ψηφία."
+                    }
+                },
+                "description": "If you have an EORI, please enter it here as it is required for clearance of shipments with goods value exceeds EUR 1000. You can verify that your EORI is valid {here}.<br><br>If you do not, have an EORI number, we will contact you for further instructions."
+            },
+            "title": "Proof of Identification (for High Value Shipments)",
+            "ShipCostBtn": {
+                "toolTip": "",
+                "title": "",
+                "description": "Does your shipment cost more than 999 Euros?<br>1. Yes<br>2. No"
+            },
+            "description": "For customs clearance of shipments where the goods value is greater than EUR 999, Greece customs authorities require an EORI number."
+        },
+        "RetExport": {
+            "ExpAWBImg": {
+                "title": "",
+                "formatHint": "Upload File(s)",
+                "description": "Export AWB",
+                "toolTip": ""
+            },
+            "RepairType": {
+                "title": "",
+                "description": "Repair Type (if item was not replaced):<br>- Under Warranty<br>- Not Under Warranty (Repair Fees were charged)",
+                "toolTip": ""
+            },
+            "RetrnShip": {
+                "title": "",
+                "toolTip": "",
+                "description": "Is your parcel a returned shipment after repair or replacement?<br>1. Yes<br>2. No"
+            },
+            "ExpDeclarImg": {
+                "toolTip": "",
+                "formatHint": "Upload File(s)",
+                "title": "",
+                "description": "Export Declaration"
+            },
+            "ExpInvImg": {
+                "toolTip": "",
+                "formatHint": "Upload File(s)",
+                "description": "Export Commercial Invoice",
+                "title": ""
+            },
+            "ReturnText": {
+                "title": "",
+                "toolTip": "",
+                "description": "Please provide the reason for the return of this shipment."
+            },
+            "title": "Returned Export",
+            "InvUploader": {
+                "description": "Please upload a copy an invoice with either:<br>- the repair costs, or <br>- an indication that the goods were repaired/replaced under warranty at no cost to you.",
+                "formatHint": "Upload File(s)",
+                "toolTip": "",
+                "title": ""
+            },
+            "description": "This import shipment is a returning commercial export.  In order for us  undertake clearance procedure, we must have the complete export paperwork.<br><br>Please attach: the export commercial invoice, the export air waybill and the export customs declaration (If DHL has completed the commercial export, we will retrieve the export declaration from export department). In addition, if the product is returning from a repair, it must be stated on the invoice  whether the goods were repaired under warranty or what is the repair cost.",
+            "ShipmentDHL": {
+                "title": "",
+                "description": "Did you export this shipment with DHL Express?<br>1. Yes<br>2. No",
+                "toolTip": ""
+            },
+            "toolTip": ""
+        }
+    }
+}

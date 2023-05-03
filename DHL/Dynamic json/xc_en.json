@@ -22,6 +22,11 @@
                 "title": "Stamp Original Invoice"
             },
             "ShipDHLRadioBtn": {
+                "description": "Would you like to clear your shipment with DHL?<br>1. Yes<br>2. No",
+                "title": "",
+                "toolTip": ""
+            },
+            "title": "Health Inspection Approval"
                 "description": "Would you like to clear your shipment with DHL?",
                 "Opt1": "Yes",
                 "Opt2": "No",

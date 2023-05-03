@@ -12,6 +12,7 @@
                 "title": "Medicamentos Personales",
                 "toolTip": "Para ser entregado en nuestro mostrador en Schottegatweg Oost 18"
             },
+
             "title": "Aprobación de Inspección Sanitaria",
             "description": "",
             "toolTip": "",
@@ -22,6 +23,10 @@
                 "title": "Factura Original con sello"
             },
             "ShipDHLRadioBtn": {
+                "description": "¿Le gustaría realizar el despacho de su envío con DHL?<br>1. Sí<br>2. No",
+                "title": "",
+                "toolTip": ""
+            },
                 "description": "¿Le gustaría realizar el despacho de su envío con DHL?",
                 "Opt1": "Sí",
                 "Opt2": "No",
