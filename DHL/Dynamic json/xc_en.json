@@ -1,0 +1,33 @@
+{
+    "SIR": {
+        "MiniHealthPert": {
+            "OrgInvImg": {
+                "title": "Original Invoice",
+                "formatHint": "Upload file(s)",
+                "description": "Please upload a copy of your original invoice for the customs clearance of this shipment.",
+                "toolTip": ""
+            },
+            "PerMedCheckBx": {
+                "description": "I understand that beside the requested documents, I also have to deliver the original doctor's prescription to the DHL offices located at Schottegatweg Oost 18.",
+                "title": "Personal Medicines",
+                "toolTip": "To be delivered at our counter at Schottegatweg Oost 18"
+            },
+            "title": "Health Inspection Approval",
+            "description": "",
+            "toolTip": "",
+            "StampInvImg": {
+                "formatHint": "Upload file(s)",
+                "description": "Please upload a copy of your Stamp Invoice for the customs clearance of this shipment.",
+                "toolTip": "",
+                "title": "Stamp Original Invoice"
+            },
+            "ShipDHLRadioBtn": {
+                "description": "Would you like to clear your shipment with DHL?",
+                "Opt1": "Yes",
+                "Opt2": "No",
+                "title": "",
+                "toolTip": ""
+            }
+        }
+    }
+}
