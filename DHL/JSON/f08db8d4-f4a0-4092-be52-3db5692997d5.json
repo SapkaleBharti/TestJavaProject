@@ -2,8 +2,8 @@
   {
     "ShpInfReqDef": {
       "Id": "f08db8d4-f4a0-4092-be52-3db5692997d5",
-      "Nm": "Ministry of Health Permit - XC",
-      "Dsc": "Ministry of Health Permit - Composed",
+      "Nm": "Medical Goods License Required - XC",
+      "Dsc": "Medical Goods License Required - Composed",
       "DrvdFromShpInfReqDef": {},
       "LedOwnOrgn": {
         "CtryCd": "XC"
@@ -103,8 +103,8 @@
                               "Att" : [
                                 {
                                   "Id" : "8483373b-7e89-439d-98c2-90c695f508a2",
-                                  "Nm" : "Would you like to clear your shipment with DHL",
-                                  "Dsc" : "Would you like to clear your shipment with DHL descriptiom",
+                                  "Nm" : "Health Inspection Approval",
+                                  "Dsc" : "Health Inspection Approval description",
                                   "AttTy" : "UserEntry",
                                   "isExcl" : false,
                                   "isMan" : true,
@@ -186,7 +186,7 @@
                           "Dsc": "Personal Medicines Consent Entity",
                           "isImg": false,
                           "isExcl": false,
-                          "isMan": true,
+                          "isMan": false,
                           "Ent": [
                               {
                                   "Id": "0a5e2c7e-75d7-48b2-9538-bf8032225460",
@@ -194,7 +194,7 @@
                                   "Dsc": "Personal Medicines Consent Category Entity",
                                   "isImg": false,
                                   "isExcl": false,
-                                  "isMan": true,
+                                  "isMan": false,
                                   "Att": [
                                       {
                                           "Id": "f62686d8-eac1-47fb-afdf-15c7ad82f703",
@@ -225,7 +225,7 @@
                                   "Dsc": "Consent for Personal Medicines",
                                   "isImg": false,
                                   "isExcl": false,
-                                  "isMan": true,
+                                  "isMan": false,
                                   "Att": [
                                       {
                                           "Id": "cf9f58a3-c33e-4385-936f-6416ba54c8af",
@@ -242,7 +242,7 @@
                                               "Tooltip": "To be delivered at our counter at Schottegatweg Oost 18",
                                               "CmptTy": "Checkbox",
                                               "DisplayDsc": {
-                                                  "DisplayTxt": "I understand that beside the requested documents, I also have to deliver the original doctor's prescription to the DHL offices located at Schottegatweg Oost 18."
+                                                  "DisplayTxt": "Personal Medicines Description"
                                               },
                                               "ValTy": "Standard",
                                               "Order": 4
@@ -278,18 +278,42 @@
                                           "Nm": "Purpose Name",
                                           "Dsc": "Purpose Name",
                                           "AttTy": "Constant",
-                                          "DflVal": "Not Authorized for DHL clearance",
+                                          "DflVal": "Confirm to deliver the original doctor's prescription to the DHL",
                                           "isExcl": false,
-                                          "isMan": true
+                                          "isMan": false,
+                                          "Rul" : [
+                                            {
+                                              "RulId" : "afbad049-9030-451a-83ae-1ccf1e9b1677",
+                                              "Nm" : "Rule condition for Personal Medicines",
+                                              "Cond" : "**.Att[Id='8483373b-7e89-439d-98c2-90c695f508a2'].Val = 'Opt2'",
+                                              "AttrMtdt" : [
+                                                {
+                                                  "isMan" : true
+                                                }
+                                              ]
+                                            }
+                                          ]
                                       },
                                       {
                                           "Id": "942f2225-b1d0-4812-bfac-885529bfed16",
                                           "Nm": "Purpose Description",
                                           "Dsc": "Purpose Description",
                                           "AttTy": "Constant",
-                                          "DflVal": "User Not Authorized for DHL clearance",
+                                          "DflVal": "User confirmed to deliver the original doctor's prescription to the DHL office",
                                           "isExcl": false,
-                                          "isMan": true
+                                          "isMan": false,
+                                          "Rul" : [
+                                            {
+                                              "RulId" : "595f6ed6-bb24-4932-98a4-b49b90db4f66",
+                                              "Nm" : "Rule condition for Personal Medicines",
+                                              "Cond" : "**.Att[Id='8483373b-7e89-439d-98c2-90c695f508a2'].Val = 'Opt2'",
+                                              "AttrMtdt" : [
+                                                {
+                                                  "isMan" : true
+                                                }
+                                              ]
+                                            }
+                                          ]
                                       }
                                   ]
                               }
@@ -324,12 +348,24 @@
                       "AttTy": "Constant",
                       "DflVal": "ENT",
                       "isExcl": false,
-                      "isMan": true,
+                      "isMan": false,
                       "AttMsgPos": [
                         {
                           "Ver": "3.002",
                           "MsgTyCd": "DocImgMsg",
                           "xPath": "DocImgMsg/Bd/Doc/DocFamCd"
+                        }
+                      ],
+                      "Rul" : [
+                        {
+                          "RulId" : "fd80ece9-17a5-4375-80e9-c1c726b50437",
+                          "Nm" : "Rule condition for Original Invoice",
+                          "Cond" : "**.Att[Id='8483373b-7e89-439d-98c2-90c695f508a2'].Val='Opt1'",
+                          "AttrMtdt" : [
+                            {
+                              "isMan" : true
+                            }
+                          ]
                         }
                       ]
                     },
@@ -340,12 +376,24 @@
                       "AttTy": "Constant",
                       "DflVal": "ENT",
                       "isExcl": false,
-                      "isMan": true,
+                      "isMan": false,
                       "AttMsgPos": [
                         {
                           "Ver": "3.002",
                           "MsgTyCd": "DocImgMsg",
                           "xPath": "DocImgMsg/Bd/Doc/DocTyCd"
+                        }
+                      ],
+                      "Rul" : [
+                        {
+                          "RulId" : "cc2574ad-89a8-4c01-a886-92059d9d7436",
+                          "Nm" : "Rule condition for Original Invoice",
+                          "Cond" : "**.Att[Id='8483373b-7e89-439d-98c2-90c695f508a2'].Val='Opt1'",
+                          "AttrMtdt" : [
+                            {
+                              "isMan" : true
+                            }
+                          ]
                         }
                       ]
                     },
@@ -374,7 +422,7 @@
                         "Tooltip": "",
                         "CmptTy": "FileUploader",
                         "DisplayDsc": {
-                          "DisplayTxt": "Please upload a copy of your original invoice for the customs clearance of this shipment."
+                          "DisplayTxt": "Original Invoice description"
                         },
                         "Order": 2
                       },
@@ -407,7 +455,7 @@
                   "Dsc": "Stamp Original Invoice uploader entity",
                   "isImg": true,
                   "isExcl": false,
-                  "isMan": true,
+                  "isMan": false,
                   "Att": [
                     {
                       "Id": "1f6a9bd6-5f74-47c4-a234-eebf9c5df05e",
@@ -416,12 +464,24 @@
                       "AttTy": "Constant",
                       "DflVal": "ENT",
                       "isExcl": false,
-                      "isMan": true,
+                      "isMan": false,
                       "AttMsgPos": [
                         {
                           "Ver": "3.002",
                           "MsgTyCd": "DocImgMsg",
                           "xPath": "DocImgMsg/Bd/Doc/DocFamCd"
+                        }
+                      ],
+                      "Rul" : [
+                        {
+                          "RulId" : "01c1a5e9-1438-452a-aa95-71ea8c68e844",
+                          "Nm" : "Rule condition for Stamp Original Invoice",
+                          "Cond" : "**.Att[Id='8483373b-7e89-439d-98c2-90c695f508a2'].Val = 'Opt2'",
+                          "AttrMtdt" : [
+                            {
+                              "isMan": true
+                            }
+                          ]
                         }
                       ]
                     },
@@ -432,12 +492,24 @@
                       "AttTy": "Constant",
                       "DflVal": "ENT",
                       "isExcl": false,
-                      "isMan": true,
+                      "isMan": false,
                       "AttMsgPos": [
                         {
                           "Ver": "3.002",
                           "MsgTyCd": "DocImgMsg",
                           "xPath": "DocImgMsg/Bd/Doc/DocTyCd"
+                        }
+                      ],
+                      "Rul" : [
+                        {
+                          "RulId" : "2a34188a-b525-410e-a75d-c2a4316476a9",
+                          "Nm" : "Rule condition for Stamp Original Invoice",
+                          "Cond" : "**.Att[Id='8483373b-7e89-439d-98c2-90c695f508a2'].Val = 'Opt2'",
+                          "AttrMtdt" : [
+                            {
+                              "isMan": true
+                            }
+                          ]
                         }
                       ]
                     },
@@ -484,8 +556,8 @@
                           "Cond" : "**.Att[Id='8483373b-7e89-439d-98c2-90c695f508a2'].Val = 'Opt2'",
                           "AttrMtdt" : [
                             {
-                              "isMan" : true,
-                              "isHidden" : false
+                              "isHidden" : false,
+                              "isMan": true
                             }
                           ]
                         }
