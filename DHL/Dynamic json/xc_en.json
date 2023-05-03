@@ -12,6 +12,7 @@
                 "title": "Personal Medicines",
                 "toolTip": "To be delivered at our counter at Schottegatweg Oost 18"
             },
+            "title": "Health Inspection Approval",
             "description": "",
             "toolTip": "",
             "StampInvImg": {
@@ -26,6 +27,12 @@
                 "toolTip": ""
             },
             "title": "Health Inspection Approval"
+                "description": "Would you like to clear your shipment with DHL?",
+                "Opt1": "Yes",
+                "Opt2": "No",
+                "title": "",
+                "toolTip": ""
+            }
         }
     }
 }

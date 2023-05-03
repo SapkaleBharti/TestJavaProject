@@ -12,6 +12,8 @@
                 "title": "Medicamentos Personales",
                 "toolTip": "Para ser entregado en nuestro mostrador en Schottegatweg Oost 18"
             },
+
+            "title": "Aprobación de Inspección Sanitaria",
             "description": "",
             "toolTip": "",
             "StampInvImg": {
@@ -25,7 +27,12 @@
                 "title": "",
                 "toolTip": ""
             },
-            "title": "Aprobación de Inspección Sanitaria"
+                "description": "¿Le gustaría realizar el despacho de su envío con DHL?",
+                "Opt1": "Sí",
+                "Opt2": "No",
+                "title": "",
+                "toolTip": ""
+            }
         }
     }
 }
