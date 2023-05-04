@@ -1,0 +1,659 @@
+[
+  {
+    "ShpInfReqDef": {
+      "Id": "4198765d-a388-4fa7-bcd8-2e288efbf27d",
+      "Nm": "Return goods relief- TR",
+      "Dsc": "To be added in future release desc",
+      "DrvdFromShpInfReqDef": {},
+      "LedOwnOrgn": {
+        "CtryCd": "TR"
+      },
+      "ApplyAllInd": false,
+      "PrsnDatSenstyClssLvl": "Medium",
+      "QuickGuideEnabledInd": false,
+      "UICmpt": {
+        "CmptNm": "ReturnedTax",
+        "DisplayTtl": "Returned Goods Duty and Tax Exemption",
+        "Tooltip": "Display Tooltip",
+        "CmptTy": "Composed",
+        "DisplayDsc": {
+          "DisplayTxt": "DHL Express requires a Returned Goods Tax Exemption "
+        }
+      },
+      "Ent": [
+        {
+          "Id": "beec7d64-2b62-40a7-9d7b-4c4dab45591c",
+          "Nm": "Shipment Document",
+          "Dsc": "Shipment Document",
+          "isImg": false,
+          "isExcl": false,
+          "isMan": true,
+          "Ent": [
+            {
+              "Id": "65b0d7e2-3e22-414e-b3fd-c6e76c705989",
+              "Nm": "Return goods relief Entity",
+              "Dsc": "To be added in future release Desc",
+              "isImg": true,
+              "isExcl": false,
+              "isMan": true,
+              "Att": [
+                {
+                  "Id": "35748fbc-d788-46d9-bdba-de301355c6c9",
+                  "Nm": "Document Family Code",
+                  "Dsc": "GIA Document Family Code",
+                  "AttTy": "Constant",
+                  "DflVal": "ENT",
+                  "isExcl": false,
+                  "isMan": true,
+                  "AttMsgPos": [
+                    {
+                      "Ver": "3.002",
+                      "MsgTyCd": " DocImgMsg",
+                      "xPath": "DocImgMsg/Bd/Doc/DocFamCd"
+                    }
+                  ]
+                },
+                {
+                  "Id": "7407bb1d-3b70-4808-b5a9-3fa778191f3e",
+                  "Nm": "Document Type Code",
+                  "Dsc": "Document Type Code",
+                  "AttTy": "Constant",
+                  "DflVal": "ENT",
+                  "isExcl": false,
+                  "isMan": true,
+                  "AttMsgPos": [
+                    {
+                      "Ver": "3.002",
+                      "MsgTyCd": " DocImgMsg",
+                      "xPath": "DocImgMsg/Bd/Doc/DocTyCd"
+                    }
+                  ]
+                },
+                {
+                  "Id": "4dfa98e5-6d50-481a-8706-00b9b451a7e5",
+                  "Nm": "Return goods relief Img",
+                  "AttTy": "UserEntry",
+                  "isExcl": false,
+                  "isMan": true,
+                  "MaxFlSz": 6000,
+                  "MaxFlCnt": 20,
+                  "AlwExt": [
+                    "pdf",
+                    "jpeg",
+                    "jpg",
+                    "png",
+                    "bmp",
+                    "docx"
+                  ],
+                  "UICmpt": {
+                    "Order": 1,
+                    "CmptNm": "ReturnedTaxImg",
+                    "Hint": "Upload File(s)",
+                    "DisplayTtl": "",
+                    "Tooltip": "Please ensure that your documents are stamped and signed. ",
+                    "CmptTy": "FileUploader",
+                    "DisplayDsc": {
+                      "DisplayTxt": ""
+                    }
+                  },
+                  "AttMsgPos": [
+                    {
+                      "Ver": "12.030",
+                      "MsgTyCd": "ShpPcdDetailsMsg",
+                      "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/Img/Loc"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Id": "51a645ba-4a12-4720-a36e-31c9ba2f6985",
+          "Nm": "Returned Goods Duty and Tax Exemption",
+          "Dsc": "Returned Goods Duty and Tax Exemption Entity",
+          "isImg": false,
+          "isExcl": false,
+          "isMan": true,
+          "Ent": [
+            {
+              "Id": "cf3a88fd-b520-4bb7-88fa-dd13e52c0f25",
+              "Nm": "Returned Goods Duty and Tax Exemption Category",
+              "Dsc": "To be added in future release desc",
+              "isImg": false,
+              "isExcl": false,
+              "isMan": true,
+              "Att": [
+                {
+                  "Id": "73d071d9-1ea0-4890-a69d-30cde2c91bd4",
+                  "Nm": "Consent Category Code",
+                  "Dsc": "The unique identificaiton of the Consent Purpose",
+                  "AttTy": "Constant",
+                  "DflVal": "UKEORI"
+                },
+                {
+                  "Id": "253e6c77-0313-4601-9bac-b973836e5064",
+                  "Nm": "Consent Category Name",
+                  "Dsc": "Consent Category Name",
+                  "AttTy": "Constant",
+                  "DflVal": "Customs Consents"
+                },
+                {
+                  "Id": "07029c98-1a9e-468a-9334-46cbe2ad229f",
+                  "Nm": "Consent Category Description",
+                  "Dsc": "Consent Category Desc",
+                  "AttTy": "Constant",
+                  "DflVal": "Captures Customs Consents from User"
+                }
+              ]
+            },
+            {
+              "Id": "35bb6f67-4588-4823-812c-2ad01150160f",
+              "Nm": "Identification Type Entity  ",
+              "Dsc": "Identification Type Entity desc ",
+              "isImg": false,
+              "isExcl": false,
+              "isMan": true,
+              "Att": [
+                {
+                  "Id": "6ab80195-be42-40a6-8be4-2aa97199247f",
+                  "Nm": " Identification Type List",
+                  "Dsc": " Identification Type Entity Desc ",
+                  "AttTy": "UserEntry",
+                  "isExcl": false,
+                  "isMan": true,
+                  "isHidden": false,
+                  "UICmpt": {
+                    "Order": 2,
+                    "CmptNm": "TypeofCompList",
+                    "DisplayTtl": "Company Type",
+                    "Hint": "Select your company type.",
+                    "Tooltip": "",
+                    "CmptTy": "List",
+                    "DisplayDsc": {
+                      "DisplayTxt": ""
+                    }
+                  },
+                  "Enum": [
+                    {
+                      "Val": " Individual-owned Company",
+                      "DisplayTxt": " Individual-owned Company",
+                      "SrtOrd": 1,
+                      "Nm": "Opt1"
+                    },
+                    {
+                      "Val": "Commercial Firm",
+                      "DisplayTxt": "Commercial Firm",
+                      "SrtOrd": 2,
+                      "Nm": "Opt2"
+                    }
+                  ]
+                },
+                {
+                  "Rul": [
+                    {
+                      "RulId": "b5bec465-dff7-4993-8d3f-f0607ea78fdf",
+                      "Nm": "Selet your company type",
+                      "Cond": "**.Att[Id='6ab80195-be42-40a6-8be4-2aa97199247f'].Val='Opt1'",
+                      "AttrMtdt": [
+                        {
+                          "DflVal": ""
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Id": "a04842ac-3261-4813-b3e4-bc9f088b6c45",
+              "Nm": "Identification Type Entity List",
+              "Dsc": "Identification Type Entity Decription",
+              "isImg": false,
+              "isExcl": false,
+              "isMan": true,
+              "Att": [
+                {
+                  "Id": "1d5f2a58-4e24-4265-a3a1-29930041c324",
+                  "Nm": " Identification Type List",
+                  "Dsc": " Identification Type Desc ",
+                  "AttTy": "UserEntry",
+                  "isExcl": false,
+                  "isMan": true,
+                  "isHidden": false,
+                  "UICmpt": {
+                    "Order": 3,
+                    "CmptNm": "IdentificationList",
+                    "DisplayTtl": "Company Type",
+                    "Hint": "Select your Identification Type ",
+                    "Tooltip": "",
+                    "CmptTy": "List",
+                    "DisplayDsc": {
+                      "DisplayTxt": ""
+                    }
+                  },
+                  "Enum": [
+                    {
+                      "Val": " Turkish Republic Identity Number",
+                      "DisplayTxt": "Turkish Republic Identity Number",
+                      "SrtOrd": 1,
+                      "Nm": "Opt1"
+                    },
+                    {
+                      "Val": " Passport",
+                      "DisplayTxt": " Passport",
+                      "SrtOrd": 2,
+                      "Nm": "Opt2"
+                    }
+                  ]
+                },
+                {
+                  "Rul": [
+                    {
+                      "RulId": "b49ebad0-c17e-4df4-aa18-117259bfd965",
+                      "Nm": "Select your Identification Type ",
+                      "Cond": "**.Att[Id='6ab80195-be42-40a6-8be4-2aa97199247f'].Val='Opt1'",
+                      "AttrMtdt": [
+                        {
+                          "DflVal": ""
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Id": "d226ad20-9922-4956-85eb-e2836a9a4d7d",
+              "Nm": "Turkish Republic Identity Number TextInput",
+              "Dsc": "Turkish Republic Identity Number desc",
+              "isImg": false,
+              "isExcl": false,
+              "isMan": false,
+              "Att": [
+                {
+                  "Id": "c38fa51b-b063-4912-b40b-150f13de5724",
+                  "Nm": "Turkish Republic Identity Number Entity",
+                  "Dsc": "Turkish Republic Identity Number desc.",
+                  "AttTy": "Constant",
+                  "DflVal": "",
+                  "isExcl": false,
+                  "isMan": false,
+                  "AttMsgPos": [
+                    {
+                      "Ver": "12.030",
+                      "MsgTyCd": "ShpPcdDetailsMsg",
+                      "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpCust/Rgs/TyCd"
+                    }
+                  ],
+                  "Rul": [
+                    {
+                      "RulId": "d5034e38-a631-4488-ba4d-e61a19652512",
+                      "Nm": "Show Turkish Republic Identity Number",
+                      "Cond": "**.Att[Id='6ab80195-be42-40a6-8be4-2aa97199247f'].Val='Opt1'",
+                      "AttrMtdt": [
+                        {
+                          "isMan": true
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Id": "8f3c9b16-6c7d-4d62-a9f5-222e30fcccd4",
+                  "Nm": "Turkish Republic Identity Number",
+                  "Dsc": "Turkish Republic Identity Number Desc",
+                  "AttTy": "UserEntry",
+                  "isExcl": false,
+                  "isMan": false,
+                  "isHidden": true,
+                  "RegEx":  "^(GR)([0-9]{11})$",
+                  "UICmpt": {
+                    "Order": 4,
+                    "CmptNm": "IdentityNum",
+                    "Hint": "",
+                    "DisplayTtl": "",
+                    "Tooltip": "",
+                    "CmptTy": "TextInput",
+                    "DisplayDsc": {
+                      "DisplayTxt": "ID Description text"
+                    },
+                    "ValTy": "Regex"
+                  },
+                  "AttMsgPos": [
+                    {
+                      "Ver": "12.030",
+                      "MsgTyCd": "ShpPcdDetailsMsg",
+                      "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpCust/Rgs/No"
+                    }
+                  ],
+                  "Rul": [
+                    {
+                      "RulId": "25628f4b-148b-41d5-9388-9b3450063b37",
+                      "Nm": "Rule conditio for Greek VAT number",
+                      "Cond": "**.Att[Id='6ab80195-be42-40a6-8be4-2aa97199247f'].Val='Opt1'",
+                      "AttrMtdt": [
+                        {
+                          "isMan": true,
+                          "isHidden": false
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Id": "d67bed07-1723-4f10-a934-71e5280b5dcc",
+              "Nm": "Turkish Republic Identity Card Shipment Document",
+              "Dsc": "Turkish Republic Identity Card Shipment Document Desc",
+              "isImg": false,
+              "isExcl": false,
+              "isMan": true,
+              "Ent": [
+                {
+                  "Id": "759e8d5c-c122-4c88-987f-fc18ad25fa70",
+                  "Nm": "Returned Goods Duty and Tax Exemption Entity",
+                  "Dsc": "Returned Goods Duty and Tax Exemption Desc",
+                  "isImg": true,
+                  "isExcl": false,
+                  "isMan": true,
+                  "Att": [
+                    {
+                      "Id": "d8fec4b4-899a-40f3-a400-db7f85ee602f",
+                      "Nm": "Document Family Code",
+                      "Dsc": "GIA Document Family Code",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": true,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": " DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocFamCd"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "e9d93550-faa3-4860-991d-f6ad9c90fb72",
+                      "Nm": "Document Type Code",
+                      "Dsc": "Document Type Code",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": true,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": " DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocTyCd"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "e94ddf63-9d11-4ce7-90c0-0dbc480615a7",
+                      "Nm": "Turkish Republic Identity Card Img",
+                      "AttTy": "UserEntry",
+                      "isExcl": false,
+                      "isMan": true,
+                      "MaxFlSz": 6000,
+                      "MaxFlCnt": 20,
+                      "AlwExt": [
+                        "pdf",
+                        "jpeg",
+                        "jpg",
+                        "png",
+                        "bmp",
+                        "docx"
+                      ],
+                      "UICmpt": {
+                        "Order": 5,
+                        "CmptNm": "IdentityNumImg",
+                        "Hint": "Upload File(s)",
+                        "DisplayTtl": "Turkish Republic Identity Card",
+                        "Tooltip": "",
+                        "CmptTy": "FileUploader",
+                        "DisplayDsc": {
+                          "DisplayTxt": ""
+                        }
+                      },
+                      "AttMsgPos": [
+                        {
+                          "Ver": "12.030",
+                          "MsgTyCd": "ShpPcdDetailsMsg",
+                          "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/Img/Loc"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Id": "9c5c5c3e-fca3-465b-a2ac-20ce69edd904",
+              "Nm": " Commercial Firm Passport Number - TextInput",
+              "Dsc": " Commercial Firm Passport Number desc ",
+              "isImg": false,
+              "isExcl": false,
+              "isMan": false,
+              "Att": [
+                {
+                  "Id": "f53def70-7a44-4c68-a357-aa0ee650baa5",
+                  "Nm": "Passport Number Type",
+                  "Dsc": " Passport Number Desc Entity",
+                  "AttTy": "Constant",
+                  "DflVal": "",
+                  "isExcl": false,
+                  "isMan": false,
+                  "AttMsgPos": [
+                    {
+                      "Ver": "12.030",
+                      "MsgTyCd": "ShpPcdDetailsMsg",
+                      "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpCust/Rgs/TyCd"
+                    }
+                  ]
+                },
+                {
+                  "Id": "9ab3dd10-2b8f-431f-abb0-3ce5fa3572b6",
+                  "Nm": " Commercial Firm Passport Number  TextInput",
+                  "Dsc": " Commercial Firm Passport Number descripption",
+                  "AttTy": "UserEntry",
+                  "isExcl": false,
+                  "isMan": false,
+                  "isHidden": true,
+                  "RegEx": "^[A-Za-z0-9]{1,40}$",
+                  "UICmpt": {
+                    "Order": 6,
+                    "CmptNm": "PassportNumText",
+                    "Hint": "",
+                    "DisplayTtl": "",
+                    "Tooltip": "",
+                    "CmptTy": "TextInput",
+                    "DisplayDsc": {
+                      "DisplayTxt": "ID Description text"
+                    },
+                    "ValTy": "Regex"
+                  },
+                  "AttMsgPos": [
+                    {
+                      "Ver": "12.030",
+                      "MsgTyCd": "ShpPcdDetailsMsg",
+                      "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpCust/Rgs/No"
+                    }
+                  ],
+                  "Rul": [
+                    {
+                      "RulId": "5e8b4e4a-3ec8-4c89-a94c-1fb790ca07ef",
+                      "Nm": "Rule conditio for  Selected Commercial Firm Passport Number ",
+                      "Cond": "**.Att[Id='6ab80195-be42-40a6-8be4-2aa97199247f'].Val='Opt2'",
+                      "AttrMtdt": [
+                        {
+                          "isHidden": false
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Id": "c1feabda-a8a2-4174-b741-9e0d13268264",
+              "Nm": "Passport Shipment Document",
+              "Dsc": "Passport Shipment Document Desc",
+              "isImg": false,
+              "isExcl": false,
+              "isMan": true,
+              "Ent": [
+                {
+                  "Id": "5c895ae2-db51-4dc8-835e-1e6e01a3dd54",
+                  "Nm": " Paasport Document Entity",
+                  "Dsc": "Paasport Document Desc",
+                  "isImg": true,
+                  "isExcl": false,
+                  "isMan": true,
+                  "Att": [
+                    {
+                      "Id": "663d0835-6c0e-4c35-a6ae-e228d6217ed6",
+                      "Nm": "Document Family Code",
+                      "Dsc": "GIA Document Family Code",
+                      "AttTy": "Constant",
+                      "DflVal": "PII",
+                      "isExcl": false,
+                      "isMan": true,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": " DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocFamCd"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "2c43a814-3f0d-4da6-b04b-f5869abbe71f",
+                      "Nm": "Document Type Code",
+                      "Dsc": "Document Type Code",
+                      "AttTy": "Constant",
+                      "DflVal": "PII",
+                      "isExcl": false,
+                      "isMan": true,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": " DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocTyCd"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "9b2b7133-b10d-4fe8-9330-c0a1c474c1ea",
+                      "Nm": "Paasport Card Img",
+                      "AttTy": "UserEntry",
+                      "isExcl": false,
+                      "isMan": true,
+                      "MaxFlSz": 6000,
+                      "MaxFlCnt": 20,
+                      "AlwExt": [
+                        "pdf",
+                        "jpeg",
+                        "jpg",
+                        "png",
+                        "bmp",
+                        "docx"
+                      ],
+                      "UICmpt": {
+                        "Order": 7,
+                        "CmptNm": "PassportImg",
+                        "Hint": "Upload File(s)",
+                        "DisplayTtl": "Passport Image",
+                        "Tooltip": "",
+                        "CmptTy": "FileUploader",
+                        "DisplayDsc": {
+                          "DisplayTxt": "Please upload a copy of the photo page of your passport"
+                        }
+                      },
+                      "AttMsgPos": [
+                        {
+                          "Ver": "12.030",
+                          "MsgTyCd": "ShpPcdDetailsMsg",
+                          "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/Img/Loc"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "3c081ffe-b71c-44cf-b70a-a2c4d2803146",
+                      "Nm": "Document Family Code",
+                      "Dsc": "GIA Document Family Code",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": true,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": " DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocFamCd"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "64de711a-67a9-4ed3-b964-3603223b3276",
+                      "Nm": "Document Type Code",
+                      "Dsc": "Document Type Code",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": true,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": " DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocTyCd"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "d5c35e52-9c02-4448-bc45-02ffe7847887",
+                      "Nm": "upload the tax plate image of your company for the customs clearance ",
+                      "AttTy": "UserEntry",
+                      "isExcl": false,
+                      "isMan": true,
+                      "MaxFlSz": 6000,
+                      "MaxFlCnt": 20,
+                      "AlwExt": [
+                        "pdf",
+                        "jpeg",
+                        "jpg",
+                        "png",
+                        "bmp",
+                        "docx"
+                      ],
+                      "UICmpt": {
+                        "Order": 8,
+                        "CmptNm": "TexPlateImg",
+                        "Hint": "Upload File(s)",
+                        "DisplayTtl": "",
+                        "Tooltip": "",
+                        "CmptTy": "FileUploader",
+                        "DisplayDsc": {
+                          "DisplayTxt": "Please upload the tax plate image of your company for the customs clearance of this shipment"
+                        }
+                      },
+                      "AttMsgPos": [
+                        {
+                          "Ver": "12.030",
+                          "MsgTyCd": "ShpPcdDetailsMsg",
+                          "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/Img/Loc"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+]
