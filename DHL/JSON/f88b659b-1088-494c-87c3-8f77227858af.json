@@ -1,0 +1,529 @@
+[
+    {
+        "ShpInfReqDef": {
+            "Id": "f88b659b-1088-494c-87c3-8f77227858af",
+            "Nm": "Power of Attorney- TR",
+            "Dsc": "Power of Attorney Description",
+            "DrvdFromShpInfReqDef": {},
+            "LedOwnOrgn": {
+                "CtryCd": "TR"
+            },
+            "ApplyAllInd": false,
+            "PrsnDatSenstyClssLvl": "Medium",
+            "QuickGuideEnabledInd": false,
+            "UICmpt": {
+                "CmptNm": "PowerOfAttr",
+                "DisplayTtl": "Power of Attorney",
+                "Tooltip": "",
+                "CmptTy": "",
+                "DisplayDsc": {
+                    "DisplayTxt": ""
+                }
+            },
+            "Ent": [
+                {
+                    "Id": "aa5ffc8d-fbc2-4cf3-ae67-fe7545af632e",
+                    "Nm": "Power of Attorney",
+                    "Dsc": "Power of Attorney Desc",
+                    "isImg": false,
+                    "isExcl": false,
+                    "isMan": true,
+                    "Ent": [
+                        {
+                            "Id": "3d94973a-b942-4b8c-bf56-543c767905d9",
+                            "Nm": "Shipment Customer",
+                            "Dsc": "Shipment Customer Entity",
+                            "isImg": false,
+                            "isExcl": false,
+                            "isMan": true,
+                            "Ent": [
+                                {
+                                    "Id": "8c8e1a3a-4fdb-4093-a98a-b012cece19dd",
+                                    "Nm": "Business Party",
+                                    "Dsc": "Business Party Entity",
+                                    "isImg": false,
+                                    "isExcl": false,
+                                    "isMan": true,
+                                    "Ent": [
+                                        {
+                                            "Id": "8fdf1ae3-e47c-40ab-bbe0-0be67c9baedd",
+                                            "Nm": "Individual Customer",
+                                            "Dsc": "Individual Customer Entity",
+                                            "isImg": false,
+                                            "isExcl": false,
+                                            "isMan": true,
+                                            "Ent": [
+                                                {
+                                                    "Id": "048b7ea5-b16b-449b-83bc-af8ad29838d7",
+                                                    "Nm": "Consent",
+                                                    "Dsc": "Consent Entity",
+                                                    "isImg": false,
+                                                    "isExcl": false,
+                                                    "isMan": true,
+                                                    "Ent": [
+                                                        {
+                                                            "Id": "38ddbc62-1d31-4f6e-8cb6-5187ba3be843",
+                                                            "Nm": "Power of Attorney ",
+                                                            "Dsc": "Power of Attorney Entity",
+                                                            "isImg": false,
+                                                            "isExcl": false,
+                                                            "isMan": true,
+                                                            "Att": [
+                                                                {
+                                                                    "Id": "a9a38a69-c845-4fa6-b7df-906898255424",
+                                                                    "Nm": "Power of Attorney Category ",
+                                                                    "Dsc": "Power of Attorney Category Entity",
+                                                                    "AttTy": "Constant",
+                                                                    "DflVal": "CSTMS"
+                                                                },
+                                                                {
+                                                                    "Id": "1899541a-1cc5-4141-ae85-809196817fd4",
+                                                                    "Nm": "Power of Attorney Entity ",
+                                                                    "Dsc": "Power of Attorney Category Desc",
+                                                                    "AttTy": "Constant",
+                                                                    "DflVal": "Customs Consents"
+                                                                },
+                                                                {
+                                                                    "Id": "73fa7001-c2df-465a-9fbf-55aa699471c7",
+                                                                    "Nm": "Consent Power of Attorney",
+                                                                    "Dsc": "Power of Attorney Desc",
+                                                                    "AttTy": "Constant",
+                                                                    "DflVal": "Captures Customs Consents from User"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "Id": "787711f9-51f1-404f-a762-50f55218fef6",
+                                                            "Nm": "consent for Power of Attorney -Checkbox",
+                                                            "Dsc": "consent for Power of Attorney",
+                                                            "isImg": false,
+                                                            "isExcl": false,
+                                                            "isMan": true,
+                                                            "Att": [
+                                                                {
+                                                                    "Id": "ed179f7f-8d99-4497-acea-0d7d877d09c3",
+                                                                    "Nm": "Power of Attorney checkbox",
+                                                                    "Dsc": "consent for Power of Attorney checkbox  Desc",
+                                                                    "AttTy": "UserEntry",
+                                                                    "isExcl": false,
+                                                                    "isMan": true,
+                                                                    "UICmpt": {
+                                                                        "Order": 1,
+                                                                        "DefaultState": false,
+                                                                        "CmptNm": "POACheckbox",
+                                                                        "DisplayTtl": "",
+                                                                        "Tooltip": "",
+                                                                        "CmptTy": "Checkbox",
+                                                                        "DisplayDsc": {},
+                                                                        "ValTy": "Standard"
+                                                                    }
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "Id": "3b704b65-22e2-41d7-9009-868f03062cf5",
+                                                            "Nm": "Power of Attorney Identification Type",
+                                                            "Dsc": "Power of Attorney Identification Type Entity",
+                                                            "isImg": false,
+                                                            "isExcl": false,
+                                                            "isMan": true,
+                                                            "Att": [
+                                                                {
+                                                                    "Id": "ce18013e-1fa7-4610-9d31-50e56e4483a4",
+                                                                    "Nm": "Power of Attorney Identification-List ",
+                                                                    "Dsc": "Power of Attorney Identification desc",
+                                                                    "AttTy": "UserEntry",
+                                                                    "isExcl": false,
+                                                                    "isMan": true,
+                                                                    "UICmpt": {
+                                                                        "Order": 2,
+                                                                        "CmptNm": "POAIdentification",
+                                                                        "DisplayTtl": "Identification Type",
+                                                                        "Hint": "Select your Identification Type",
+                                                                        "Tooltip": "",
+                                                                        "CmptTy": "List",
+                                                                        "DisplayDsc": {
+                                                                            "DisplayTxt": ""
+                                                                        },
+                                                                        "ValTy": "Standard"
+                                                                    },
+                                                                    "Enum": [
+                                                                        {
+                                                                            "Val": "",
+                                                                            "DisplayTxt": "Turkish Republic Identity Number ",
+                                                                            "SrtOrd": 1,
+                                                                            "Nm": "Opt1"
+                                                                        },
+                                                                        {
+                                                                            "Val": "",
+                                                                            "DisplayTxt": " Passport",
+                                                                            "SrtOrd": 2,
+                                                                            "Nm": "Opt2"
+                                                                        }
+                                                                    ],
+                                                                    "AttMsgPos": [
+                                                                        {
+                                                                            "Ver": "12.030",
+                                                                            "MsgTyCd": "ShpPcdDetailsMsg",
+                                                                            "xPath": "Shp/DatElGrp/@Cd=ShpTrTyClss"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "Id": "85386f91-911c-48fd-808d-d6c8b95ada3c",
+                                                    "Nm": "Turkish Republic Identity Number - TextInput",
+                                                    "Dsc": "Turkish Republic Identity Number desc",
+                                                    "isImg": false,
+                                                    "isExcl": false,
+                                                    "isMan": false,
+                                                    "Att": [
+                                                        {
+                                                            "Id": "98b100c3-7ecd-45ee-990d-d890e8bebd0b",
+                                                            "Nm": "Identity  Number Type",
+                                                            "Dsc": "Identity  Number Type desc",
+                                                            "AttTy": "Constant",
+                                                            "DflVal": "",
+                                                            "isExcl": false,
+                                                            "isMan": false,
+                                                            "AttMsgPos": [
+                                                                {
+                                                                    "Ver": "12.030",
+                                                                    "MsgTyCd": "ShpPcdDetailsMsg",
+                                                                    "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpCust/Rgs/TyCd"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "Id": "bcda14fd-fae6-474a-b751-39e14ad45e56",
+                                                            "Nm": "Turkish Republic Identity Number Entity",
+                                                            "Dsc": "Turkish Republic Identity Number Entity desc",
+                                                            "AttTy": "UserEntry",
+                                                            "isExcl": false,
+                                                            "isMan": false,
+                                                            "isHidden": true,
+                                                            "RegEx": "^\\d[11]$",
+                                                            "UICmpt": {
+                                                                "Order": 3,
+                                                                "CmptNm": "RepublicIdNum",
+                                                                "Hint": "",
+                                                                "DisplayTtl": "",
+                                                                "Tooltip": "",
+                                                                "CmptTy": "TextInput",
+                                                                "DisplayDsc": {
+                                                                    "DisplayTxt": ""
+                                                                },
+                                                                "ValTy": "Regex"
+                                                            },
+                                                            "AttMsgPos": [
+                                                                {
+                                                                    "Ver": "12.030",
+                                                                    "MsgTyCd": "ShpPcdDetailsMsg",
+                                                                    "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpCust/Rgs/No"
+                                                                }
+                                                            ],
+                                                            "Rul": [
+                                                                {
+                                                                    "RulId": "ca45ecf4-b592-4b53-b349-3c94f22f7d12",
+                                                                    "Nm": "Rule conditio for Greek VAT number",
+                                                                    "Cond": "**.Att[Id='fbb57a93-2c2d-4be2-9046-31351cde1108'].Val='Opt1'",
+                                                                    "AttrMtdt": [
+                                                                        {
+                                                                            "isHidden": false
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "Id": "0742a843-5dc1-4149-b383-c278cd663ac9",
+                                                    "Nm": "Passport Number - TextInput",
+                                                    "Dsc": "Passport Number desc - TextInput",
+                                                    "isImg": false,
+                                                    "isExcl": false,
+                                                    "isMan": false,
+                                                    "Att": [
+                                                        {
+                                                            "Id": "4d5b57eb-4c69-4a78-ac22-6a3563633d69",
+                                                            "Nm": "Passport Number Type",
+                                                            "Dsc": " Passport Number Desc Entity",
+                                                            "AttTy": "Constant",
+                                                            "DflVal": "",
+                                                            "isExcl": false,
+                                                            "isMan": false,
+                                                            "AttMsgPos": [
+                                                                {
+                                                                    "Ver": "12.030",
+                                                                    "MsgTyCd": "ShpPcdDetailsMsg",
+                                                                    "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpCust/Rgs/TyCd"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "Id": "156f009f-9365-4714-8172-531da4fecef3",
+                                                            "Nm": "Passport Number entity TextInput",
+                                                            "Dsc": "Passport Number descripption",
+                                                            "AttTy": "UserEntry",
+                                                            "isExcl": false,
+                                                            "isMan": false,
+                                                            "isHidden": true,
+                                                            "RegEx": "^[A-Za-z0-9]{1,40}$",
+                                                            "UICmpt": {
+                                                                "Order": 4,
+                                                                "CmptNm": "PassNumber",
+                                                                "Hint": "",
+                                                                "DisplayTtl": "",
+                                                                "Tooltip": "",
+                                                                "CmptTy": "TextInput",
+                                                                "DisplayDsc": {
+                                                                    "DisplayTxt": "ID Description text"
+                                                                },
+                                                                "ValTy": "Regex"
+                                                            },
+                                                            "AttMsgPos": [
+                                                                {
+                                                                    "Ver": "12.030",
+                                                                    "MsgTyCd": "ShpPcdDetailsMsg",
+                                                                    "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpCust/Rgs/No"
+                                                                }
+                                                            ],
+                                                            "Rul": [
+                                                                {
+                                                                    "RulId": "b7e9f9e8-16bb-4893-93cb-c41277c2b5f0",
+                                                                    "Nm": "Rule conditio for Greek VAT number",
+                                                                    "Cond": "**.Att[Id='fbb57a93-2c2d-4be2-9046-31351cde1108'].Val='Opt2'",
+                                                                    "AttrMtdt": [
+                                                                        {
+                                                                            "isHidden": false
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "Id": "25fce19a-31e0-4703-9dac-a19dddcfced6",
+                                                    "Nm": "Content Entity TextArea",
+                                                    "Dsc": "Content Entity  description",
+                                                    "AttTy": "Content",
+                                                    "isExcl": false,
+                                                    "isMan": true,
+                                                    "MinL": 1,
+                                                    "MaxL": 800,
+                                                    "UICmpt": {
+                                                        "Order": 5,
+                                                        "CmptNm": "ContentTxt",
+                                                        "DisplayTtl": "Content",
+                                                        "Hint": "",
+                                                        "CmptTy": "TextArea",
+                                                        "DisplayDsc": {
+                                                            "DisplayTxt": ""
+                                                        },
+                                                        "ValTy": "String"
+                                                    },
+                                                    "AttMsgPos": [
+                                                        {
+                                                            "Ver": "12.030",
+                                                            "MsgTyCd": "ShpPcdDetailsMsg",
+                                                            "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/CmrcInv/Ln/DscGds"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "Id": "4f76754e-4150-4422-9f9d-ca00917b0638",
+                                                    "Nm": "E-mail address Textinput ",
+                                                    "Dsc": "E-mail address Decs",
+                                                    "isImg": false,
+                                                    "isExcl": false,
+                                                    "isMan": false,
+                                                    "Att": [
+                                                        {
+                                                            "Id": "7dbde0bc-d3e6-41f6-b463-1fc014f41dd7",
+                                                            "Nm": "E-mail address Textinput Code",
+                                                            "Dsc": "E-mail address Textinput Desc",
+                                                            "AttTy": "Constant",
+                                                            "DflVal": "",
+                                                            "isExcl": false,
+                                                            "isMan": true,
+                                                            "AttMsgPos": [
+                                                                {
+                                                                    "Ver": "12.030",
+                                                                    "MsgTyCd": "ShpPcdDetailsMsg",
+                                                                    "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/BsnPty/CommDev/@TyCd"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "Id": "6d8de077-3985-4f00-a20e-d08b6de6ff67",
+                                                            "Nm": "E-mail address ",
+                                                            "Dsc": "Email",
+                                                            "AttTy": "UserEntry",
+                                                            "isExcl": false,
+                                                            "isMan": true,
+                                                            "isHidden": false,
+                                                            "RegEx": "(?=^.{3,70}$)^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,}$",
+                                                            "UICmpt": {
+                                                                "Order": 6,
+                                                                "CmptNm": "EmailTextInput",
+                                                                "DisplayTtl": "E-mail address",
+                                                                "Hint": "",
+                                                                "CmptTy": "TextInput",
+                                                                "DisplayDsc": {
+                                                                    "DisplayTxt": ""
+                                                                },
+                                                                "ValTy": "Regex"
+                                                            },
+                                                            "AttMsgPos": [
+                                                                {
+                                                                    "Ver": "12.030",
+                                                                    "MsgTyCd": "ShpPcdDetailsMsg",
+                                                                    "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/BsnPty/CommDev/@TyCd=EML"
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "Id": "a1db6801-e918-482f-af3a-998f7a55cd7d",
+                                                            "Nm": "Delivery Address TextInput",
+                                                            "Dsc": "Delivery Address Desc ",
+                                                            "AttTy": "UserEntry",
+                                                            "isExcl": false,
+                                                            "isMan": false,
+                                                            "isHidden": true,
+                                                            "MinL": 1,
+                                                            "MaxL": 35,
+                                                            "UICmpt": {
+                                                                "Order": 7,
+                                                                "CmptNm": "AddressText",
+                                                                "DisplayTtl": "Delivery Address",
+                                                                "Tooltip": "Delivery Address Line 1 ",
+                                                                "CmptTy": "TextInput",
+                                                                "DisplayDsc": {
+                                                                    "DisplayTxt": "Delivery Address field"
+                                                                },
+                                                                "ValTy": "String"
+                                                            },
+                                                            "AttMsgPos": [
+                                                                {
+                                                                    "Ver": "12.030",
+                                                                    "MsgTyCd": "ShpPcdDetailsMsg",
+                                                                    "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/BsnPty/Nm/@RolTyCd=RV"
+                                                                }
+                                                            ],
+                                                            "Rul": [
+                                                                {
+                                                                    "RulId": "fe805232-c757-4f10-b72d-f8052826a0fb",
+                                                                    "Nm": "Please enter your delivery address information in detail.",
+                                                                    "Cond": "**.Att[Id='fbb57a93-2c2d-4be2-9046-31351cde1108'].Val='Opt1'",
+                                                                    "AttrMtdt": [
+                                                                        {
+                                                                            "isMan": true,
+                                                                            "isHidden": false
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "Id": "8041818e-1c52-4f21-b2ca-06c148f7b754",
+                                                            "Nm": "Delivery Address Line 2 (Optional)",
+                                                            "Dsc": "Delivery Address Entity Desc ",
+                                                            "AttTy": "UserEntry",
+                                                            "isExcl": false,
+                                                            "isMan": false,
+                                                            "isHidden": true,
+                                                            "MinL": 1,
+                                                            "MaxL": 35,
+                                                            "UICmpt": {
+                                                                "Order": 8,
+                                                                "CmptNm": "AddressL2Text",
+                                                                "DisplayTtl": "Delivery Address",
+                                                                "Tooltip": "Delivery Address Line 2 (Optional) ",
+                                                                "CmptTy": "TextInput",
+                                                                "DisplayDsc": {
+                                                                    "DisplayTxt": "Delivery Address field"
+                                                                },
+                                                                "ValTy": "String"
+                                                            },
+                                                            "AttMsgPos": [
+                                                                {
+                                                                    "Ver": "12.030",
+                                                                    "MsgTyCd": "ShpPcdDetailsMsg",
+                                                                    "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/BsnPty/Nm/@RolTyCd=RV"
+                                                                }
+                                                            ],
+                                                            "Rul": [
+                                                                {
+                                                                    "RulId": "ba710093-d658-40a0-a0e5-4c23a8e437c0",
+                                                                    "Nm": "Please enter your delivery address information in detail.",
+                                                                    "Cond": "**.Att[Id='fbb57a93-2c2d-4be2-9046-31351cde1108'].Val='Opt1'",
+                                                                    "AttrMtdt": [
+                                                                        {
+                                                                            "isMan": true,
+                                                                            "isHidden": false
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "Id": "436b4e99-c008-44c9-bdf6-87288b5da524",
+                                                            "Nm": "Delivery Address Line 3 (Optional)",
+                                                            "Dsc": "Delivery Address Entity Desc ",
+                                                            "AttTy": "UserEntry",
+                                                            "isExcl": false,
+                                                            "isMan": false,
+                                                            "isHidden": true,
+                                                            "MinL": 1,
+                                                            "MaxL": 35,
+                                                            "UICmpt": {
+                                                                "Order": 9,
+                                                                "CmptNm": "AddressLine3",
+                                                                "DisplayTtl": "Delivery Address",
+                                                                "Tooltip": "Delivery Address Line 3(Optional) ",
+                                                                "CmptTy": "TextInput",
+                                                                "DisplayDsc": {
+                                                                    "DisplayTxt": "Delivery Address field"
+                                                                },
+                                                                "ValTy": "String"
+                                                            },
+                                                            "AttMsgPos": [
+                                                                {
+                                                                    "Ver": "12.030",
+                                                                    "MsgTyCd": "ShpPcdDetailsMsg",
+                                                                    "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/BsnPty/Nm/@RolTyCd=RV"
+                                                                }
+                                                            ],
+                                                            "Rul": [
+                                                                {
+                                                                    "RulId": "3ce47e10-2c38-4589-a474-e44090c72ffa",
+                                                                    "Nm": "Please enter your delivery address information in detail.",
+                                                                    "Cond": "**.Att[Id='fbb57a93-2c2d-4be2-9046-31351cde1108'].Val='Opt1'",
+                                                                    "AttrMtdt": [
+                                                                        {
+                                                                            "isMan": true,
+                                                                            "isHidden": false
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+]
