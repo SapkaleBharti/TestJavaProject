@@ -2,8 +2,8 @@
   {
     "ShpInfReqDef": {
       "Id": " 9df77954-633e-4a19-8e78-a2e73e34050f",
-      "Nm": "Returned Export - GR",
-      "Dsc": "This import shipment is a returning commercial export",
+      "Nm": "Returns Original Export proof required- GR",
+      "Dsc": "Returns Original Export proof required desc",
       "DrvdFromShpInfReqDef": {},
       "LedOwnOrgn": {
         "CtryCd": "GR"
