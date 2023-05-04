@@ -1,0 +1,324 @@
+{
+    "CASES-LIST": {
+        "SUCCESS-ALERT-MESSAGE": {
+            "APPLY-TO-ALL": {
+                "TITLE": "",
+                "TEXT-ONE-SHIPMENT": "{{title}} a été appliqué à un autre envoi!",
+                "TEXT": "{{title}} a été appliqué à {{shipmentApplied}} autres envois!"
+            },
+            "COMMENT-SENT": {
+                "TITLE": "Merci pour votre commentaire.",
+                "TEXT": "Vos commentaires sont en cours d’examen par notre équipe DHL Express Customs. Si d’autres mesures sont nécessaires, nous vous contacterons à nouveau."
+            },
+            "TITLE": "Merci de votre soumission!",
+            "TEXT": "Vos coordonnées sont maintenant examinées par notre équipe des douanes. Si d’autres mesures sont requises, nous communiquerons de nouveau avec vous."
+        },
+        "FILTER-GROUP": {
+            "PLACEHOLDER": "Entrer le numéro de lettre de transport"
+        },
+        "INFORMATION-BLOCK": {
+            "DESCRIPTION": "",
+            "TITLE": "Perfectionnez votre envoi"
+        },
+        "CASES-TABLE": {
+            "HEADER-TIMESTAMP": "date de notification",
+            "HEADER-WAYBILL": "numéro de lettre de transport",
+            "SUB-HEADER-TIMESTAMP": "",
+            "HEADER-ORIGIN-COUNTRY-MOBILE": "origine",
+            "HEADER-ORIGIN-COUNTRY": "Pays d'origine",
+            "HEADER-WAYBILL-MOBILE": "bourdereau",
+            "HEADER-SHIPPER": "fournisseur",
+            "HEADER-STATUS": "Statut"
+        },
+        "CASES-PAGINATION": {
+            "LABEL": "premier numéro d'élement     dernier numéro d'élement    nombre total des cases"
+        }
+    },
+    "CASES": {
+        "SIR-SUBMIT-MODAL": {
+            "BUTTONS": {
+                "UNABLE-TO-SUBMIT": "Impossible de remplir le formulaire?",
+                "SUBMIT-MANY-CASES": "Soumettre ({{nombre valide}} de {{nombre total}}",
+                "SUBMIT-ONE-CASE": "soumettre",
+                "BACK": "Back",
+                "CANCEL": "éditer"
+            },
+            "No": "non sélectionnés",
+            "VIRUS-ERRORS": {
+                "TITLE": "Problème de téléchargement de fichiers",
+                "BODY": "Un virus a été détecté dans {{fileNames}}. Vérifiez le(s) fichier(s) et réessayez."
+            },
+            "TOO-MANY-SHIPMENTS": {
+                "BODY": "Le nombre maximal d’envois auxquels vous pouvez appliquer votre exigence est {{ESB_max_configuration}}. Sélectionnez un plus petit nombre de fichiers et réessayez.",
+                "TITLE": "Appliquer à toutes les limites dépassées"
+            },
+            "LABEL-WAYBILL": "bordereau d'expédition",
+            "REMAINING-SHIPMENTS": {
+                "ORIGIN-COUNTRY": "pays d'origine",
+                "HIDE": "Cacher les envois restants",
+                "SHIPMENT-VALUE": "valeur",
+                "WAYBILL": "bordereau d'expédition",
+                "SHOW": "Afficher les envois restants"
+            },
+            "UNABLE-TO-COMPLETE": "Impossible de remplir le formulaire?",
+            "LOADER": {
+                "TITLE": "Traitement de la soumission…",
+                "BODY": "Veuillez ne pas fermer, actualiser ou quitter cette page pendant que nous traitons vos informations."
+            },
+            "TITLE-CONFIRM": "confirmer et soumettre",
+            "PREVIEW-UNAVAILABLE": "telecharger",
+            "ERRORS": {
+                "TITLE": "Nous sommes désolés!",
+                "CONTACT_US_LINK": "Contactez-nous",
+                "BODY": "En raison de difficultés techniques, nous ne sommes pas en mesure de soumettre vos informations. Veuillez réessayer plus tard ou nous contacter."
+            },
+            "LABEL-CONSENT": "Je confirme que tous les renseignements que j’ai fournis sont exacts et valides aux fins de présentation aux autorités douanières.",
+            "TEXTAREA-FORMAT-HINT": "Veuillez indiquer la raison de la soumission incomplète ou d’autres commentaires",
+            "LABEL-READY": "prêt à soumettre",
+            "FILE-MIME-ERRORS": {
+                "BODY": "Les extensions de fichier du ou des fichiers suivants ne sont pas valides : {{fileNames}}. Veuillez corriger leurs extensions et réessayer.",
+                "TITLE": "Extension de fichier (s) invalide(s)"
+            },
+            "Yes": "sélectionné",
+            "UNSCANNABLE-FILES": {
+                "TITLE": "Fichier(s) protégé(s) par mot de passe détecté(s)",
+                "BODY": "Vous ne pouvez pas télécharger le(s) fichier(s) protégé(s) par mot de passe suivant(s) : {{fileNames}}. Veuillez réessayer après avoir supprimé la protection par mot de passe."
+            },
+            "VIEW-LABEL": "affiche",
+            "LABEL-INCOMPLETE": "incomplet",
+            "APPLY-TO-ALL": {
+                "LABEL": "Appliquez vos {{title}} envois restants"
+            }
+        },
+        "SHIPMENT-DETAILS-MODAL": {
+            "BUTTON-CLOSE-MOBILE": "affiche mois",
+            "SHIPMENT-INFORMATION": {
+                "WEIGHT": "poids",
+                "PIECES": "pieces",
+                "DESCRIPTION": "Désignation",
+                "MOBILE": ""
+            },
+            "TITLE-FROM": "origine",
+            "TITLE-SHIPPER": "expéditeur",
+            "BUTTON-TRACK-MOBILE": "suivre l'expédition",
+            "TITLE-MOBILE": "Détails de l'envoi"
+        },
+        "WAYBILL-DETAILS": {
+            "BUTTON-MORE-DETAILS": "afficher plus",
+            "TITLE-SHIPPER": "expéditeur",
+            "BUTTON-TRACK": "suivre l'expédition",
+            "TITLE-FROM": "origine",
+            "BUTTON-LESS-DETAILS": "Afficher moins",
+            "BUTTON-VIEW-DETAILS-MOBILE": "afficher plus"
+        },
+        "SHIPMENT-DOCUMENTS": {
+            "WAYBILL-TITLE": "bordereau d'expédition",
+            "MOBILE": {
+                "ITEMS-COUNT-TEXT": "",
+                "ITEMS-COUNT-LABEL": "Affichage des articles :"
+            },
+            "BUTTONS": {
+                "LOAD-MORE": "Afficher tout",
+                "SHOW-LESS": "Afficher moins"
+            },
+            "INVOICE-TITLE-PLURAL": "Documents de facturation ({{facture}})",
+            "DOWNLOAD-TEXT": "télécharger tous",
+            "PRINT-TEXT": "imprimer tous",
+            "ITEMS-COUNT": "Affichage de 1-{{showItems}} de {{totalItems}}",
+            "WAYBILL-TITLE-PLURAL": "Bordereaux de transport ({{waybillCount}})",
+            "INVOICE-TITLE": "facture",
+            "TITLE": "documents d'expédition"
+        },
+        "ASK-REDIRECT-MODAL": {
+            "BUTTON-STAY": "Rester sur la page",
+            "TITLE": "Voulez-vous quitter ou actualiser cette page ?",
+            "DESCRIPTION": "Les changements que vous avez apportés seront perdus.",
+            "BUTTON-LEAVE": "perdre les modifications apportées"
+        },
+        "GENERAL-INFORMATION": {
+            "BUTTON-BACK": "retour",
+            "TITLE-MOBILE": "Cet envoi nécessite des détails supplémentaires.",
+            "TITLE": "Cet envoi nécessite des détails supplémentaires.",
+            "DESCRIPTION": "DHL a besoin de plus d’informations de votre part pour cet envoi avant que nous puissions soumettre pour le dédouanement."
+        },
+        "INFO-MESSAGE": {
+            "TITLE": "Remarques de DHL",
+            "LINK": "voir plus"
+        },
+        "WAYBILL-NUMBER": {
+            "TITLE": "bordereau d'expédition"
+        }
+    },
+    "CALL-US": {
+        "LOCAL-PHONE-NUMBERS": "Personnalisé par pays",
+        "OUTSIDE-PHONE-NUMBERS": "",
+        "LABEL-OUTSIDE-OF-COUNTRY": "les appels internationaux",
+        "TITLE": "nous contacter",
+        "DESCRIPTION": "Questions et soutien de notre équipe DHL Customs Clearance Support."
+    },
+    "ERRORS": {
+        "FILE_UPLOADER_FILES_COUNT": "ne pouvez télécharger que le(s) fichier(s) {{count}}.",
+        "DATE_PICKER_FUTURE": "La date sélectionnée doit être dans le futur.",
+        "TEXT_AREA_EXACT_LENGTH": "{{title}} doit contenir exactement les caractères {{length}}.",
+        "STRING_TEXT_FIELD_EMPTY": "{{title}} doit être rempli.",
+        "MASK": "format d’entrée n’est pas valide. Le format attendu est {{mask}}",
+        "FILE_UPLOADER_EXTENSIONS": "Le document téléchargé doit être dans l’un des formats suivants : {{extensionsList}}",
+        "COMMENT_TEXT_AREA_EXACT_LENGTH": "Vos commentaires doivent contenir exactement {{length}} caractères.",
+        "NUMBER_TEXT_FIELD_MIN_LENGTH": "{{title}} doit avoir au moins {{length}} chiffres.",
+        "UNKNOWN": "éprouvons des difficultés techniques. Veuillez réessayer plus tard ou nous contacter.",
+        "NUMBER_TEXT_FIELD_EXACT_LENGTH": "{{title}} doit être exactement {{length}} chiffres.",
+        "COMMENT_TEXT_AREA_MIN_LENGTH": "Vos commentaires doivent comporter au moins {{length}} caractères",
+        "COMPOSITE_ANY_OF": "Veuillez remplir exactement l’un des champs suivants : {{list}}",
+        "DATE_PICKER_CURRENT": "Vous devez sélectionner la date du jour.",
+        "EORI_NOT_VALID": "Le numéro que vous avez entré n’est pas valide. Si vous n’avez pas de numéro EORI, sélectionnez « Vous n’avez pas d’EORI? » ci-dessous.",
+        "TEXT_AREA_MAX_LENGTH": "{{title}} ne doit pas avoir plus de {{length}} caractères",
+        "TEXT_AREA_EMPTY": "{{title}} doit être rempli.",
+        "STRING_TEXT_FIELD_MIN_LENGTH": "sirTitle}} ne doit pas comporter moins de {{length}}",
+        "FILE_UPLOADER_ZERO_FILE_SIZE": "La taille du fichier téléchargé est de 0 Ko. Veuillez télécharger un fichier plus volumineux",
+        "STRING_TEXT_FIELD_MAX_LENGTH": "{{sirTitle}} ne doit pas comporter plus de {{length}} caractères.",
+        "INVALID_EMAIL": "E-mail non valide.",
+        "TEXT_AREA_BETWEEN_LENGTH": "{{title}} doit avoir entre {{minLength}} et {{maxLength}} caractères.",
+        "TEXT_AREA_REGEX": "commentaire ne peut pas contenir uniquement des caractères spéciaux.",
+        "TECHNICAL_DIFFICULTIES": "Nous éprouvons des difficultés techniques. Veuillez réessayer plus tard ou nous contacter.",
+        "COMMENT_TEXT_AREA_EMPTY": "Vos commentaires doivent être remplis.",
+        "FILE_UPLOADER_FILE_SIZE": "taille totale de tous les fichiers téléchargés doit être inférieure à {{fileSize}}",
+        "COMMENT_TEXT_AREA_REGEX": "Vos commentaires ne peuvent pas contenir",
+        "NUMBER_TEXT_FIELD_MAX_LENGTH": "{{title}} ne doit pas avoir plus de {{length}} chiffres.",
+        "COMMENT_TEXT_AREA_MAX_LENGTH": "Vos commentaires ne doivent pas comporter plus de {{length}} caractères",
+        "NO_RESULTS": "Aucun resultat trouvé",
+        "DATE_PICKER_PAST": "La date sélectionnée doit être dans le passé.",
+        "TEXT_AREA_MIN_LENGTH": "{{title}} doit avoir au moins {{length}} caractères.",
+        "COMPOSITE_ONE_OF": "Veuillez remplir exactement l’un des champs suivants : {{list}}",
+        "DATE_PICKER_FUTURE_CURRENT": "La date sélectionnée ne doit pas appartenir au passé.",
+        "NUMBER_TEXT_FIELD_BETWEEN_LENGTH": "{{title}} doit avoir entre {{minLength}} et {{maxLength}} chiffres",
+        "INVALID_COUNTRY": "sélectionner un pays.",
+        "COMMENT_TEXT_AREA_BETWEEN_LENGTH": "Vos commentaires doivent comporter entre {{minLength}} et {{maxLength",
+        "STRING_TEXT_FIELD_EXACT_LENGTH": "{{sirTitle}} doit contenir exactement {{length}} caractères.",
+        "STRING_TEXT_FIELD_BETWEEN_LENGTH": "{{sirTitle}} doit avoir entre {{minLength}} et {{maxLength}} caractères.",
+        "DATE_PICKER_PAST_CURRENT": "La date sélectionnée ne doit pas être dans le futur."
+    },
+    "DATE-PICKER": {
+        "DATE-FORMAT": "",
+        "PLACEHOLDER-TEXT": "sélectionner la date"
+    },
+    "THANK-YOU": {
+        "ODD-BANNER": {
+            "BUTTON": "",
+            "TITLE": "",
+            "BODY": ""
+        },
+        "LINK-LABEL": "suivre votre expédition",
+        "LINK-ADDITIONAL-LABEL": "",
+        "LABEL-PART1": "Vos coordonnées sont en cours d’examen par notre équipe DHL Express Customs. Si d’autres mesures sont nécessaires, nous vous contacterons à nouveau.",
+        "LABEL-PART2": "Merci d’utiliser DHL.",
+        "LABEL-PART3": "",
+        "COMMENT-TITLE": "Merci pour votre commentaire.",
+        "COMMENT-LABEL-PART1": "Vos commentaires sont en cours d’examen par notre équipe DHL Express Customs. Si d’autres mesures sont nécessaires, nous vous contacterons à nouveau.",
+        "LIST-TITLE": "informations complémentaires",
+        "TITLE": "Merci de votre soumission!"
+    },
+    "INVALID-LENGTH": {
+        "BODY": "La page est introuvable. Veuillez vérifier l’URL.",
+        "TITLE": "Nous sommes désolés!"
+    },
+    "NOT-FOUND": {
+        "BODY": "La page est introuvable. Veuillez vérifier l’URL.",
+        "TITLE": "Nous sommes désolés!"
+    },
+    "Chat": {
+        "Label": "chat"
+    },
+    "EMAIL-US": {
+        "EMAILS-LIST": "",
+        "TITLE": "",
+        "DESCRIPTION": ""
+    },
+    "FOOTER": {
+        "MENU-ITEM": {
+            "CONTACT-US": "Contactez-nous",
+            "COOKIE-SETTINGS": "Paramètres des cookies",
+            "LEGAL-OPTIONS": [
+                {
+                    "displayText": "Conditions générales",
+                    "link": "https://www.dhl.com/us-en/home/footer/local-privacy-notice.html"
+                },
+                {
+                    "displayText": "Avis de confidentialité",
+                    "link": "https://www.dhl.com/us-en/home/footer/terms-of-use.html"
+                }
+            ]
+        }
+    },
+    "QUICK-GUIDE": {
+        "NEXT": "",
+        "TITLE": "guide rapide",
+        "DESCRIPTION": "",
+        "LABEL": "guide rapide",
+        "PREVIOUS": "",
+        "CLOSE": "ferme"
+    },
+    "FILE-UPLOADER": {
+        "LABELS": {
+            "MAXIMUM-FILE-SIZE": "Taille maximale totale du fichier : {{maxSize}}",
+            "SUPPORTED-FORMATS": "Types de fichiers acceptés : {{allowedExtensions}}"
+        },
+        "SIZES": {
+            "MB": "",
+            "TB": "",
+            "BT": "",
+            "GB": "",
+            "KB": ""
+        },
+        "BUTTONS": {
+            "CLEAR": "supprimer des fichiers"
+        }
+    },
+    "CASE-STATUSES": {
+        "CUSCT": "Action en instance ",
+        "RWREJ": "nouvelle action en instance"
+    },
+    "MOBILE-NAVIGATION": {
+        "HEADER-LEGAL-OPTIONS": "légal",
+        "LABEL-CHANGE-LANGUAGE": "langue",
+        "LABEL-LEGAL": "légal",
+        "LABEL-CONTACT-US": "nous contacter",
+        "HEADER-CONTACT-US": "nous contacter",
+        "LABEL-COOKIE-SETTINGS": "paramètres de cookies"
+    },
+    "SESSION-EXPIRED": {
+        "LINK": "Démarrez une nouvelle session.",
+        "TITLE": "Votre session a expiré.",
+        "TEXT": "Veuillez cliquer sur le lien ci-dessous pour continuer."
+    },
+    "GREF-NOT-FOUND": {
+        "TITLE": "Nous sommes désolés!",
+        "BODY": "La page est introuvable. Veuillez vérifier l’URL."
+    },
+    "TECHNICAL-ISSUE": {
+        "TITLE": "Nous sommes désolés!",
+        "BODY": "Nous éprouvons des difficultés techniques. Veuillez réessayer plus tard ou nous contacter.",
+        "CONTACT_US_LINK": "Contactez-nous"
+    },
+    "TOKEN-EXPIRED": {
+        "SUCCESS-MESSAGE": {
+            "TEXT": "",
+            "TITLE": ""
+        },
+        "RENEW-MESSAGE": {
+            "TEXT": "Veuillez nous contacter pour obtenir de l’aide",
+            "TITLE": "ce lien n’est plus valide.",
+            "LINK": ""
+        },
+        "ERROR-MESSAGE": {
+            "TITLE": "nous sommes désolés!",
+            "TEXT": "Nous éprouvons des difficultés techniques. Veuillez réessayer plus tard ou nous contacter."
+        }
+    },
+    "HEADER": {
+        "APP-HEADER": "Domicile"
+    },
+    "MISSING-COUNTRY-CODE": {
+        "BODY": "La page est introuvable. Veuillez vérifier l’URL.",
+        "TITLE": "Nous sommes désolés!"
+    }
+}
