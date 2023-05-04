@@ -268,7 +268,7 @@
                                 {
                                   "Id": "0da3ad86-cc40-44ff-9ad4-60780be50fc8",
                                   "Nm": "Greek VAT number Confirmation",
-                                  "Dsc": "For customs clearance of shipments where the goods value is greater than EUR 999, Greece customs authorities require an EORI number.",
+                                  "Dsc": "Greek VAT number desc",
                                   "AttTy": "UserEntry",
                                   "isExcl": false,
                                   "isMan": false,
@@ -322,11 +322,11 @@
                                   "Rul": [
                                     {
                                       "RulId": "e9082d77-d449-427e-b7cc-bdbd1101a8c6",
-                                      "Nm": "Not agree purpose",
+                                      "Nm": "Agree to have a Greek VAT number purpose",
                                       "Cond": "**.Att[Id='0da3ad86-cc40-44ff-9ad4-60780be50fc8'].Val='Opt2'",
                                       "AttrMtdt": [
                                         {
-                                          "DflVal": "Does not have Greek VAT number"
+                                          "DflVal": "User doesn't have Greek VAT number"
                                         }
                                       ]
                                     }
@@ -337,17 +337,17 @@
                                   "Nm": "Purpose Description - Greek VAT number",
                                   "Dsc": "Purpose Description - Greek VAT number desc",
                                   "AttTy": "Constant",
-                                  "DflVal": "Does not have Greek VAT number",
+                                  "DflVal": "User doesn't have Greek VAT numberr",
                                   "isExcl": false,
                                   "isMan": false,
                                   "Rul": [
                                     {
                                       "RulId": "ed7d5c64-cab3-4b19-a4c7-13825ac3ee3d",
-                                      "Nm": "Not agree Do you have a Greek VAT number Description",
+                                      "Nm": "Not agree to have a Greek VAT number purpose Description",
                                       "Cond": "**.'0da3ad86-cc40-44ff-9ad4-60780be50fc8'].Val='Opt1'and **.Att[Id='0da3ad86-cc40-44ff-9ad4-60780be50fc8'].Val='Opt1'",
                                       "AttrMtdt": [
                                         {
-                                          "DflVal": "User have Greek VAT number"
+                                          "DflVal": "User doesn't have Greek VAT number"
                                         }
                                       ]
                                     }
