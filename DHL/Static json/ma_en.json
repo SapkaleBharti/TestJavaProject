@@ -1,0 +1,324 @@
+{
+    "CASES-LIST": {
+        "SUCCESS-ALERT-MESSAGE": {
+            "APPLY-TO-ALL": {
+                "TITLE": "",
+                "TEXT-ONE-SHIPMENT": "{{title}} has been applied to one other shipment!",
+                "TEXT": "{{title}} has been applied to {{shipmentApplied}} other shipments!"
+            },
+            "COMMENT-SENT": {
+                "TITLE": "Thank you for your comments.",
+                "TEXT": "Your comments are now being reviewed by our DHL Express Customs team. If any further action is required, we will reach out to you again."
+            },
+            "TITLE": "Thank you for your submission! ",
+            "TEXT": "Your details are now being reviewed by our Customs team. If any further action is required, we will  reach out to you again."
+        },
+        "FILTER-GROUP": {
+            "PLACEHOLDER": "Enter Waybill Number"
+        },
+        "INFORMATION-BLOCK": {
+            "DESCRIPTION": "DHL requires more information from you for the shipments indicated here before we can submit for Customs Clearance.",
+            "TITLE": "Perfect Your Shipment"
+        },
+        "CASES-TABLE": {
+            "HEADER-TIMESTAMP": "Notification Date",
+            "HEADER-WAYBILL": "Waybill Number",
+            "SUB-HEADER-TIMESTAMP": "dd-mm-yyyy",
+            "HEADER-ORIGIN-COUNTRY-MOBILE": "Origin",
+            "HEADER-ORIGIN-COUNTRY": "Origin Country",
+            "HEADER-WAYBILL-MOBILE": "Waybill",
+            "HEADER-SHIPPER": "Shipper",
+            "HEADER-STATUS": "Status"
+        },
+        "CASES-PAGINATION": {
+            "LABEL": "{{firstElementNumber}}-{{lastElementNumber}} of {{casesTotalCount}}"
+        }
+    },
+    "CASES": {
+        "SIR-SUBMIT-MODAL": {
+            "BUTTONS": {
+                "UNABLE-TO-SUBMIT": "Unable to Complete Form?",
+                "SUBMIT-MANY-CASES": "Submit ({{validCount}} of {{totalCount}})",
+                "SUBMIT-ONE-CASE": "Submit",
+                "BACK": "Back",
+                "CANCEL": "Edit"
+            },
+            "No": "Not Selected ",
+            "VIRUS-ERRORS": {
+                "TITLE": "File Upload Issue",
+                "BODY": "A virus was detected in {{fileNames}}. Please check the file(s) and try again."
+            },
+            "TOO-MANY-SHIPMENTS": {
+                "BODY": "The maximum number of shipments you can Apply your requirement to is {{ESB_max_configuration}}. Please select a smaller number of files and try again.",
+                "TITLE": "Apply To All Limit Exceeded"
+            },
+            "LABEL-WAYBILL": "Waybill",
+            "REMAINING-SHIPMENTS": {
+                "ORIGIN-COUNTRY": "Origin Country",
+                "HIDE": "Hide remaining shipments",
+                "SHIPMENT-VALUE": "Value",
+                "WAYBILL": "Waybill",
+                "SHOW": "Show remaining shipments"
+            },
+            "UNABLE-TO-COMPLETE": "Unable to Complete Form?",
+            "LOADER": {
+                "TITLE": "Processing Submission…",
+                "BODY": "Please do not close, refresh or leave this page while we process your information."
+            },
+            "TITLE-CONFIRM": "Confirm and Submit",
+            "PREVIEW-UNAVAILABLE": "Download",
+            "ERRORS": {
+                "TITLE": "We are sorry!",
+                "CONTACT_US_LINK": "Contact Us",
+                "BODY": "Due to technical difficulties, we are unable to submit your information. Please try again later or Contact Us."
+            },
+            "LABEL-CONSENT": "I confirm that all of the information I provided is accurate and valid for the purpose of submission to Customs authorities.",
+            "TEXTAREA-FORMAT-HINT": "Please enter reason for Incomplete submission or other comments",
+            "LABEL-READY": "Ready to Submit",
+            "FILE-MIME-ERRORS": {
+                "BODY": "The file extension(s) of the following file(s) are invalid: {{fileNames}}. Please fix their extensions and try again.",
+                "TITLE": "File Extension(s) Invalid"
+            },
+            "Yes": "Selected",
+            "UNSCANNABLE-FILES": {
+                "TITLE": "Password Protected File(s) Detected",
+                "BODY": "You cannot upload the following password protected file(s): {{fileNames}}. Please try again after removing password protection."
+            },
+            "VIEW-LABEL": "View",
+            "LABEL-INCOMPLETE": "Incomplete",
+            "APPLY-TO-ALL": {
+                "LABEL": "Apply your {{title}} to your remaining shipments"
+            }
+        },
+        "SHIPMENT-DETAILS-MODAL": {
+            "BUTTON-CLOSE-MOBILE": "View Less",
+            "SHIPMENT-INFORMATION": {
+                "WEIGHT": "Weight",
+                "PIECES": "Pieces",
+                "DESCRIPTION": "Description",
+                "MOBILE": ""
+            },
+            "TITLE-FROM": "Origin",
+            "TITLE-SHIPPER": "Shipper",
+            "BUTTON-TRACK-MOBILE": "Track Shipment",
+            "TITLE-MOBILE": "Shipment Detail"
+        },
+        "WAYBILL-DETAILS": {
+            "BUTTON-MORE-DETAILS": "View More",
+            "TITLE-SHIPPER": "Shipper",
+            "BUTTON-TRACK": "Track Shipment",
+            "TITLE-FROM": "Origin",
+            "BUTTON-LESS-DETAILS": "View Less",
+            "BUTTON-VIEW-DETAILS-MOBILE": "View More"
+        },
+        "SHIPMENT-DOCUMENTS": {
+            "WAYBILL-TITLE": "Waybill",
+            "MOBILE": {
+                "ITEMS-COUNT-TEXT": "1-{{showItems}} of {{totalItems}}",
+                "ITEMS-COUNT-LABEL": "Showing items: "
+            },
+            "BUTTONS": {
+                "LOAD-MORE": "View all",
+                "SHOW-LESS": "View less"
+            },
+            "INVOICE-TITLE-PLURAL": "Invoice Documents ({{invoiceCount}})",
+            "DOWNLOAD-TEXT": "Download all",
+            "PRINT-TEXT": "Print all",
+            "ITEMS-COUNT": "Showing 1-{{showItems}} of {{totalItems}}",
+            "WAYBILL-TITLE-PLURAL": "Waybill Documents ({{waybillCount}})",
+            "INVOICE-TITLE": "Invoice",
+            "TITLE": "Shipment Documents"
+        },
+        "ASK-REDIRECT-MODAL": {
+            "BUTTON-STAY": "Stay on Page",
+            "TITLE": "Do you want to leave or refresh this page?",
+            "DESCRIPTION": "Changes you made will be lost.",
+            "BUTTON-LEAVE": "Lose Changes"
+        },
+        "GENERAL-INFORMATION": {
+            "BUTTON-BACK": "Back",
+            "TITLE-MOBILE": "This shipment needs additional details.",
+            "TITLE": "This shipment needs additional details.",
+            "DESCRIPTION": "DHL requires more information from you for this shipment before we can submit for Customs Clearance."
+        },
+        "INFO-MESSAGE": {
+            "TITLE": "DHL Remarks",
+            "LINK": "View More"
+        },
+        "WAYBILL-NUMBER": {
+            "TITLE": "Waybill"
+        }
+    },
+    "CALL-US": {
+        "LOCAL-PHONE-NUMBERS": "<Customized by country>",
+        "OUTSIDE-PHONE-NUMBERS": "<Customized by country>",
+        "LABEL-OUTSIDE-OF-COUNTRY": "International Callers",
+        "TITLE": "Call Us",
+        "DESCRIPTION": "Questions and support from our DHL Customs Clearance Support Team."
+    },
+    "ERRORS": {
+        "FILE_UPLOADER_FILES_COUNT": "You can only upload {{count}} file(s).",
+        "DATE_PICKER_FUTURE": "The selected date must be in the future.",
+        "TEXT_AREA_EXACT_LENGTH": "{{title}} should be exactly {{length}} characters.",
+        "STRING_TEXT_FIELD_EMPTY": "{{title}} must be filled.",
+        "MASK": "Your input format is invalid. The expected format is {{mask}}",
+        "FILE_UPLOADER_EXTENSIONS": "The uploaded document must be in one of these formats: {{extensionsList}}",
+        "COMMENT_TEXT_AREA_EXACT_LENGTH": "Your Comments should be exactly {{length}} characters.",
+        "NUMBER_TEXT_FIELD_MIN_LENGTH": "{{title}} should have at least {{length}} digits.",
+        "UNKNOWN": "We are experiencing technical difficulties. Please try again later or Contact Us.",
+        "NUMBER_TEXT_FIELD_EXACT_LENGTH": "{{title}} should be exactly {{length}} digits.",
+        "COMMENT_TEXT_AREA_MIN_LENGTH": "Your Comments should have at least {{length}} characters.",
+        "COMPOSITE_ANY_OF": "Please complete at least one of the following fields {{list}}",
+        "DATE_PICKER_CURRENT": "You must select today's date.",
+        "EORI_NOT_VALID": "The number you entered is invalid. If you do not have an EORI number, select \"Don't have an EORI?\" below.",
+        "TEXT_AREA_MAX_LENGTH": "{{title}} should not have more than {{length}} characters.",
+        "TEXT_AREA_EMPTY": "{{title}} must be filled.",
+        "STRING_TEXT_FIELD_MIN_LENGTH": "{{sirTitle}} should not be less than {{length}} characters.",
+        "FILE_UPLOADER_ZERO_FILE_SIZE": "The size of the uploaded file is 0KB. Please upload a larger file.",
+        "STRING_TEXT_FIELD_MAX_LENGTH": "{{sirTitle}} should not be more than {{length}} characters.",
+        "INVALID_EMAIL": "Invalid e-mail.",
+        "TEXT_AREA_BETWEEN_LENGTH": "{{title}} should have between {{minLength}} and {{maxLength}} characters.",
+        "TEXT_AREA_REGEX": "Your comment cannot contain only special characters.",
+        "TECHNICAL_DIFFICULTIES": "We are experiencing technical difficulties. Please try again later or Contact Us.",
+        "COMMENT_TEXT_AREA_EMPTY": "Your Comments must be filled.",
+        "FILE_UPLOADER_FILE_SIZE": "The total size of all files uploaded must be less than {{fileSize}}.",
+        "COMMENT_TEXT_AREA_REGEX": "Your Comments cannot contain only special characters.",
+        "NUMBER_TEXT_FIELD_MAX_LENGTH": "{{title}} should not have more than {{length}} digits.",
+        "COMMENT_TEXT_AREA_MAX_LENGTH": "Your Comments should not have more than {{length}} characters.",
+        "NO_RESULTS": "No results found.",
+        "DATE_PICKER_PAST": "The selected date must be in the past.",
+        "TEXT_AREA_MIN_LENGTH": "{{title}} should have at least {{length}} characters.",
+        "COMPOSITE_ONE_OF": "Please complete exactly one of the following fields: {{list}}",
+        "DATE_PICKER_FUTURE_CURRENT": "The selected date must not be in the past.",
+        "NUMBER_TEXT_FIELD_BETWEEN_LENGTH": "{{title}} should have between {{minLength}} and {{maxLength}} digits.",
+        "INVALID_COUNTRY": "Please select a country.",
+        "COMMENT_TEXT_AREA_BETWEEN_LENGTH": "Your Comments should have between {{minLength}} and {{maxLength}} characters.",
+        "STRING_TEXT_FIELD_EXACT_LENGTH": "{{sirTitle}} should be exactly {{length}} characters.",
+        "STRING_TEXT_FIELD_BETWEEN_LENGTH": "{{sirTitle}} should have between {{minLength}} and {{maxLength}} characters.",
+        "DATE_PICKER_PAST_CURRENT": "The selected date must not be in the future."
+    },
+    "DATE-PICKER": {
+        "DATE-FORMAT": "DD.MM.YYYY",
+        "PLACEHOLDER-TEXT": "Select Date"
+    },
+    "THANK-YOU": {
+        "ODD-BANNER": {
+            "BUTTON": "",
+            "TITLE": "",
+            "BODY": ""
+        },
+        "LINK-LABEL": "Track your shipment",
+        "LINK-ADDITIONAL-LABEL": "",
+        "LABEL-PART1": "Your details are now being reviewed by our DHL Express Customs team. If any further action is required, we will reach out to you again.",
+        "LABEL-PART2": "Thank you for using DHL.",
+        "LABEL-PART3": "<Optional placeholder if country specific text>",
+        "COMMENT-TITLE": "Thank you for your comments.",
+        "COMMENT-LABEL-PART1": "Your comments are now being reviewed by our DHL Express Customs team. If any further action is required, we will reach out to you again.",
+        "LIST-TITLE": "Further Information",
+        "TITLE": "Thank you for your submission!"
+    },
+    "INVALID-LENGTH": {
+        "BODY": "The page cannot be found. Please check the URL.",
+        "TITLE": "We are sorry!"
+    },
+    "NOT-FOUND": {
+        "BODY": "The page cannot be found. Please check the URL.",
+        "TITLE": "We are sorry!"
+    },
+    "Chat": {
+        "Label": "Chat"
+    },
+    "EMAIL-US": {
+        "EMAILS-LIST": "<Customized by country>",
+        "TITLE": "Email Us",
+        "DESCRIPTION": "If you need help, please email us at"
+    },
+    "FOOTER": {
+        "MENU-ITEM": {
+            "CONTACT-US": "Contact us",
+            "COOKIE-SETTINGS": "Cookie Settings",
+            "LEGAL-OPTIONS": [
+                {
+                    "displayText": "Privacy Notice",
+                    "link": "https://www.dhl.com/us-en/home/footer/local-privacy-notice.html"
+                },
+                {
+                    "displayText": "Terms of Use",
+                    "link": "https://www.dhl.com/us-en/home/footer/terms-of-use.html"
+                }
+            ]
+        }
+    },
+    "QUICK-GUIDE": {
+        "NEXT": "",
+        "TITLE": "Quick Guide",
+        "DESCRIPTION": "",
+        "LABEL": "Quick Guide",
+        "PREVIOUS": "",
+        "CLOSE": "Close"
+    },
+    "FILE-UPLOADER": {
+        "LABELS": {
+            "MAXIMUM-FILE-SIZE": "Maximum Total File Size: {{maxSize}}",
+            "SUPPORTED-FORMATS": "Accepted File Types: {{allowedExtensions}}"
+        },
+        "SIZES": {
+            "MB": "{{size}} MB",
+            "TB": "{{size}} TB",
+            "BT": "{{size}} Bytes",
+            "GB": "{{size}} GB",
+            "KB": "{{size}} KB"
+        },
+        "BUTTONS": {
+            "CLEAR": "Remove Files"
+        }
+    },
+    "CASE-STATUSES": {
+        "CUSCT": "Pending Action",
+        "RWREJ": "Pending New Action"
+    },
+    "MOBILE-NAVIGATION": {
+        "HEADER-LEGAL-OPTIONS": "Legal",
+        "LABEL-CHANGE-LANGUAGE": "Language",
+        "LABEL-LEGAL": "Legal",
+        "LABEL-CONTACT-US": "Contact Us",
+        "HEADER-CONTACT-US": "Contact Us",
+        "LABEL-COOKIE-SETTINGS": "Cookie Settings"
+    },
+    "SESSION-EXPIRED": {
+        "LINK": "Start New Session.",
+        "TITLE": "Your session has expired.",
+        "TEXT": "Please click the link below to continue."
+    },
+    "GREF-NOT-FOUND": {
+        "TITLE": "We are sorry!",
+        "BODY": "The page cannot be found. Please check the URL."
+    },
+    "TECHNICAL-ISSUE": {
+        "TITLE": "We are sorry!",
+        "BODY": "We are experiencing technical difficulties. Please try again later or Contact Us.",
+        "CONTACT_US_LINK": "Contact Us"
+    },
+    "TOKEN-EXPIRED": {
+        "SUCCESS-MESSAGE": {
+            "TEXT": "",
+            "TITLE": ""
+        },
+        "RENEW-MESSAGE": {
+            "TEXT": "Please Contact Us for support.",
+            "TITLE": "This link is no longer valid.",
+            "LINK": ""
+        },
+        "ERROR-MESSAGE": {
+            "TITLE": "We are sorry!",
+            "TEXT": "We are experiencing technical difficulties. Please try again later or Contact Us."
+        }
+    },
+    "HEADER": {
+        "APP-HEADER": "Home"
+    },
+    "MISSING-COUNTRY-CODE": {
+        "BODY": "The page cannot be found. Please check the URL.",
+        "TITLE": "We are sorry!"
+    }
+}
