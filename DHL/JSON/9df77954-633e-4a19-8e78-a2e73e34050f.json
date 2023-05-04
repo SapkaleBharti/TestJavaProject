@@ -95,16 +95,16 @@
                             },
                             {
                               "Id": "8430861b-38c6-4e53-92a0-5a100bdd0d05",
-                              "Nm": "Returned Shipment - Radio button",
-                              "Dsc": "Returned Shipment description",
+                              "Nm": " Consent for Returned Shipment ",
+                              "Dsc": "Consent for Returned Shipment",
                               "isImg": false,
                               "isExcl": false,
                               "isMan": true,
                               "Att": [
                                 {
                                   "Id": "75e0a595-ab28-4e91-9949-fab52cdf82b5",
-                                  "Nm": "Returned Shipment - Radio button Entity",
-                                  "Dsc": "Returned Shipment - Radio button entity description",
+                                  "Nm": "Consent for Returned Shipment Entity",
+                                  "Dsc": "Consent for Returned Shipment entity description",
                                   "AttTy": "UserEntry",
                                   "isExcl": false,
                                   "isMan": true,
@@ -139,7 +139,7 @@
                                   "Nm": "Purpose Name - Radio button",
                                   "Dsc": "Purpose Name with a radiobutton component",
                                   "AttTy": "Constant",
-                                  "DflVal": "Agree to my parcel returned shipment after repair",
+                                  "DflVal": "User have parcel returned shipment after repair",
                                   "isExcl": false,
                                   "isMan": true,
                                   "Rul": [
@@ -149,7 +149,7 @@
                                       "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val='Opt2'",
                                       "AttrMtdt": [
                                         {
-                                          "DflVal": "Not agree my parcel returned shipment after repair"
+                                          "DflVal": "Does not have parcel returned shipment after repair"
                                         }
                                       ]
                                     }
@@ -160,7 +160,7 @@
                                   "Nm": "Purpose Description - Radio button",
                                   "Dsc": "Purpose Description with a radiobutton component",
                                   "AttTy": "Constant",
-                                  "DflVal": "Not agree my parcel returned shipment after repair",
+                                  "DflVal": "Does not have parcel returned shipment after repair",
                                   "isExcl": false,
                                   "isMan": true,
                                   "Rul": [
@@ -170,7 +170,7 @@
                                       "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val='Opt1'",
                                       "AttrMtdt": [
                                         {
-                                          "DflVal": "Agree to my parcel returned shipment after repair"
+                                          "DflVal": "User have parcel returned shipment after repair"
                                         }
                                       ]
                                     }
