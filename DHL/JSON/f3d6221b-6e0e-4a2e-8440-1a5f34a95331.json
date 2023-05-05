@@ -1,0 +1,572 @@
+[
+  {
+    "ShpInfReqDef": {
+      "Id": "f3d6221b-6e0e-4a2e-8440-1a5f34a95331",
+      "Nm": "Duty exemption confirmation - XC",
+      "Dsc": "Duty exemption confirmation  - Composed",
+      "DrvdFromShpInfReqDef": {},
+      "LedOwnOrgn": {
+        "CtryCd": "XC"
+      },
+      "ApplyAllInd": false,
+      "PrsnDatSenstyClssLvl": "Low",
+      "QuickGuideEnabledInd": false,
+      "UICmpt": {
+        "CmptNm": "DutyExemptionCon",
+        "DisplayTtl": "Duties Exoneration",
+        "Tooltip": "",
+        "CmptTy": "Composed",
+        "DisplayDsc": {
+          "DisplayTxt": ""
+        },
+        "Hint": ""
+      },
+      "Ent": [
+        {
+          "Id": "7050ada7-4753-4213-9a1d-5b752082d503",
+          "Nm": "Duty exemption confirmation entity",
+          "Dsc": "Duty exemption confirmation desc",
+          "isImg": false,
+          "isExcl": false,
+          "isMan": true,
+          "Ent": [
+            {
+              "Id" : "4aee72b1-d3f6-4e81-b7fb-e9c0671d3e12",
+              "Nm" : "Shipment Customer",
+              "Dsc" : "Shipment Customer Entity",
+              "isImg" : false,
+              "isExcl" : false,
+              "isMan" : true,
+              "Ent" : [
+                {
+                  "Id" : "523f0e8f-5446-49eb-b5a7-9afe68808404",
+                  "Nm" : "Business Party",
+                  "Dsc" : "Business Party Entity",
+                  "isImg" : false,
+                  "isExcl" : false,
+                  "isMan" : true,
+                  "Ent" : [
+                    {
+                      "Id" : "a2be3a59-fcc7-4d5b-9d6e-72bf9f18ad83",
+                      "Nm" : "Individual Customer",
+                      "Dsc" : "Individual Customer Entity",
+                      "isImg" : false,
+                      "isExcl" : false,
+                      "isMan" : true,
+                      "Ent" : [
+                        {
+                          "Id" : "7b1e7f53-86f5-41c2-8a56-817b8aa10ff8",
+                          "Nm" : "Consent",
+                          "Dsc" : "Consent Entity",
+                          "isImg" : false,
+                          "isExcl" : false,
+                          "isMan" : true,
+                          "Ent" : [
+                            {
+                              "Id" : "466defdf-59a2-4405-bff4-1366bf35c885",
+                              "Nm" : "Consent Category",
+                              "Dsc" : "Consent Category Entity",
+                              "isImg" : false,
+                              "isExcl" : false,
+                              "isMan" : true,
+                              "Att" : [
+                                {
+                                  "Id" : "d10cd3f2-57fc-4c51-b776-397a01c8e623",
+                                  "Nm" : "Consent Category Code",
+                                  "Dsc" : "The unique identificaiton of the Consent Purpose",
+                                  "AttTy" : "Constant",
+                                  "DflVal" : "CSTMS"
+                                },
+                                {
+                                  "Id" : "9aff925b-bc54-4421-9a30-ce6f14786408",
+                                  "Nm" : "Consent Category Name",
+                                  "Dsc" : "Consent Category Name",
+                                  "AttTy" : "Constant",
+                                  "DflVal" : "Customs Consents"
+                                },
+                                {
+                                  "Id" : "1cde53e8-9595-454d-b836-77a40d9dc746",
+                                  "Nm" : "Duty exemption confirmation Description",
+                                  "Dsc" : "Duty exemption confirmation Desc",
+                                  "AttTy" : "Constant",
+                                  "DflVal" : "Captures Customs Consents from User"
+                                }
+                              ]
+                            },
+                            {
+                              "Id" : "68c1cb19-9c41-4f9b-82c1-5aa621ce51c1",
+                              "Nm" : "Duty exemption confirmation- Radio button",
+                              "Dsc" : "Duty exemption confirmation component",
+                              "isImg" : false,
+                              "isExcl" : false,
+                              "isMan" : true,
+                              "Att" : [
+                                {
+                                  "Id" : "4d94eb4f-13ac-46de-8246-bfbb910f2d1c",
+                                  "Nm" : "Would you like DHL to request approval to clear your shipment",
+                                  "Dsc" : "Would you like DHL to request approval to clear your shipment desc",
+                                  "AttTy" : "UserEntry",
+                                  "isExcl" : false,
+                                  "isMan" : true,
+                                  "UICmpt" : {
+                                    "Order" : 1,
+                                    "CmptNm" : "ShipDHLApproval",
+                                    "DisplayTtl" : "",
+                                    "Tooltip" : "",
+                                    "CmptTy" : "RadioButton",
+                                    "DisplayDsc" : {
+                                      "DisplayTxt" : "Would you like DHL to request approval to clear your shipment"
+                                    },
+                                    "ValTy" : "Standard"
+                                  },
+                                  "Enum" : [
+                                    {
+                                      "Val" : "Yes",
+                                      "DisplayTxt" : "Yes",
+                                      "SrtOrd" : 1,
+                                      "Nm" : "Opt1"
+                                    },
+                                    {
+                                      "Val" : "No",
+                                      "DisplayTxt" : "No",
+                                      "SrtOrd" : 2,
+                                      "Nm" : "Opt2"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "Id" : "28c4e022-aef1-4c7e-95a2-2afdf3c6fc6a",
+                                  "Nm" : "Purpose Name - Radio button",
+                                  "Dsc" : "Purpose Name with a radiobutton component",
+                                  "AttTy" : "Constant",
+                                  "DflVal" : "Agree to DHL to request approval to clear your shipment",
+                                  "isExcl" : false,
+                                  "isMan" : true,
+                                  "Rul" : [
+                                    {
+                                      "RulId" : "deb281b8-676f-49c6-a728-5bb62ba68fdf2",
+                                      "Nm" : "Not agree purpose",
+                                      "Cond" : "**.Att[Id='4d94eb4f-13ac-46de-8246-bfbb910f2d1c'].Val='Opt2'",
+                                      "AttrMtdt" : [
+                                        {
+                                          "DflVal" : "Not Agree to DHL to request approval to clear your shipment"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "Id" : "01f1fd05-c217-4014-b296-d5f418a2f051",
+                                  "Nm" : "Purpose Description - Radio button",
+                                  "Dsc" : "Purpose Description with a radiobutton component",
+                                  "AttTy" : "Constant",
+                                  "DflVal" : "Not agree to clear shipment with DHL",
+                                  "isExcl" : false,
+                                  "isMan" : true,
+                                  "Rul" : [
+                                    {
+                                      "RulId" : "efd022f5-9416-44a8-b8bb-221dda2c78f8",
+                                      "Nm" : "Not agree Purpose Description",
+                                      "Cond" : "**.Att[Id='4d94eb4f-13ac-46de-8246-bfbb910f2d1c'].Val='Opt1'",
+                                      "AttrMtdt" : [
+                                        {
+                                          "DflVal" : "Agree to clear shipment with DHL"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Id": "190a738c-10ee-4985-a9e9-dbe98be5491b",
+              "Nm": "Shipment Document",
+              "Dsc": "Document Image",
+              "isImg": true,
+              "isExcl": false,
+              "isMan": true,
+              "Ent": [
+                {
+                  "Id": "105e03af-26a1-4ecc-bcce-83087484d05e",
+                  "Nm": "Original Invoice uploader",
+                  "Dsc": "Original Invoice uploader entity",
+                  "isImg": true,
+                  "isExcl": false,
+                  "isMan": true,
+                  "Att": [
+                    {
+                      "Id": "27ce60c2-44fe-4256-9be0-cff6c2c0ebba",
+                      "Nm": "Document Family Code",
+                      "Dsc": "Document Family Code",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": true,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": "DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocFamCd"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "fb7dd0c8-e3a0-49fe-8fe0-5529cbac9bfc",
+                      "Nm": "Document Type Code",
+                      "Dsc": "Document Type Code",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": true,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": "DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocTyCd"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "7adece8d-3786-4ffb-844e-c5053ba6cc58",
+                      "Nm": "Original Invoice Img",
+                      "Dsc": "Original Invoice Img desc",
+                      "AttTy": "UserEntry",
+                      "isExcl": false,
+                      "isMan": false,
+                      "isHidden" : true,
+                      "MaxFlSz": 6000,
+                      "MaxFlCnt": 20,
+                      "AlwExt": [
+                        "pdf",
+                        "jpeg",
+                        "jpg",
+                        "png",
+                        "bmp",
+                        "docx"
+                      ],
+                      "UICmpt": {
+                        "CmptNm": "OriginalInvImg",
+                        "DisplayTtl": "Original Invoice",
+                        "Hint": "Upload File(s)",
+                        "Tooltip": "",
+                        "CmptTy": "FileUploader",
+                        "DisplayDsc": {
+                          "DisplayTxt": ""
+                        },
+                        "Order": 2
+                      },
+                      "AttMsgPos": [
+                        {
+                          "Ver": "12.030",
+                          "MsgTyCd": "ShpPcdDetailsMsg",
+                          "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/Img/Loc"
+                        }
+                      ],
+                      "Rul" : [
+                        {
+                          "RulId" : "50c9cdb7-7276-4554-817a-b13579b62337",
+                          "Nm" : "Rule condition for Original Invoice",
+                          "Cond" : "**.Att[Id='4d94eb4f-13ac-46de-8246-bfbb910f2d1c'].Val = 'Opt1'",
+                          "AttrMtdt" : [
+                            {
+                              "isMan" : true,
+                              "isHidden" : false
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Id": "9ad6ea9e-7146-4840-9fd0-2cdf49f87549",
+                  "Nm": "Stamp Invoice - DVV Invoice uploader",
+                  "Dsc": "Stamp Invoice - DVV Invoice uploader entity",
+                  "isImg": true,
+                  "isExcl": false,
+                  "isMan": true,
+                  "Att": [
+                    {
+                      "Id": "2e943f04-408e-4900-abf0-8991149ea3a5",
+                      "Nm": "Document Family Code",
+                      "Dsc": "Document Family Code",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": true,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": "DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocFamCd"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "558d8bdc-3bd8-4b9d-95bf-af207857cbae",
+                      "Nm": "Document Type Code",
+                      "Dsc": "Document Type Code",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": true,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": "DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocTyCd"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "290084b7-465c-47a2-88f6-70830e75ba18",
+                      "Nm": "Stamp Invoice - DVV Img",
+                      "Dsc": "Stamp Invoice - DVV Img desc",
+                      "AttTy": "UserEntry",
+                      "isExcl": false,
+                      "isMan": false,
+                      "isHidden" : true,
+                      "MaxFlSz": 6000,
+                      "MaxFlCnt": 20,
+                      "AlwExt": [
+                        "pdf",
+                        "jpeg",
+                        "jpg",
+                        "png",
+                        "bmp",
+                        "docx"
+                      ],
+                      "UICmpt": {
+                        "CmptNm": "StampInvDVVImg",
+                        "DisplayTtl": "Stamp Invoice - DVV",
+                        "Hint": "Upload File(s)",
+                        "Tooltip": "",
+                        "CmptTy": "FileUploader",
+                        "DisplayDsc": {
+                          "DisplayTxt": " Please upload a copy of your Stamp original Invoice (DVV)"
+                        },
+                        "Order": 3
+                      },
+                      "AttMsgPos": [
+                        {
+                          "Ver": "12.030",
+                          "MsgTyCd": "ShpPcdDetailsMsg",
+                          "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/Img/Loc"
+                        }
+                      ],
+                      "Rul" : [
+                        {
+                          "RulId" : "6dedb499-e9a9-48e5-a6df-b23657da831a",
+                          "Nm" : "Rule condition for Stamp Original Invoice",
+                          "Cond" : "**.Att[Id='4d94eb4f-13ac-46de-8246-bfbb910f2d1c'].Val = 'Opt2'",
+                          "AttrMtdt" : [
+                            {
+                              "isMan" : true,
+                              "isHidden" : false
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Id": "3c79405c-d6ff-442c-90a9-42a6c54e6071",
+                  "Nm": "Stamp Airwaybill - DVV uploader",
+                  "Dsc": "Stamp Airwaybill - DVV uploader entity",
+                  "isImg": true,
+                  "isExcl": false,
+                  "isMan": true,
+                  "Att": [
+                    {
+                      "Id": "22f76a1d-5d7e-4224-b2ff-0be001dcfd94",
+                      "Nm": "Document Family Code",
+                      "Dsc": "Document Family Code",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": true,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": "DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocFamCd"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "a631055e-e8ad-44d8-8650-4d59f27f9636",
+                      "Nm": "Document Type Code",
+                      "Dsc": "Document Type Code",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": true,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": "DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocTyCd"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "15288bc9-3ed7-48b2-9158-59236aed8003",
+                      "Nm": "Stamp Airwaybill - DVV Img",
+                      "Dsc": "Stamp Airwaybill - DVV Img desc",
+                      "AttTy": "UserEntry",
+                      "isExcl": false,
+                      "isMan": false,
+                      "isHidden" : true,
+                      "MaxFlSz": 6000,
+                      "MaxFlCnt": 20,
+                      "AlwExt": [
+                        "pdf",
+                        "jpeg",
+                        "jpg",
+                        "png",
+                        "bmp",
+                        "docx"
+                      ],
+                      "UICmpt": {
+                        "CmptNm": "AirwaybillImg",
+                        "DisplayTtl": "Stamp Airwaybill - DVV",
+                        "Hint": "Upload File(s)",
+                        "Tooltip": "",
+                        "CmptTy": "FileUploader",
+                        "DisplayDsc": {
+                          "DisplayTxt": "Please upload a copy of your Stamp airwaybill (DVV) for the customs clearance of this shipment"
+                        },
+                        "Order": 4
+                      },
+                      "AttMsgPos": [
+                        {
+                          "Ver": "12.030",
+                          "MsgTyCd": "ShpPcdDetailsMsg",
+                          "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/Img/Loc"
+                        }
+                      ],
+                      "Rul" : [
+                        {
+                          "RulId" : "e45b211c-19ce-4a78-8b91-d225f591bf43",
+                          "Nm" : "Rule condition for Stamp Airwaybill - DVV",
+                          "Cond" : "**.Att[Id='4d94eb4f-13ac-46de-8246-bfbb910f2d1c'].Val = 'Opt2'",
+                          "AttrMtdt" : [
+                            {
+                              "isMan" : true,
+                              "isHidden" : false
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Id": "93f99e16-a94d-4521-99df-9a02f7c59c60",
+                  "Nm": "Stamp Exoneration Form - DVV uploader",
+                  "Dsc": "Stamp Exoneration Form - DVV uploader entity",
+                  "isImg": true,
+                  "isExcl": false,
+                  "isMan": true,
+                  "Att": [
+                    {
+                      "Id": "01032764-24ac-46cd-9521-fd75f81aa67a",
+                      "Nm": "Document Family Code",
+                      "Dsc": "Document Family Code",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": true,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": "DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocFamCd"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "79c3c3b1-a41a-45b3-a085-7e6c08b5fe8d",
+                      "Nm": "Document Type Code",
+                      "Dsc": "Document Type Code",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": true,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": "DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocTyCd"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "94254cc6-05bc-4da1-abae-3419c182ad97",
+                      "Nm": "Stamp Exoneration Form - DVV Img",
+                      "Dsc": "Stamp Exoneration Form - DVV desc",
+                      "AttTy": "UserEntry",
+                      "isExcl": false,
+                      "isMan": false,
+                      "isHidden" : true,
+                      "MaxFlSz": 6000,
+                      "MaxFlCnt": 20,
+                      "AlwExt": [
+                        "pdf",
+                        "jpeg",
+                        "jpg",
+                        "png",
+                        "bmp",
+                        "docx"
+                      ],
+                      "UICmpt": {
+                        "CmptNm": "StampExonerDVV",
+                        "DisplayTtl": "Stamp Exoneration Form - DVV",
+                        "Hint": "Upload File(s)",
+                        "Tooltip": "",
+                        "CmptTy": "FileUploader",
+                        "DisplayDsc": {
+                          "DisplayTxt": "Please upload a copy of your Stamp exoneration Form (DVV) for the customs clearance of this shipment."
+                        },
+                        "Order": 5
+                      },
+                      "AttMsgPos": [
+                        {
+                          "Ver": "12.030",
+                          "MsgTyCd": "ShpPcdDetailsMsg",
+                          "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/Img/Loc"
+                        }
+                      ],
+                      "Rul" : [
+                        {
+                          "RulId" : "b2a6914f-6840-4af5-a1e7-422927bae027",
+                          "Nm" : "Rule condition for Stamp Exoneration Form - DVV",
+                          "Cond" : "**.Att[Id='4d94eb4f-13ac-46de-8246-bfbb910f2d1c'].Val = 'Opt2'",
+                          "AttrMtdt" : [
+                            {
+                              "isMan" : true,
+                              "isHidden" : false
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+]
