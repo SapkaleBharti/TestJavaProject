@@ -181,54 +181,138 @@
                           ]
                         },
                         {
-                          "Id": "7badc66d-214b-4cf3-abba-68d666d89ee7",
-                          "Nm": "Repair Type Radio button",
-                          "Dsc": "Repair Type Radio button description",
+                          "Id": "9a3ec982-3c3c-4a31-9e9b-26427e90d4ed",
+                          "Nm": "Consent Repair Type entity",
+                          "Dsc": "Consent Repair Type desc",
                           "isImg": false,
                           "isExcl": false,
                           "isMan": false,
-                          "Att": [
+                          "Ent": [
                             {
-                              "Id": "9a5247db-2c9e-4185-9991-45aa04a0b29d",
-                              "Nm": "Repair Type Radio button Entity",
-                              "Dsc": "Repair Type Radio button entity desc",
-                              "AttTy": "UserEntry",
+                              "Id": "6143e2e9-b397-4235-937e-1546fc20bea3",
+                              "Nm": "Consent Repair Type",
+                              "Dsc": "Consent Repair Type Desc",
+                              "isImg": false,
                               "isExcl": false,
                               "isMan": false,
-                              "isHidden": true,
-                              "UICmpt": {
-                                "Order": 2,
-                                "CmptNm": "RepairType",
-                                "DisplayTtl": "",
-                                "Tooltip": "",
-                                "CmptTy": "RadioButton",
-                                "DisplayDsc": {
-                                  "DisplayTxt": "Repair Type description"
-                                },
-                                "ValTy": "Standard"
-                              },
-                              "Enum": [
+                              "Att": [
                                 {
-                                  "Val": "UnderWarranty",
-                                  "DisplayTxt": "Under Warranty",
-                                  "SrtOrd": 1,
-                                  "Nm": "Opt1"
+                                  "Id": "f5f2e149-fe2c-4a60-ab6c-29d88e5c5108",
+                                  "Nm": "Consent Category Code",
+                                  "Dsc": "The unique identificaiton of the Consent Purpose",
+                                  "AttTy": "Constant",
+                                  "DflVal": "CSTMS"
                                 },
                                 {
-                                  "Val": "NoUnderWarranty",
-                                  "DisplayTxt": "Not Under Warranty",
-                                  "SrtOrd": 2,
-                                  "Nm": "Opt2"
+                                  "Id": "3dab625b-7d8d-451d-aaf3-12a63daa5f94",
+                                  "Nm": "Consent Category Name",
+                                  "Dsc": "Consent Category Name",
+                                  "AttTy": "Constant",
+                                  "DflVal": "Customs Consents"
+                                },
+                                {
+                                  "Id": "f9367ed6-f4fe-42f8-aad8-08f2ab6d3347",
+                                  "Nm": "Consent Category Description",
+                                  "Dsc": "Consent Category Desc",
+                                  "AttTy": "Constant",
+                                  "DflVal": "Captures Customs Consents from User"
                                 }
-                              ],
-                              "Rul": [
+                              ]
+                            },
+                            {
+                              "Id": "da23cc78-b5fc-4189-94ad-0a6eb6cb97ba",
+                              "Nm": "Consent Purpose -Repair Type",
+                              "Dsc": "Consent Purpose - Repair Type desc",
+                              "isImg": false,
+                              "isExcl": false,
+                              "isMan": false,
+                              "Att": [
                                 {
-                                  "RulId": "2d76d5e7-5a5a-47d5-a8ac-38c387b19e43",
-                                  "Nm": "Rule condition for Repair Type",
-                                  "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val='Opt1' and **.Att[Id='9a5247db-2c9e-4185-9991-45aa04a0b29d'].Val='Opt1'",
-                                  "AttrMtdt": [
+                                  "Id": "9a5247db-2c9e-4185-9991-45aa04a0b29d",
+                                  "Nm": "Repair Type conformation",
+                                  "Dsc": "Repair Typer Confirmation Description",
+                                  "AttTy": "UserEntry",
+                                  "isExcl": false,
+                                  "isMan": false,
+                                  "isHidden": true,
+                                  "UICmpt": {
+                                    "Order": 2,
+                                    "CmptNm": "RepairType",
+                                    "DisplayTtl": "",
+                                    "Tooltip": "",
+                                    "CmptTy": "RadioButton",
+                                    "DisplayDsc": {
+                                      "DisplayTxt": ""
+                                    },
+                                    "ValTy": "Standard"
+                                  },
+                                  "Enum": [
                                     {
-                                      "isHidden": false
+                                      "Val": "UnderWarranty",
+                                      "DisplayTxt": "Under Warranty",
+                                      "SrtOrd": 1,
+                                      "Nm": "Opt1"
+                                    },
+                                    {
+                                      "Val": "NoUnderWarranty",
+                                      "DisplayTxt": "Not Under Warranty",
+                                      "SrtOrd": 2,
+                                      "Nm": "Opt2"
+                                    }
+                                  ],
+                                  "Rul": [
+                                    {
+                                      "RulId": "607d8481-ba7c-4c95-ae07-8273cc077f59",
+                                      "Nm": "Rule condition to Repair Type",
+                                      "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val='Opt1'",
+                                      "AttrMtdt": [
+                                        {
+                                          "isMan": true,
+                                          "isHidden": false
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "Id": "18b014c0-2dd2-4888-850b-e52e28e24657",
+                                  "Nm": "Purpose Name - Repair Type",
+                                  "Dsc": "Purpose Name - Repair Type desc",
+                                  "AttTy": "Constant",
+                                  "DflVal": "User does not have Repair Type",
+                                  "isExcl": false,
+                                  "isMan": false,
+                                  "Rul": [
+                                    {
+                                      "RulId": "f44b3e0f-4f59-4df7-a20e-e95f296de3c3",
+                                      "Nm": "Agree to Repair type purpose Description",
+                                      "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val='Opt2'and **.Att[Id='9a5247db-2c9e-4185-9991-45aa04a0b29d'].Val='Opt2'",
+                                      "AttrMtdt": [
+                                        {
+                                          "DflVal": "User doesn't have Repair Type"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "Id": "e8a10bae-c136-42ac-a12c-583a95fa51a0",
+                                  "Nm": "User have Repair Type",
+                                  "Dsc": "User have Repair Type Decription",
+                                  "AttTy": "Constant",
+                                  "DflVal": "User doesn't have Repair Type",
+                                  "isExcl": false,
+                                  "isMan": false,
+                                  "Rul": [
+                                    {
+                                      "RulId": "25b0b47d-b250-4054-ba33-d4d7b7947ead",
+                                      "Nm": "Not agree to Repair type purpose Description",
+                                      "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val='Opt1'and **.Att[Id='9a5247db-2c9e-4185-9991-45aa04a0b29d'].Val='Opt1'",
+                                      "AttrMtdt": [
+                                        {
+                                          "DflVal": "User does not have Repair Type"
+                                        }
+                                      ]
                                     }
                                   ]
                                 }
@@ -297,8 +381,8 @@
                               "Att": [
                                 {
                                   "Id": "917a20fa-f163-454d-b941-fbe3bb21018c",
-                                  "Nm": "Shipment with DHL RadioButton",
-                                  "Dsc": "Shipment with DHL Desc",
+                                  "Nm": "Shipment with DHL Entity",
+                                  "Dsc": "Shipment with DHL  Entity Desc",
                                   "AttTy": "UserEntry",
                                   "isExcl": false,
                                   "isMan": false,
