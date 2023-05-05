@@ -39,7 +39,7 @@
               "isMan": true,
               "Att": [
                 {
-                  "Id": "3df3c6b2-5bb4-4857-882f-de36c910b960",
+                  "Id": "f6922ca1-519a-4ca0-b124-86ab571faefb",
                   "Nm": "Customer role type code",
                   "Dsc": "This is customer role type code attribute which is used to signigy the role of Customer in business transaction. A code that uniquely identifies a customer role.",
                   "AttTy": "Session",
@@ -141,8 +141,8 @@
                               "Att": [
                                 {
                                   "Id": "6a2f893d-8c39-42ed-9b9e-450d21092907",
-                                  "Nm": "Shipment Cost radio button",
-                                  "Dsc": "Shipment Cost radio button description",
+                                  "Nm": "High Value Shipment Consent",
+                                  "Dsc": "High Value Shipment Consent description",
                                   "AttTy": "UserEntry",
                                   "isExcl": false,
                                   "isMan": true,
@@ -183,11 +183,11 @@
                                   "Rul": [
                                     {
                                       "RulId": "e74fa4ae-a5f6-4d08-b583-f96373e3b958",
-                                      "Nm": "Not agree purpose",
+                                      "Nm": "Agree High Value Shipment Rule",
                                       "Cond": "**.Att[Id='6a2f893d-8c39-42ed-9b9e-450d21092907'].Val='Opt2'",
                                       "AttrMtdt": [
                                         {
-                                          "DflVal": "Shipment does not cost more than 999 Euros"
+                                          "DflVal": "Not agree for Shipment cost more than 999 Euros"
                                         }
                                       ]
                                     }
@@ -198,17 +198,17 @@
                                   "Nm": "Purpose Description - Radio button",
                                   "Dsc": "Purpose Description with a radiobutton component",
                                   "AttTy": "Constant",
-                                  "DflVal": "User confirmed that the shipment costs more than 999 Euros",
+                                  "DflVal": "Not agree for Shipment cost more than 999 Euros",
                                   "isExcl": false,
                                   "isMan": true,
                                   "Rul": [
                                     {
                                       "RulId": "ed7d5c64-cab3-4b19-a4c7-13825ac3ee3d",
-                                      "Nm": "Not agree Purpose Description",
-                                      "Cond": "**.'6a2f893d-8c39-42ed-9b9e-450d21092907'].Val='Opt1'",
+                                      "Nm": "Not Agree High Value Shipment Rule",
+                                      "Cond": "**.'6a2f893d-8c39-42ed-9b9e-450d21092907'].Val='Opt2'",
                                       "AttrMtdt": [
                                         {
-                                          "DflVal": " User confirmed that the shipment does not costs more than 999 Euros"
+                                          "DflVal": "Agree to Shipment cost more than 999 Euros"
                                         }
                                       ]
                                     }
@@ -256,7 +256,7 @@
                                   "DflVal": "Captures Customs Consents from User"
                                 }
                               ]
-                                },
+                            },
                             {
                               "Id": "4829cfe1-fcbb-48d2-9344-d8468de1f41d",
                               "Nm": "Consent Purpose - Greek VAT Number",
@@ -268,14 +268,14 @@
                                 {
                                   "Id": "0da3ad86-cc40-44ff-9ad4-60780be50fc8",
                                   "Nm": "Greek VAT number Confirmation",
-                                  "Dsc": "Greek VAT number desc",
+                                  "Dsc": "Greek VAT number Confirmation Description",
                                   "AttTy": "UserEntry",
                                   "isExcl": false,
                                   "isMan": false,
                                   "isHidden": true,
                                   "UICmpt": {
                                     "Order": 2,
-                                    "CmptNm": "PORadioBtn",
+                                    "CmptNm": "GRVatBtn",
                                     "DisplayTtl": "",
                                     "Tooltip": "",
                                     "CmptTy": "RadioButton",
@@ -302,7 +302,8 @@
                                     {
                                       "RulId": "55b3c76f-cf7e-4a24-abeb-57694b7cd4ef",
                                       "Nm": "Rule condition to Greek vat number",
-                                      "Cond": "**.Att[Id='6a2f893d-8c39-42ed-9b9e-450d21092907'].Val='Opt1'and **.Att[Id='0da3ad86-cc40-44ff-9ad4-60780be50fc8'].Val='Opt1'", "AttrMtdt": [
+                                      "Cond": "**.Att[Id='6a2f893d-8c39-42ed-9b9e-450d21092907'].Val='Opt1'",
+                                      "AttrMtdt": [
                                         {
                                           "isMan": true,
                                           "isHidden": false
@@ -323,7 +324,7 @@
                                     {
                                       "RulId": "e9082d77-d449-427e-b7cc-bdbd1101a8c6",
                                       "Nm": "Agree to have a Greek VAT number purpose",
-                                      "Cond": "**.Att[Id='0da3ad86-cc40-44ff-9ad4-60780be50fc8'].Val='Opt2'",
+                                      "Cond": "**.Att[Id='6a2f893d-8c39-42ed-9b9e-450d21092907'].Val='Opt1'and **.Att[Id='0da3ad86-cc40-44ff-9ad4-60780be50fc8'].Val='Opt2'",
                                       "AttrMtdt": [
                                         {
                                           "DflVal": "User doesn't have Greek VAT number"
@@ -334,8 +335,8 @@
                                 },
                                 {
                                   "Id": "b5438bd1-82cd-4617-a280-f1cb172a0128",
-                                  "Nm": "Purpose Description - Greek VAT number",
-                                  "Dsc": "Purpose Description - Greek VAT number desc",
+                                  "Nm": "User have Greek VAT number",
+                                  "Dsc": "User have Greek VAT number Decription",
                                   "AttTy": "Constant",
                                   "DflVal": "User doesn't have Greek VAT numberr",
                                   "isExcl": false,
@@ -344,10 +345,10 @@
                                     {
                                       "RulId": "ed7d5c64-cab3-4b19-a4c7-13825ac3ee3d",
                                       "Nm": "Not agree to have a Greek VAT number purpose Description",
-                                      "Cond": "**.'0da3ad86-cc40-44ff-9ad4-60780be50fc8'].Val='Opt1'and **.Att[Id='0da3ad86-cc40-44ff-9ad4-60780be50fc8'].Val='Opt1'",
+                                      "Cond": "**.Att[Id='6a2f893d-8c39-42ed-9b9e-450d21092907'].Val='Opt1'and **.Att[Id='0da3ad86-cc40-44ff-9ad4-60780be50fc8'].Val='Opt2'",
                                       "AttrMtdt": [
                                         {
-                                          "DflVal": "User doesn't have Greek VAT number"
+                                          "DflVal": "User does not have Greek VAT Number"
                                         }
                                       ]
                                     }
@@ -402,7 +403,15 @@
                         "Tooltip": "",
                         "CmptTy": "TextInput",
                         "DisplayDsc": {
-                          "DisplayTxt": "ID Description text"
+                          "DisplayTxt": "",
+                          "DscCmpt" : [
+                            {
+                              "Val" : "Verify your EORI Number https://ec.europa.eu/taxation_customs/dds2/eos/eori_validation.jsp?Lang=en&EoriNumb=GR123456789&Expand=true",
+                              "DisplayTxt" : "here",
+                              "Ty" : "Hyperlink",
+                              "Ky" : ""
+                            }
+                          ]
                         },
                         "ValTy": "Regex"
                       },
