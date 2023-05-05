@@ -3,7 +3,7 @@
     "ShpInfReqDef": {
       "Id": "4198765d-a388-4fa7-bcd8-2e288efbf27d",
       "Nm": "Return goods relief- TR",
-      "Dsc": "To be added in future release desc",
+      "Dsc": "To be added in future release",
       "DrvdFromShpInfReqDef": {},
       "LedOwnOrgn": {
         "CtryCd": "TR"
@@ -14,10 +14,10 @@
       "UICmpt": {
         "CmptNm": "ReturnedTax",
         "DisplayTtl": "Returned Goods Duty and Tax Exemption",
-        "Tooltip": "Display Tooltip",
+        "Tooltip": "Please ensure that your documents are stamped and signed.",
         "CmptTy": "Composed",
         "DisplayDsc": {
-          "DisplayTxt": "DHL Express requires a Returned Goods Tax Exemption "
+          "DisplayTxt": ""
         }
       },
       "Ent": [
@@ -72,6 +72,7 @@
                 {
                   "Id": "4dfa98e5-6d50-481a-8706-00b9b451a7e5",
                   "Nm": "Return goods relief Img",
+                  "Dsc": "To be added in future release Desc",
                   "AttTy": "UserEntry",
                   "isExcl": false,
                   "isMan": true,
