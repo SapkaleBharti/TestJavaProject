@@ -2,8 +2,8 @@
   {
     "ShpInfReqDef": {
       "Id": " 9df77954-633e-4a19-8e78-a2e73e34050f",
-      "Nm": "Returns Original Export proof required- GR",
-      "Dsc": "To be added in future release",
+      "Nm": "Returned Export - GR",
+      "Dsc": "This import shipment is a returning commercial export",
       "DrvdFromShpInfReqDef": {},
       "LedOwnOrgn": {
         "CtryCd": "GR"
@@ -17,7 +17,7 @@
         "Tooltip": "",
         "CmptTy": "Composed",
         "DisplayDsc": {
-          "DisplayTxt": "Returned Export"
+          "DisplayTxt": ""
         },
         "Hint": ""
       },
@@ -56,8 +56,8 @@
                       "Ent": [
                         {
                           "Id": "d4c1b6ad-3a6e-442b-825d-735bacfd1bbf",
-                          "Nm": "Consent for Returns Original Export proof required",
-                          "Dsc": "Consent for Returns Original Export proof required Entity",
+                          "Nm": "Consent for Returned Shipment",
+                          "Dsc": "Consent for Returned Shipment Entity",
                           "isImg": false,
                           "isExcl": false,
                           "isMan": true,
@@ -95,16 +95,16 @@
                             },
                             {
                               "Id": "8430861b-38c6-4e53-92a0-5a100bdd0d05",
-                              "Nm": " Consent for Returned Shipment ",
-                              "Dsc": "Consent for Returned Shipment",
+                              "Nm": "Returned Shipment - Radio button",
+                              "Dsc": "Returned Shipment description",
                               "isImg": false,
                               "isExcl": false,
                               "isMan": true,
                               "Att": [
                                 {
                                   "Id": "75e0a595-ab28-4e91-9949-fab52cdf82b5",
-                                  "Nm": " Returns Original Export proof required Shipment Entity",
-                                  "Dsc": "To be added in future release desc",
+                                  "Nm": "Returned Shipment Entity",
+                                  "Dsc": "Returned Shipment entity description",
                                   "AttTy": "UserEntry",
                                   "isExcl": false,
                                   "isMan": true,
@@ -139,7 +139,7 @@
                                   "Nm": "Purpose Name - Radio button",
                                   "Dsc": "Purpose Name with a radiobutton component",
                                   "AttTy": "Constant",
-                                  "DflVal": "User have parcel returned shipment after repair",
+                                  "DflVal": "Agree to parcel returned shipment after repair",
                                   "isExcl": false,
                                   "isMan": true,
                                   "Rul": [
@@ -149,7 +149,7 @@
                                       "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val='Opt2'",
                                       "AttrMtdt": [
                                         {
-                                          "DflVal": "Does not have parcel returned shipment after repair"
+                                          "DflVal": "Not agree parcel returned shipment after repair"
                                         }
                                       ]
                                     }
@@ -160,7 +160,7 @@
                                   "Nm": "Purpose Description - Radio button",
                                   "Dsc": "Purpose Description with a radiobutton component",
                                   "AttTy": "Constant",
-                                  "DflVal": "Does not have parcel returned shipment after repair",
+                                  "DflVal": "Not agree my parcel returned shipment after repair",
                                   "isExcl": false,
                                   "isMan": true,
                                   "Rul": [
@@ -170,7 +170,7 @@
                                       "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val='Opt1'",
                                       "AttrMtdt": [
                                         {
-                                          "DflVal": "User have parcel returned shipment after repair"
+                                          "DflVal": "Agree to parcel returned shipment after repair"
                                         }
                                       ]
                                     }
@@ -182,16 +182,16 @@
                         },
                         {
                           "Id": "7badc66d-214b-4cf3-abba-68d666d89ee7",
-                          "Nm": "Repair Type - Radio button",
-                          "Dsc": "Repair Type description",
+                          "Nm": "Repair Type Radio button",
+                          "Dsc": "Repair Type Radio button description",
                           "isImg": false,
                           "isExcl": false,
                           "isMan": false,
                           "Att": [
                             {
                               "Id": "9a5247db-2c9e-4185-9991-45aa04a0b29d",
-                              "Nm": "Repair Type - Radio button Entity",
-                              "Dsc": "Repair Type - Radio button entity description",
+                              "Nm": "Repair Type Radio button Entity",
+                              "Dsc": "Repair Type Radio button entity desc",
                               "AttTy": "UserEntry",
                               "isExcl": false,
                               "isMan": false,
@@ -332,7 +332,7 @@
                                     {
                                       "RulId": "da4cdfc0-21a3-4547-943f-05cb864c8ec8",
                                       "Nm": "Rule condition for Shipment with DHL",
-                                      "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val='Opt2' and **.Att[Id='917a20fa-f163-454d-b941-fbe3bb21018c'].Val='Opt1' ",
+                                      "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val='Opt2'",
                                       "AttrMtdt": [
                                         {
                                           "isMan": true,
