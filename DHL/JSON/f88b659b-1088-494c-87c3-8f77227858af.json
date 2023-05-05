@@ -3,7 +3,7 @@
         "ShpInfReqDef": {
             "Id": "f88b659b-1088-494c-87c3-8f77227858af",
             "Nm": "Power of Attorney- TR",
-            "Dsc": "Power of Attorney Description",
+            "Dsc": "To be added in future release",
             "DrvdFromShpInfReqDef": {},
             "LedOwnOrgn": {
                 "CtryCd": "TR"
@@ -24,7 +24,7 @@
                 {
                     "Id": "aa5ffc8d-fbc2-4cf3-ae67-fe7545af632e",
                     "Nm": "Power of Attorney",
-                    "Dsc": "Power of Attorney Desc",
+                    "Dsc": "To be added in future release Desc",
                     "isImg": false,
                     "isExcl": false,
                     "isMan": true,
@@ -431,7 +431,7 @@
                                                         },
                                                         {
                                                             "Id": "8041818e-1c52-4f21-b2ca-06c148f7b754",
-                                                            "Nm": "Delivery Address Line 2 (Optional)",
+                                                            "Nm": "Delivery Address Line",
                                                             "Dsc": "Delivery Address Entity Desc ",
                                                             "AttTy": "UserEntry",
                                                             "isExcl": false,
@@ -473,7 +473,7 @@
                                                         },
                                                         {
                                                             "Id": "436b4e99-c008-44c9-bdf6-87288b5da524",
-                                                            "Nm": "Delivery Address Line 3 (Optional)",
+                                                            "Nm": "Delivery Address Line  ",
                                                             "Dsc": "Delivery Address Entity Desc ",
                                                             "AttTy": "UserEntry",
                                                             "isExcl": false,
