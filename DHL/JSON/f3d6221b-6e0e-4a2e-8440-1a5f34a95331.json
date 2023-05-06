@@ -3,13 +3,13 @@
     "ShpInfReqDef": {
       "Id": "f3d6221b-6e0e-4a2e-8440-1a5f34a95331",
       "Nm": "Duty exemption confirmation - XC",
-      "Dsc": "Duty exemption confirmation  - Composed",
+      "Dsc": "Duty exemption confirmation desc",
       "DrvdFromShpInfReqDef": {},
       "LedOwnOrgn": {
         "CtryCd": "XC"
       },
       "ApplyAllInd": false,
-      "PrsnDatSenstyClssLvl": "Low",
+      "PrsnDatSenstyClssLvl": "VeryHigh",
       "QuickGuideEnabledInd": false,
       "UICmpt": {
         "CmptNm": "DutyExemptionCon",
@@ -24,7 +24,7 @@
       "Ent": [
         {
           "Id": "7050ada7-4753-4213-9a1d-5b752082d503",
-          "Nm": "Duty exemption confirmation entity",
+          "Nm": "Duty exemption confirmation ",
           "Dsc": "Duty exemption confirmation desc",
           "isImg": false,
           "isExcl": false,
@@ -32,11 +32,49 @@
           "Ent": [
             {
               "Id" : "4aee72b1-d3f6-4e81-b7fb-e9c0671d3e12",
-              "Nm" : "Shipment Customer",
-              "Dsc" : "Shipment Customer Entity",
+              "Nm" : "Shipment Customer Entity",
+              "Dsc" : "Shipment Customer Entity desc",
               "isImg" : false,
               "isExcl" : false,
               "isMan" : true,
+              "Att": [
+                {
+                  "Id": "78f87241-6fe5-4d36-94a3-b6761ae08c8b",
+                  "Nm": "Customer role type code",
+                  "Dsc": "This is customer role type code attribute which is used to signigy the role of Customer in business transaction.",
+                  "AttTy": "Session",
+                  "isExcl": false,
+                  "isMan": true,
+                  "SessnPrmtId": "RlTyCd",
+                  "Enum": [
+                    {
+                      "Val": "IP",
+                      "DisplayTxt": "importer",
+                      "SrtOvrdSqNo": 1,
+                      "IsDfl": false
+                    },
+                    {
+                      "Val": "SP",
+                      "DisplayTxt": "shipper",
+                      "SrtOvrdSqNo": 2,
+                      "IsDfl": false
+                    },
+                    {
+                      "Val": "RV",
+                      "DisplayTxt": "Receiver",
+                      "SrtOvrdSqNo": 3,
+                      "IsDfl": false
+                    }
+                  ],
+                  "AttMsgPos": [
+                    {
+                      "Ver": "12.030",
+                      "MsgTyCd": "ShpPcdDetailsMsg",
+                      "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpCust/CustRolTyCd"
+                    }
+                  ]
+                }
+              ],
               "Ent" : [
                 {
                   "Id" : "523f0e8f-5446-49eb-b5a7-9afe68808404",
@@ -56,16 +94,16 @@
                       "Ent" : [
                         {
                           "Id" : "7b1e7f53-86f5-41c2-8a56-817b8aa10ff8",
-                          "Nm" : "Consent",
-                          "Dsc" : "Consent Entity",
+                          "Nm" : "Consent for Shipment Cost",
+                          "Dsc" : "Consent for Shipment Cost Entity",
                           "isImg" : false,
                           "isExcl" : false,
                           "isMan" : true,
                           "Ent" : [
                             {
                               "Id" : "466defdf-59a2-4405-bff4-1366bf35c885",
-                              "Nm" : "Consent Category",
-                              "Dsc" : "Consent Category Entity",
+                              "Nm" : "Consent Shipment Cost Category",
+                              "Dsc" : "Consent Shipment Cost Category Entity",
                               "isImg" : false,
                               "isExcl" : false,
                               "isMan" : true,
@@ -80,7 +118,7 @@
                                 {
                                   "Id" : "9aff925b-bc54-4421-9a30-ce6f14786408",
                                   "Nm" : "Consent Category Name",
-                                  "Dsc" : "Consent Category Name",
+                                  "Dsc" : "Consent Category Name desc",
                                   "AttTy" : "Constant",
                                   "DflVal" : "Customs Consents"
                                 },
@@ -103,8 +141,8 @@
                               "Att" : [
                                 {
                                   "Id" : "4d94eb4f-13ac-46de-8246-bfbb910f2d1c",
-                                  "Nm" : "Would you like DHL to request approval to clear your shipment",
-                                  "Dsc" : "Would you like DHL to request approval to clear your shipment desc",
+                                  "Nm" : "Shipment request approval to DHL",
+                                  "Dsc" : "Shipment request approval to DHL desc",
                                   "AttTy" : "UserEntry",
                                   "isExcl" : false,
                                   "isMan" : true,
@@ -149,7 +187,7 @@
                                       "Cond" : "**.Att[Id='4d94eb4f-13ac-46de-8246-bfbb910f2d1c'].Val='Opt2'",
                                       "AttrMtdt" : [
                                         {
-                                          "DflVal" : "Not Agree to DHL to request approval to clear your shipment"
+                                          "DflVal" : "User agree to DHL to request approval to clear your shipment"
                                         }
                                       ]
                                     }
@@ -170,7 +208,7 @@
                                       "Cond" : "**.Att[Id='4d94eb4f-13ac-46de-8246-bfbb910f2d1c'].Val='Opt1'",
                                       "AttrMtdt" : [
                                         {
-                                          "DflVal" : "Agree to clear shipment with DHL"
+                                          "DflVal" : " User does not agree to clear shipment with DHL"
                                         }
                                       ]
                                     }
