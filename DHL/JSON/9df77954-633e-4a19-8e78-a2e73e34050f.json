@@ -2,14 +2,14 @@
   {
     "ShpInfReqDef": {
       "Id": " 9df77954-633e-4a19-8e78-a2e73e34050f",
-      "Nm": "Returned Export - GR",
-      "Dsc": "This import shipment is a returning commercial export",
+      "Nm": "Returns Original Export proof required - GR",
+      "Dsc": "Returns Original Export proof required Desc",
       "DrvdFromShpInfReqDef": {},
       "LedOwnOrgn": {
         "CtryCd": "GR"
       },
       "ApplyAllInd": false,
-      "PrsnDatSenstyClssLvl": "Low",
+      "PrsnDatSenstyClssLvl": "VeryHigh",
       "QuickGuideEnabledInd": false,
       "UICmpt": {
         "CmptNm": "RetExport",
@@ -17,7 +17,7 @@
         "Tooltip": "",
         "CmptTy": "Composed",
         "DisplayDsc": {
-          "DisplayTxt": ""
+          "DisplayTxt": "Returns Original Export proof required Desc"
         },
         "Hint": ""
       },
@@ -37,6 +37,44 @@
               "isImg": false,
               "isExcl": false,
               "isMan": true,
+              "Att": [
+                {
+                  "Id": "b1b12a59-e115-4764-ad8d-76c8bc78c6e5",
+                  "Nm": "Customer role type code",
+                  "Dsc": "This is customer role type code attribute which is used to signigy the role of Customer in business transaction.",
+                  "AttTy": "Session",
+                  "isExcl": false,
+                  "isMan": true,
+                  "SessnPrmtId": "RlTyCd",
+                  "Enum": [
+                    {
+                      "Val": "IP",
+                      "DisplayTxt": "importer",
+                      "SrtOvrdSqNo": 1,
+                      "IsDfl": false
+                    },
+                    {
+                      "Val": "SP",
+                      "DisplayTxt": "shipper",
+                      "SrtOvrdSqNo": 2,
+                      "IsDfl": false
+                    },
+                    {
+                      "Val": "RV",
+                      "DisplayTxt": "Receiver",
+                      "SrtOvrdSqNo": 3,
+                      "IsDfl": false
+                    }
+                  ],
+                  "AttMsgPos": [
+                    {
+                      "Ver": "12.030",
+                      "MsgTyCd": "ShpPcdDetailsMsg",
+                      "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpCust/CustRolTyCd"
+                    }
+                  ]
+                }
+              ],
               "Ent": [
                 {
                   "Id": "181beb24-9acb-4b2b-9839-3798cbc93406",
@@ -64,8 +102,8 @@
                           "Ent": [
                             {
                               "Id": "e51fc277-a311-4724-9dba-341b2d3e8e18",
-                              "Nm": "Consent Category",
-                              "Dsc": "Consent Category Entity",
+                              "Nm": "Consent Returned Shipment Category",
+                              "Dsc": "Consent Returned Shipment Category desc",
                               "isImg": false,
                               "isExcl": false,
                               "isMan": true,
@@ -95,8 +133,8 @@
                             },
                             {
                               "Id": "8430861b-38c6-4e53-92a0-5a100bdd0d05",
-                              "Nm": "Returned Shipment - Radio button",
-                              "Dsc": "Returned Shipment description",
+                              "Nm": "Consent Purpose Returned Shipment - Radio button",
+                              "Dsc": "Consent Purpose Returned Shipment - Radio button desc",
                               "isImg": false,
                               "isExcl": false,
                               "isMan": true,
@@ -139,17 +177,17 @@
                                   "Nm": "Purpose Name - Radio button",
                                   "Dsc": "Purpose Name with a radiobutton component",
                                   "AttTy": "Constant",
-                                  "DflVal": "Agree to parcel returned shipment after repair",
+                                  "DflVal": "User agree to return parcel shipment after repair",
                                   "isExcl": false,
                                   "isMan": true,
                                   "Rul": [
                                     {
                                       "RulId": "ff1f1b35-1404-4c24-a774-cdb2e79853a1",
-                                      "Nm": "Not agree purpose",
+                                      "Nm": "Not Agree return Shipment Rule",
                                       "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val='Opt2'",
                                       "AttrMtdt": [
                                         {
-                                          "DflVal": "Not agree parcel returned shipment after repair"
+                                          "DflVal": "User agree to return parcel shipment after repair."
                                         }
                                       ]
                                     }
@@ -160,17 +198,17 @@
                                   "Nm": "Purpose Description - Radio button",
                                   "Dsc": "Purpose Description with a radiobutton component",
                                   "AttTy": "Constant",
-                                  "DflVal": "Not agree my parcel returned shipment after repair",
+                                  "DflVal": "User agree to return parcel shipment after repair.",
                                   "isExcl": false,
                                   "isMan": true,
                                   "Rul": [
                                     {
                                       "RulId": "2beaea05-e4d5-425d-af65-3dd355e5f0ce",
-                                      "Nm": "Not agree Purpose Description",
-                                      "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val='Opt1'",
+                                      "Nm": "Not Agree return Shipment Rule desc",
+                                      "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val='Opt2'",
                                       "AttrMtdt": [
                                         {
-                                          "DflVal": "Agree to parcel returned shipment after repair"
+                                          "DflVal": "User does not agree that the parcel is returned after repair"
                                         }
                                       ]
                                     }
@@ -183,7 +221,7 @@
                         {
                           "Id": "9a3ec982-3c3c-4a31-9e9b-26427e90d4ed",
                           "Nm": "Consent Repair Type entity",
-                          "Dsc": "Consent Repair Type desc",
+                          "Dsc": "Consent Repair Type  entity desc",
                           "isImg": false,
                           "isExcl": false,
                           "isMan": false,
@@ -267,7 +305,7 @@
                                       "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val='Opt1'",
                                       "AttrMtdt": [
                                         {
-                                          "isMan": true,
+                                       
                                           "isHidden": false
                                         }
                                       ]
@@ -276,8 +314,8 @@
                                 },
                                 {
                                   "Id": "18b014c0-2dd2-4888-850b-e52e28e24657",
-                                  "Nm": "Purpose Name - Repair Type",
-                                  "Dsc": "Purpose Name - Repair Type desc",
+                                  "Nm": "Purpose Name -  Repair Type Radio Button",
+                                  "Dsc": "Purpose Name - Repair Type Radio Button desc",
                                   "AttTy": "Constant",
                                   "DflVal": "User does not have Repair Type",
                                   "isExcl": false,
@@ -286,7 +324,7 @@
                                     {
                                       "RulId": "f44b3e0f-4f59-4df7-a20e-e95f296de3c3",
                                       "Nm": "Agree to Repair type purpose Description",
-                                      "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val='Opt2'and **.Att[Id='9a5247db-2c9e-4185-9991-45aa04a0b29d'].Val='Opt2'",
+                                      "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val='Opt1'and **.Att[Id='9a5247db-2c9e-4185-9991-45aa04a0b29d'].Val='Opt2'",
                                       "AttrMtdt": [
                                         {
                                           "DflVal": "User doesn't have Repair Type"
@@ -297,8 +335,8 @@
                                 },
                                 {
                                   "Id": "e8a10bae-c136-42ac-a12c-583a95fa51a0",
-                                  "Nm": "User have Repair Type",
-                                  "Dsc": "User have Repair Type Decription",
+                                  "Nm": "Agree to User have Repair Type",
+                                  "Dsc": "Agree to User have Repair Type Decription",
                                   "AttTy": "Constant",
                                   "DflVal": "User doesn't have Repair Type",
                                   "isExcl": false,
@@ -307,7 +345,7 @@
                                     {
                                       "RulId": "25b0b47d-b250-4054-ba33-d4d7b7947ead",
                                       "Nm": "Not agree to Repair type purpose Description",
-                                      "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val='Opt1'and **.Att[Id='9a5247db-2c9e-4185-9991-45aa04a0b29d'].Val='Opt1'",
+                                      "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val='Opt1'and **.Att[Id='9a5247db-2c9e-4185-9991-45aa04a0b29d'].Val='Opt2'",
                                       "AttrMtdt": [
                                         {
                                           "DflVal": "User does not have Repair Type"
@@ -322,16 +360,16 @@
                         },
                         {
                           "Id": "d7ba6251-8513-4094-a4f4-083214a5bb5c",
-                          "Nm": "Consent Shipment with DHL",
-                          "Dsc": "Consent Shipment with DHLEntity",
+                          "Nm": "Consent Shipment export with DHL",
+                          "Dsc": "Consent Shipment export with DHL Desc",
                           "isImg": false,
                           "isExcl": false,
                           "isMan": false,
                           "Ent": [
                             {
                               "Id": "de1b91aa-4f4b-4387-a58f-245493f01316",
-                              "Nm": "Consent Category",
-                              "Dsc": "Consent Category Entity",
+                              "Nm": "Shipment export with DHL",
+                              "Dsc": "Shipment export with DHL Entity desc",
                               "isImg": false,
                               "isExcl": false,
                               "isMan": false,
@@ -357,32 +395,20 @@
                                   "AttTy": "Constant",
                                   "DflVal": "Captures Customs Consents from User"
                                 }
-                              ],
-                              "Rul": [
-                                {
-                                  "RulId": "7301aaae-1a0d-491e-99a4-626704929c9a",
-                                  "Nm": "Rule condition for Shipment with DHL",
-                                  "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val='Opt2'",
-                                  "AttrMtdt": [
-                                    {
-                                      "isMan": true
-                                    }
-                                  ]
-                                }
                               ]
-                            },
+                              },
                             {
                               "Id": "b17c967b-0c69-4903-bbd9-3d8827f17d9b",
-                              "Nm": "Shipment with DHL - Radio button",
-                              "Dsc": "Shipment with DHL radiobutton component",
+                              "Nm": "Consent Purpose - Shipment export with DHL",
+                              "Dsc": "Consent Purpose - Shipment export with DHL desc",
                               "isImg": false,
                               "isExcl": false,
                               "isMan": false,
                               "Att": [
                                 {
                                   "Id": "917a20fa-f163-454d-b941-fbe3bb21018c",
-                                  "Nm": "Shipment with DHL Entity",
-                                  "Dsc": "Shipment with DHL  Entity Desc",
+                                  "Nm": "Shipment export with DHL - Radio Button",
+                                  "Dsc": "Shipment export with DHL - Radio Button Desc",
                                   "AttTy": "UserEntry",
                                   "isExcl": false,
                                   "isMan": false,
@@ -416,7 +442,7 @@
                                     {
                                       "RulId": "da4cdfc0-21a3-4547-943f-05cb864c8ec8",
                                       "Nm": "Rule condition for Shipment with DHL",
-                                      "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val='Opt2'",
+                                      "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val='Opt1'",
                                       "AttrMtdt": [
                                         {
                                           "isMan": true,
@@ -428,8 +454,8 @@
                                 },
                                 {
                                   "Id": "c33d6bc3-73e7-4c27-82ea-1a344f95a726",
-                                  "Nm": "Purpose Name - Radio button",
-                                  "Dsc": "Purpose Name with a radiobutton component",
+                                  "Nm": "Purpose Name - Shipment export with DHL Radio Button",
+                                  "Dsc": "Purpose Name - Shipment export with DHL Radio Button desc",
                                   "AttTy": "Constant",
                                   "DflVal": "Agree to export this shipment with DHL Express",
                                   "isExcl": false,
@@ -452,17 +478,17 @@
                                   "Nm": "Purpose Description - Radio button",
                                   "Dsc": "Purpose Description with a radiobutton component",
                                   "AttTy": "Constant",
-                                  "DflVal": "Not agree to export this shipment with DHL Express",
+                                  "DflVal": "Agree to export this shipment with DHL Express",
                                   "isExcl": false,
                                   "isMan": false,
                                   "Rul": [
                                     {
                                       "RulId": "e95ba789-9599-48a3-b975-c87af6e6a848",
                                       "Nm": "Not agree Purpose Description",
-                                      "Cond": "**.Att[Id='917a20fa-f163-454d-b941-fbe3bb21018c'].Val='Opt1'",
+                                      "Cond": "**.Att[Id='917a20fa-f163-454d-b941-fbe3bb21018c'].Val='Opt2'",
                                       "AttrMtdt": [
                                         {
-                                          "DflVal": "Agree to export this shipment with DHL Express"
+                                          "DflVal": "User does not agree to export this shipment with DHL Express"
                                         }
                                       ]
                                     }
@@ -474,11 +500,12 @@
                         },
                         {
                           "Id": "8b980e4b-f5f5-4c8c-b248-777dca84b963",
-                          "Nm": "Provide of return Description ",
-                          "Dsc": "Provide of return Description desc",
+                          "Nm": "Provide reason for the return shipment",
+                          "Dsc": "Provide reason for the return shipment desc",
                           "AttTy": "UserEntry",
                           "isExcl": false,
                           "isMan": false,
+                          "isHidden": true,
                           "MinL": 1,
                           "MaxL": 800,
                           "UICmpt": {
@@ -506,7 +533,9 @@
                               "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val='Opt2'",
                               "AttrMtdt": [
                                 {
-                                  "isMan": true
+                                  "isMan": true,
+                                  "isHidden": false
+
                                 }
                               ]
                             }
