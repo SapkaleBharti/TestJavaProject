@@ -550,7 +550,7 @@
             {
               "Id": "41dde594-c3ba-454b-bfa1-28034efdb289",
               "Nm": "Shipment Document",
-              "Dsc": "Document Image",
+              "Dsc": "Document Image desc",
               "isImg": true,
               "isExcl": false,
               "isMan": true,
@@ -558,7 +558,7 @@
                 {
                   "Id": "35248df5-37bf-4e1c-9f2d-7cf179697af8",
                   "Nm": "Export Commercial Invoice",
-                  "Dsc": "Export Commercial Invoice entity",
+                  "Dsc": "Export Commercial Invoice entity desc",
                   "isImg": true,
                   "isExcl": false,
                   "isMan": false,
@@ -566,7 +566,7 @@
                     {
                       "Id": "b7801753-442f-4b31-b92e-52b9019a4e9c",
                       "Nm": "Document Family Code",
-                      "Dsc": "Document Family Code",
+                      "Dsc": "Document Family Code desc",
                       "AttTy": "Constant",
                       "DflVal": "ENT",
                       "isExcl": false,
@@ -594,7 +594,7 @@
                     {
                       "Id": "40da1304-e0fd-46bc-abb7-0c9cd6e120fc",
                       "Nm": "Document Type Code",
-                      "Dsc": "Document Type Code",
+                      "Dsc": "Document Type Code desc",
                       "AttTy": "Constant",
                       "DflVal": "ENT",
                       "isExcl": false,
@@ -674,7 +674,7 @@
                 {
                   "Id": "f7bbbc1e-9e58-4de9-ba1a-dd2e13952ac3",
                   "Nm": "Export AWB",
-                  "Dsc": "Export AWB entity",
+                  "Dsc": "Export AWB entity desc",
                   "isImg": true,
                   "isExcl": false,
                   "isMan": false,
@@ -682,7 +682,7 @@
                     {
                       "Id": "2fc875df-d396-40c0-b1de-4ec7c8278ccd",
                       "Nm": "Document Family Code",
-                      "Dsc": "Document Family Code",
+                      "Dsc": "Document Family Code desc",
                       "AttTy": "Constant",
                       "DflVal": "ENT",
                       "isExcl": false,
@@ -710,7 +710,7 @@
                     {
                       "Id": "13a097f6-6ed7-47ff-af19-d13b82a5d39e",
                       "Nm": "Document Type Code",
-                      "Dsc": "Document Type Code",
+                      "Dsc": "Document Type Code desc",
                       "AttTy": "Constant",
                       "DflVal": "ENT",
                       "isExcl": false,
@@ -798,7 +798,7 @@
                     {
                       "Id": "8b6cc875-6330-47c5-b03d-ba2779a81e41",
                       "Nm": "Document Family Code",
-                      "Dsc": "Document Family Code",
+                      "Dsc": "Document Family Code desc",
                       "AttTy": "Constant",
                       "DflVal": "ENT",
                       "isExcl": false,
@@ -826,7 +826,7 @@
                     {
                       "Id": "25995cc2-498f-48d8-bbc9-7f185126998e",
                       "Nm": "Document Type Code",
-                      "Dsc": "Document Type Code",
+                      "Dsc": "Document Type Code desc",
                       "AttTy": "Constant",
                       "DflVal": "ENT",
                       "isExcl": false,
@@ -913,7 +913,7 @@
                     {
                       "Id": "e70cd173-8212-4d8c-aa52-85fe52d809c9",
                       "Nm": "Document Family Code",
-                      "Dsc": "Document Family Code",
+                      "Dsc": "Document Family Code desc",
                       "AttTy": "Constant",
                       "DflVal": "ENT",
                       "isExcl": false,
@@ -941,7 +941,7 @@
                     {
                       "Id": "15243252-f8f9-4ccc-a90f-2fae811bbbac",
                       "Nm": "Document Type Code",
-                      "Dsc": "Document Type Code",
+                      "Dsc": "Document Type Code desc",
                       "AttTy": "Constant",
                       "DflVal": "ENT",
                       "isExcl": false,
