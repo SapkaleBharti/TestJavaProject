@@ -183,11 +183,11 @@
                                   "Rul": [
                                     {
                                       "RulId": "e74fa4ae-a5f6-4d08-b583-f96373e3b958",
-                                      "Nm": "Agree High Value Shipment Rule",
+                                      "Nm": "Not Agree High Value Shipment Rule ",
                                       "Cond": "**.Att[Id='6a2f893d-8c39-42ed-9b9e-450d21092907'].Val='Opt2'",
                                       "AttrMtdt": [
                                         {
-                                          "DflVal": "Not agree for Shipment cost more than 999 Euros"
+                                          "DflVal": "User does not agree that the Shipment costs more than 999 Euros"
                                         }
                                       ]
                                     }
@@ -204,11 +204,11 @@
                                   "Rul": [
                                     {
                                       "RulId": "ed7d5c64-cab3-4b19-a4c7-13825ac3ee3d",
-                                      "Nm": "Not Agree High Value Shipment Rule",
-                                      "Cond": "**.'6a2f893d-8c39-42ed-9b9e-450d21092907'].Val='Opt2'",
+                                      "Nm": "Not Agree High Value Shipment Rule desc",
+                                      "Cond": "**.Att[Id='6a2f893d-8c39-42ed-9b9e-450d21092907'].Val='Opt2'",
                                       "AttrMtdt": [
                                         {
-                                          "DflVal": "Agree to Shipment cost more than 999 Euros"
+                                          "DflVal": "User does not agree that the Shipment costs more than 999 Euros"
                                         }
                                       ]
                                     }
@@ -327,7 +327,7 @@
                                       "Cond": "**.Att[Id='6a2f893d-8c39-42ed-9b9e-450d21092907'].Val='Opt1'and **.Att[Id='0da3ad86-cc40-44ff-9ad4-60780be50fc8'].Val='Opt2'",
                                       "AttrMtdt": [
                                         {
-                                          "DflVal": "User doesn't have Greek VAT number"
+                                          "DflVal": "User does not have Greek VAT Number"
                                         }
                                       ]
                                     }
@@ -335,10 +335,10 @@
                                 },
                                 {
                                   "Id": "b5438bd1-82cd-4617-a280-f1cb172a0128",
-                                  "Nm": "User have Greek VAT number",
-                                  "Dsc": "User have Greek VAT number Decription",
+                                  "Nm": "Purpose description - Greek VAT number",
+                                  "Dsc": "Purpose description - Greek VAT number Decription",
                                   "AttTy": "Constant",
-                                  "DflVal": "User doesn't have Greek VAT numberr",
+                                  "DflVal": "User have Greek VAT number",
                                   "isExcl": false,
                                   "isMan": false,
                                   "Rul": [
@@ -403,13 +403,13 @@
                         "Tooltip": "",
                         "CmptTy": "TextInput",
                         "DisplayDsc": {
-                          "DisplayTxt": "",
-                          "DscCmpt" : [
+                          "DisplayTxt": "EORI Number description {GR_EORI_LINK}",
+                          "DscCmpt": [
                             {
-                              "Val" : "Verify your EORI Number https://ec.europa.eu/taxation_customs/dds2/eos/eori_validation.jsp?Lang=en&EoriNumb=GR123456789&Expand=true",
-                              "DisplayTxt" : "here",
-                              "Ty" : "Hyperlink",
-                              "Ky" : ""
+                              "Val": "www.dhl.com",
+                              "DisplayTxt": "here",
+                              "Ty": "Hyperlink",
+                              "Ky": "GR_EORI_LINK"
                             }
                           ]
                         },
