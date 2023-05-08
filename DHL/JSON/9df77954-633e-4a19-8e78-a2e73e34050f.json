@@ -1,0 +1,932 @@
+[
+  {
+    "ShpInfReqDef": {
+      "Id": "9df77954-633e-4a19-8e78-a2e73e34050f",
+      "Nm": "Returns Original Export proof required - GR",
+      "Dsc": "Returns Original Export proof required Desc",
+      "DrvdFromShpInfReqDef": {},
+      "LedOwnOrgn": {
+        "CtryCd": "GR"
+      },
+      "ApplyAllInd": false,
+      "PrsnDatSenstyClssLvl": "Medium",
+      "QuickGuideEnabledInd": false,
+      "UICmpt": {
+        "CmptNm": "RetExport",
+        "DisplayTtl": "Returned Export",
+        "Tooltip": "",
+        "CmptTy": "Composed",
+        "DisplayDsc": {
+          "DisplayTxt": "Returns Original Export proof required Desc"
+        },
+        "Hint": ""
+      },
+      "Ent": [
+        {
+          "Id": "8453c6a8-6fa0-494e-9a19-fcb606f2b4ee",
+          "Nm": "Returned Export entity",
+          "Dsc": "Returned Export Desc",
+          "isImg": false,
+          "isExcl": false,
+          "isMan": true,
+          "Ent": [
+            {
+              "Id": "f87d71de-374e-4b7d-8eb9-fde7fe2c9adc",
+              "Nm": "Shipment Customer",
+              "Dsc": "Shipment Customer Entity",
+              "isImg": false,
+              "isExcl": false,
+              "isMan": true,
+              "Att": [
+                {
+                  "Id": "b1b12a59-e115-4764-ad8d-76c8bc78c6e5",
+                  "Nm": "Customer role type code",
+                  "Dsc": "This is customer role type code attribute which is used to signigy the role of Customer in business transaction.",
+                  "AttTy": "Session",
+                  "isExcl": false,
+                  "isMan": true,
+                  "SessnPrmtId": "RlTyCd",
+                  "Enum": [
+                    {
+                      "Val": "IP",
+                      "DisplayTxt": "importer",
+                      "SrtOvrdSqNo": 1,
+                      "IsDfl": false
+                    },
+                    {
+                      "Val": "SP",
+                      "DisplayTxt": "shipper",
+                      "SrtOvrdSqNo": 2,
+                      "IsDfl": false
+                    },
+                    {
+                      "Val": "RV",
+                      "DisplayTxt": "Receiver",
+                      "SrtOvrdSqNo": 3,
+                      "IsDfl": false
+                    }
+                  ],
+                  "AttMsgPos": [
+                    {
+                      "Ver": "12.030",
+                      "MsgTyCd": "ShpPcdDetailsMsg",
+                      "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpCust/CustRolTyCd"
+                    }
+                  ]
+                },
+                {
+                  "Id": "9a5247db-2c9e-4185-9991-45aa04a0b29d",
+                  "Nm": "Repair Type Radio button",
+                  "Dsc": "Repair Typer Confirmation Description",
+                  "AttTy": "UserEntry",
+                  "isExcl": false,
+                  "isMan": false,
+                  "isHidden": true,
+                  "UICmpt": {
+                    "Order": 2,
+                    "CmptNm": "RepairType",
+                    "DisplayTtl": "",
+                    "Tooltip": "",
+                    "CmptTy": "RadioButton",
+                    "DisplayDsc": {
+                      "DisplayTxt": "Rapair type desc"
+                    },
+                    "ValTy": "Standard"
+                  },
+                  "Enum": [
+                    {
+                      "Val": "UnderWarranty",
+                      "DisplayTxt": "Under Warranty",
+                      "SrtOrd": 1,
+                      "Nm": "Opt1"
+                    },
+                    {
+                      "Val": "NoUnderWarranty",
+                      "DisplayTxt": "Not Under Warranty",
+                      "SrtOrd": 2,
+                      "Nm": "Opt2"
+                    }
+                  ],
+                  "Rul": [
+                    {
+                      "RulId": "607d8481-ba7c-4c95-ae07-8273cc077f59",
+                      "Nm": "Rule condition to Repair Type",
+                      "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val='Opt1'",
+                      "AttrMtdt": [
+                        {
+                          "isHidden": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Id": "8b980e4b-f5f5-4c8c-b248-777dca84b963",
+                  "Nm": "Provide reason for the return shipment",
+                  "Dsc": "Provide reason for the return shipment desc",
+                  "AttTy": "UserEntry",
+                  "isExcl": false,
+                  "isMan": false,
+                  "isHidden": true,
+                  "MinL": 1,
+                  "MaxL": 800,
+                  "UICmpt": {
+                    "Order": 8,
+                    "CmptNm": "ReturnText",
+                    "DisplayTtl": "Reason for Return",
+                    "Hint": "",
+                    "CmptTy": "TextArea",
+                    "DisplayDsc": {
+                      "DisplayTxt": "Return shipment desc"
+                    },
+                    "ValTy": "String"
+                  },
+                  "AttMsgPos": [
+                    {
+                      "Ver": "12.030",
+                      "MsgTyCd": "ShpPcdDetailsMsg",
+                      "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/ReaForTrCd"
+                    }
+                  ],
+                  "Rul": [
+                    {
+                      "RulId": "c97069ee-6154-4177-87ad-0613ff3f9b25",
+                      "Nm": "Rule condition for Return shipment",
+                      "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val='Opt2'",
+                      "AttrMtdt": [
+                        {
+                          "isMan": true,
+                          "isHidden": false
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "Ent": [
+                {
+                  "Id": "181beb24-9acb-4b2b-9839-3798cbc93406",
+                  "Nm": "Business Party",
+                  "Dsc": "Business Party Entity",
+                  "isImg": false,
+                  "isExcl": false,
+                  "isMan": true,
+                  "Ent": [
+                    {
+                      "Id": "206eb8bd-37df-4696-b778-7b81f3695ab7",
+                      "Nm": "Individual Customer",
+                      "Dsc": "Individual Customer Entity",
+                      "isImg": false,
+                      "isExcl": false,
+                      "isMan": true,
+                      "Ent": [
+                        {
+                          "Id": "d4c1b6ad-3a6e-442b-825d-735bacfd1bbf",
+                          "Nm": "Consent for Returned Shipment after repair ",
+                          "Dsc": "Consent for Returned Shipment  after repair Entity",
+                          "isImg": false,
+                          "isExcl": false,
+                          "isMan": true,
+                          "Ent": [
+                            {
+                              "Id": "e51fc277-a311-4724-9dba-341b2d3e8e18",
+                              "Nm": "Consent Returned Shipment after repair Category",
+                              "Dsc": "Consent Returned Shipment after repair Category desc",
+                              "isImg": false,
+                              "isExcl": false,
+                              "isMan": true,
+                              "Att": [
+                                {
+                                  "Id": "34300d47-a91f-48ea-aca4-156d7d8d83ce",
+                                  "Nm": "Consent Category Code",
+                                  "Dsc": "The unique identificaiton of the Consent Purpose",
+                                  "AttTy": "Constant",
+                                  "DflVal": "CSTMS"
+                                },
+                                {
+                                  "Id": "682a8af2-d276-46f7-9da0-a6000eb08e4d",
+                                  "Nm": "Consent Category Name",
+                                  "Dsc": "Consent Category Name",
+                                  "AttTy": "Constant",
+                                  "DflVal": "Customs Consents"
+                                },
+                                {
+                                  "Id": "5c523074-ab59-4ffd-8dfb-9babc95d4940",
+                                  "Nm": "Consent Category Description",
+                                  "Dsc": "Consent Category Desc",
+                                  "AttTy": "Constant",
+                                  "DflVal": "Captures Customs Consents from User"
+                                }
+                              ]
+                            },
+                            {
+                              "Id": "8430861b-38c6-4e53-92a0-5a100bdd0d05",
+                              "Nm": "Consent Purpose Returned Shipment after repair",
+                              "Dsc": "Consent Purpose Returned Shipment after repair desc",
+                              "isImg": false,
+                              "isExcl": false,
+                              "isMan": true,
+                              "Att": [
+                                {
+                                  "Id": "75e0a595-ab28-4e91-9949-fab52cdf82b5",
+                                  "Nm": "Returned Shipment after repair consent",
+                                  "Dsc": "Returned Shipment after repair consent desc",
+                                  "AttTy": "UserEntry",
+                                  "isExcl": false,
+                                  "isMan": true,
+                                  "UICmpt": {
+                                    "Order": 1,
+                                    "CmptNm": "RetrnShip",
+                                    "DisplayTtl": "",
+                                    "Tooltip": "",
+                                    "CmptTy": "RadioButton",
+                                    "DisplayDsc": {
+                                      "DisplayTxt": "Returned Shipment description"
+                                    },
+                                    "ValTy": "Standard"
+                                  },
+                                  "Enum": [
+                                    {
+                                      "Val": "Yes",
+                                      "DisplayTxt": "Yes",
+                                      "SrtOrd": 1,
+                                      "Nm": "Opt1"
+                                    },
+                                    {
+                                      "Val": "No",
+                                      "DisplayTxt": "No",
+                                      "SrtOrd": 2,
+                                      "Nm": "Opt2"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "Id": "92011bf2-1fa7-40ab-95d7-d90a8081c2c7",
+                                  "Nm": "Purpose Name - Returned Shipment after repair",
+                                  "Dsc": "Purpose Name - Returned Shipment after repair component",
+                                  "AttTy": "Constant",
+                                  "DflVal": "Agree Returned shipment after repair or replacement",
+                                  "isExcl": false,
+                                  "isMan": true,
+                                  "Rul": [
+                                    {
+                                      "RulId": "ff1f1b35-1404-4c24-a774-cdb2e79853a1",
+                                      "Nm": "Not Agree returned shipment",
+                                      "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val='Opt2'",
+                                      "AttrMtdt": [
+                                        {
+                                          "DflVal": "Not a Returned shipment after repair or replacement"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "Id": "d4f8882f-8e24-4252-9679-a78805ef4a72",
+                                  "Nm": "Purpose Description - Returned Shipment after repair",
+                                  "Dsc": "Purpose Description - Returned Shipment after repair component",
+                                  "AttTy": "Constant",
+                                  "DflVal": "User Agreed that the parcel is returned shipment after repair or replacement",
+                                  "isExcl": false,
+                                  "isMan": true,
+                                  "Rul": [
+                                    {
+                                      "RulId": "2beaea05-e4d5-425d-af65-3dd355e5f0ce",
+                                      "Nm": "Not agree returned Shipment after repair desc Rule",
+                                      "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val='Opt2'",
+                                      "AttrMtdt": [
+                                        {
+                                          "DflVal": "User does not agree that the parcel is returned shipment after repair or replacement"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "Id": "d7ba6251-8513-4094-a4f4-083214a5bb5c",
+                          "Nm": "Consent Shipment export with DHL",
+                          "Dsc": "Consent Shipment export with DHL Desc",
+                          "isImg": false,
+                          "isExcl": false,
+                          "isMan": false,
+                          "Ent": [
+                            {
+                              "Id": "de1b91aa-4f4b-4387-a58f-245493f01316",
+                              "Nm": "Shipment export with DHL entity",
+                              "Dsc": "Shipment export with DHL Entity desc",
+                              "isImg": false,
+                              "isExcl": false,
+                              "isMan": false,
+                              "Att": [
+                                {
+                                  "Id": "7a4a3a0b-0c89-4f60-95d9-da9bd1c7601d",
+                                  "Nm": "Consent Category Code",
+                                  "Dsc": "The unique identificaiton of the Consent Purpose",
+                                  "AttTy": "Constant",
+                                  "DflVal": "CSTMS"
+                                },
+                                {
+                                  "Id": "3be60771-3e8c-467f-9107-ebad3c510620",
+                                  "Nm": "Consent Category Name",
+                                  "Dsc": "Consent Category Name",
+                                  "AttTy": "Constant",
+                                  "DflVal": "Customs Consents"
+                                },
+                                {
+                                  "Id": "05a6dbcb-e033-4305-bbc8-4a7bdd50517d",
+                                  "Nm": "Consent Category Description",
+                                  "Dsc": "Consent Category Desc",
+                                  "AttTy": "Constant",
+                                  "DflVal": "Captures Customs Consents from User"
+                                }
+                              ]
+                            },
+                            {
+                              "Id": "b17c967b-0c69-4903-bbd9-3d8827f17d9b",
+                              "Nm": "Consent Purpose - Shipment export with DHL",
+                              "Dsc": "Consent Purpose - Shipment export with DHL desc",
+                              "isImg": false,
+                              "isExcl": false,
+                              "isMan": false,
+                              "Att": [
+                                {
+                                  "Id": "917a20fa-f163-454d-b941-fbe3bb21018c",
+                                  "Nm": "Shipment export with DHL - Radio Button",
+                                  "Dsc": "Shipment export with DHL - Radio Button Desc",
+                                  "AttTy": "UserEntry",
+                                  "isExcl": false,
+                                  "isMan": false,
+                                  "isHidden": true,
+                                  "UICmpt": {
+                                    "Order": 5,
+                                    "CmptNm": "ShipmentDHL",
+                                    "DisplayTtl": "Export Representative",
+                                    "Tooltip": "",
+                                    "CmptTy": "RadioButton",
+                                    "DisplayDsc": {
+                                      "DisplayTxt": "Shipment with DHL desc"
+                                    },
+                                    "ValTy": "Standard"
+                                  },
+                                  "Enum": [
+                                    {
+                                      "Val": "Yes",
+                                      "DisplayTxt": "Yes",
+                                      "SrtOrd": 1,
+                                      "Nm": "Opt1"
+                                    },
+                                    {
+                                      "Val": "No",
+                                      "DisplayTxt": "No",
+                                      "SrtOrd": 2,
+                                      "Nm": "Opt2"
+                                    }
+                                  ],
+                                  "Rul": [
+                                    {
+                                      "RulId": "da4cdfc0-21a3-4547-943f-05cb864c8ec8",
+                                      "Nm": "Rule condition for Shipment with DHL",
+                                      "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val='Opt1'",
+                                      "AttrMtdt": [
+                                        {
+                                          "isMan": true,
+                                          "isHidden": false
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "Id": "c33d6bc3-73e7-4c27-82ea-1a344f95a726",
+                                  "Nm": "Purpose Name - Shipment export with DHL Radio Button",
+                                  "Dsc": "Purpose Name - Shipment export with DHL Radio Button desc",
+                                  "AttTy": "Constant",
+                                  "DflVal": "Agree to export shipment with DHL Express",
+                                  "isExcl": false,
+                                  "isMan": false,
+                                  "Rul": [
+                                    {
+                                      "RulId": "fd16b4ee-1b53-422a-a211-4e241795bcd6",
+                                      "Nm": "Not agree Shipment export with DHL purpose name",
+                                      "Cond": "**.Att[Id='917a20fa-f163-454d-b941-fbe3bb21018c'].Val='Opt2' and **.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val='Opt1'",
+                                      "AttrMtdt": [
+                                        {
+                                          "DflVal": "Not agree Shipment exported with DHL Express"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "Id": "6cfb1e3b-b505-4195-b811-3513abe6f5b6",
+                                  "Nm": "Purpose Description - Shipment export with DHL Radio button",
+                                  "Dsc": "Purpose Description with a radiobutton component",
+                                  "AttTy": "Constant",
+                                  "DflVal": "Agree to export shipment with DHL Express",
+                                  "isExcl": false,
+                                  "isMan": false,
+                                  "Rul": [
+                                    {
+                                      "RulId": "e95ba789-9599-48a3-b975-c87af6e6a848",
+                                      "Nm": "Not agree Shipment export with DHL purpose Description",
+                                      "Cond": "**.Att[Id='917a20fa-f163-454d-b941-fbe3bb21018c'].Val='Opt2' and **.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val='Opt1'",
+                                      "AttrMtdt": [
+                                        {
+                                          "DflVal": "User doese not agree to export shipment with DHL Express"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Id": "41dde594-c3ba-454b-bfa1-28034efdb289",
+              "Nm": "Shipment Document",
+              "Dsc": "Document Image desc",
+              "isImg": true,
+              "isExcl": false,
+              "isMan": true,
+              "Ent": [
+                {
+                  "Id": "35248df5-37bf-4e1c-9f2d-7cf179697af8",
+                  "Nm": "Export Commercial Invoice entity",
+                  "Dsc": "Export Commercial Invoice entity desc",
+                  "isImg": true,
+                  "isExcl": false,
+                  "isMan": false,
+                  "Att": [
+                    {
+                      "Id": "b7801753-442f-4b31-b92e-52b9019a4e9c",
+                      "Nm": "Document Family Code",
+                      "Dsc": "Document Family Code desc",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": false,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": "DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocFamCd"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "a66782b4-f541-40aa-8df0-ce72b935b53b",
+                          "Nm": "Rule for Commercial invoice family code",
+                          "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val = 'Opt1'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "40da1304-e0fd-46bc-abb7-0c9cd6e120fc",
+                      "Nm": "Document Type Code",
+                      "Dsc": "Document Type Code desc",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": false,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": "DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocTyCd"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "6a87b668-15f5-410e-b174-94a6cdde73b3",
+                          "Nm": "Rule for Commercial invoice doc Type",
+                          "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val = 'Opt1'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "30d56ae5-5fed-44ec-b29c-dd234d603c07",
+                      "Nm": "Export Commercial Invoice Uploader",
+                      "Dsc": "Export Commercial Invoice Uploader desc",
+                      "AttTy": "UserEntry",
+                      "isExcl": false,
+                      "isMan": false,
+                      "isHidden": true,
+                      "MaxFlSz": 6000,
+                      "MaxFlCnt": 20,
+                      "AlwExt": [
+                        "pdf",
+                        "jpeg",
+                        "jpg",
+                        "png",
+                        "bmp",
+                        "docx"
+                      ],
+                      "UICmpt": {
+                        "CmptNm": "ExpInvImg",
+                        "DisplayTtl": "Export Commercial Invoice",
+                        "Hint": "Upload File(s)",
+                        "Tooltip": "",
+                        "CmptTy": "FileUploader",
+                        "DisplayDsc": {
+                          "DisplayTxt": "Export Commercial Invoice"
+                        },
+                        "Order": 3
+                      },
+                      "AttMsgPos": [
+                        {
+                          "Ver": "12.030",
+                          "MsgTyCd": "ShpPcdDetailsMsg",
+                          "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/Img/Loc"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "cb7f19e3-e59d-4cab-942f-ca083d04e42d",
+                          "Nm": "Rule condition for Export Commercial Invoice",
+                          "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val = 'Opt1'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true,
+                              "isHidden": false
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Id": "f7bbbc1e-9e58-4de9-ba1a-dd2e13952ac3",
+                  "Nm": "Export AWB entity",
+                  "Dsc": "Export AWB entity desc",
+                  "isImg": true,
+                  "isExcl": false,
+                  "isMan": false,
+                  "Att": [
+                    {
+                      "Id": "2fc875df-d396-40c0-b1de-4ec7c8278ccd",
+                      "Nm": "Document Family Code",
+                      "Dsc": "Document Family Code desc",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": false,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": "DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocFamCd"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "56242bdf-17ad-4410-bd32-0fc4af2e2384",
+                          "Nm": "Rule for Export AWB family code",
+                          "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val = 'Opt1'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "13a097f6-6ed7-47ff-af19-d13b82a5d39e",
+                      "Nm": "Document Type Code",
+                      "Dsc": "Document Type Code desc",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": false,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": "DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocTyCd"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "135594a6-c55b-4b52-9c88-03cd17d6c0db",
+                          "Nm": "Rule for Export AWB doc Type",
+                          "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val = 'Opt1'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "d473ad24-93b3-4aeb-b158-0e73e5a2fbbc",
+                      "Nm": "Export AWB Uploader",
+                      "Dsc": "Export AWB Uploader desc",
+                      "AttTy": "UserEntry",
+                      "isExcl": false,
+                      "isMan": false,
+                      "isHidden": true,
+                      "MaxFlSz": 6000,
+                      "MaxFlCnt": 20,
+                      "AlwExt": [
+                        "pdf",
+                        "jpeg",
+                        "jpg",
+                        "png",
+                        "bmp",
+                        "docx"
+                      ],
+                      "UICmpt": {
+                        "CmptNm": "ExpAWBImg",
+                        "DisplayTtl": "Export AWB",
+                        "Hint": "Upload File(s)",
+                        "Tooltip": "",
+                        "CmptTy": "FileUploader",
+                        "DisplayDsc": {
+                          "DisplayTxt": "Export AWB desc"
+                        },
+                        "Order": 4
+                      },
+                      "AttMsgPos": [
+                        {
+                          "Ver": "12.030",
+                          "MsgTyCd": "ShpPcdDetailsMsg",
+                          "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/Img/Loc"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "d6e5f259-6fe8-4bf8-9243-c341a115001d",
+                          "Nm": "Rule for Export AWB",
+                          "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val = 'Opt1'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true,
+                              "isHidden": false
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Id": "0a2e034d-c45a-4257-a78e-9d05caeef657",
+                  "Nm": "Export Declaration entity",
+                  "Dsc": "Export Declaration entity desc",
+                  "isImg": true,
+                  "isExcl": false,
+                  "isMan": false,
+                  "Att": [
+                    {
+                      "Id": "8b6cc875-6330-47c5-b03d-ba2779a81e41",
+                      "Nm": "Document Family Code",
+                      "Dsc": "Document Family Code desc",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": false,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": "DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocFamCd"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "65bcf8f8-88e2-4dd2-9479-d3c1d2f1cf4e",
+                          "Nm": "Rule for Export Dec family code",
+                          "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val = 'Opt1' and **.Att[Id='917a20fa-f163-454d-b941-fbe3bb21018c'].Val = 'Opt2'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "25995cc2-498f-48d8-bbc9-7f185126998e",
+                      "Nm": "Document Type Code",
+                      "Dsc": "Document Type Code desc",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": false,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": "DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocTyCd"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "85305c23-5f24-4c3d-8950-cbb748b423b5",
+                          "Nm": "Rule condition for Export Declaration",
+                          "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val = 'Opt1' and **.Att[Id='917a20fa-f163-454d-b941-fbe3bb21018c'].Val = 'Opt2'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "170a58fc-6fd7-4e9c-99c0-d89129566bb2",
+                      "Nm": "Export Declaration Img",
+                      "Dsc": "Export Declaration uploader desc",
+                      "AttTy": "UserEntry",
+                      "isExcl": false,
+                      "isMan": false,
+                      "isHidden": true,
+                      "MaxFlSz": 6000,
+                      "MaxFlCnt": 20,
+                      "AlwExt": [
+                        "pdf",
+                        "jpeg",
+                        "jpg",
+                        "png",
+                        "bmp",
+                        "docx"
+                      ],
+                      "UICmpt": {
+                        "Order": 6,
+                        "CmptNm": "ExpDeclarImg",
+                        "DisplayTtl": "Export Declaration",
+                        "Hint": "Upload File(s)",
+                        "CmptTy": "FileUploader",
+                        "DisplayDsc": {
+                          "DisplayTxt": "Export Declaration desc"
+                        }
+                      },
+                      "AttMsgPos": [
+                        {
+                          "Ver": "12.030",
+                          "MsgTyCd": "ShpPcdDetailsMsg",
+                          "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/Img/Loc"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "43217b05-472f-46a0-b33d-099ce6d58ab2",
+                          "Nm": "Rule condition for Export Declaration",
+                          "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val = 'Opt1' and **.Att[Id='917a20fa-f163-454d-b941-fbe3bb21018c'].Val = 'Opt2'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true,
+                              "isHidden": false
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Id": "7ef1a883-06a4-4ad0-9bc3-b0d4d33c2703",
+                  "Nm": "Invoice Uploader Entity",
+                  "Dsc": "Invoice Uploader Desc",
+                  "isImg": true,
+                  "isExcl": false,
+                  "isMan": false,
+                  "Att": [
+                    {
+                      "Id": "e70cd173-8212-4d8c-aa52-85fe52d809c9",
+                      "Nm": "Document Family Code",
+                      "Dsc": "Document Family Code desc",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": false,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": "DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocFamCd"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "09898e12-815f-4db9-8424-8e35cfd85437",
+                          "Nm": "Rule condition for Invoice Uploader",
+                          "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val = 'Opt1'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "15243252-f8f9-4ccc-a90f-2fae811bbbac",
+                      "Nm": "Document Type Code",
+                      "Dsc": "Document Type Code desc",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": false,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": "DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocTyCd"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "9b795b05-043d-4494-8a47-32767d2ffcda",
+                          "Nm": "Rule condition for Invoice Uploader",
+                          "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val = 'Opt1'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "ebff245c-df75-4b26-b39e-db224ff1a89e",
+                      "Nm": "Invoice Uploader Img",
+                      "Dsc": "Invoice Uploader Img description",
+                      "AttTy": "UserEntry",
+                      "isExcl": false,
+                      "isMan": false,
+                      "isHidden": true,
+                      "MaxFlSz": 6000,
+                      "MaxFlCnt": 20,
+                      "AlwExt": [
+                        "pdf",
+                        "jpeg",
+                        "jpg",
+                        "png",
+                        "bmp",
+                        "docx"
+                      ],
+                      "UICmpt": {
+                        "Order": 7,
+                        "CmptNm": "InvUploader",
+                        "DisplayTtl": "Invoice",
+                        "Hint": "Upload File(s)",
+                        "CmptTy": "FileUploader",
+                        "DisplayDsc": {
+                          "DisplayTxt": "Invoice desc"
+                        }
+                      },
+                      "AttMsgPos": [
+                        {
+                          "Ver": "12.030",
+                          "MsgTyCd": "ShpPcdDetailsMsg",
+                          "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/Img/Loc"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "87db3ae8-7c66-417b-9249-4970d2e254e2",
+                          "Nm": "Rule condition for Invoice Uploader",
+                          "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val = 'Opt1'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true,
+                              "isHidden": false
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+]
