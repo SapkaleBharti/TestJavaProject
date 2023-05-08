@@ -874,7 +874,7 @@
                     {
                       "Id": "ebff245c-df75-4b26-b39e-db224ff1a89e",
                       "Nm": "Invoice Uploader Img",
-                      "Dsc": "Invoice Uploader Img desc",
+                      "Dsc": "Invoice Uploader Img description",
                       "AttTy": "UserEntry",
                       "isExcl": false,
                       "isMan": false,
