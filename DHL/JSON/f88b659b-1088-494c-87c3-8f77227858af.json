@@ -3,13 +3,13 @@
         "ShpInfReqDef": {
             "Id": "f88b659b-1088-494c-87c3-8f77227858af",
             "Nm": "Power of Attorney- TR",
-            "Dsc": "To be added in future release",
+            "Dsc": "Power of Attorney Desc",
             "DrvdFromShpInfReqDef": {},
             "LedOwnOrgn": {
                 "CtryCd": "TR"
             },
             "ApplyAllInd": false,
-            "PrsnDatSenstyClssLvl": "Medium",
+            "PrsnDatSenstyClssLvl": "VeryHigh",
             "QuickGuideEnabledInd": false,
             "UICmpt": {
                 "CmptNm": "PowerOfAttr",
