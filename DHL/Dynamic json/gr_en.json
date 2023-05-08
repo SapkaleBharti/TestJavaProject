@@ -1,0 +1,43 @@
+{
+    "SIR": {
+        "POI": {
+            "toolTip": "",
+            "title": "Proof of Identification (for High Value Shipments)",
+            "description": "For customs clearance of shipments where the goods value is greater than EUR 999, Greece customs authorities require an EORI number.",
+            "PORadioBtn": {
+                "description": "Do you have a Greek VAT number?",
+                "Opt1": "Yes",
+                "Opt2": "No",
+                "title": "",
+                "toolTip": ""
+            },
+            "EORINum": {
+                "title": "",
+                "toolTip": "",
+                "validationErrorMessage": "Your EORI number must start with GR and must be followed by 9 digits.",
+                "links": {
+                    "here": {
+                        "DeclarationForm": {
+                            "displayText": "here",
+                            "Val": "https://ec.europa.eu/taxation_customs/dds2/eos/eori_validation.jsp?Lang=en&EoriNumb=GR123456789&Expand=true"
+                        }
+                    }
+                },
+                "description": "If you have an EORI, please enter it here as it is required for clearance of shipments with goods value exceeds EUR 1000. You can verify that your EORI is valid {here}.<br><br>If you do not, have an EORI number, we will contact you for further instructions."
+            },
+            "ShipCostBtn": {
+                "title": "",
+                "description": "Does your shipment cost more than 999 Euros?",
+                "Opt1": "Yes",
+                "Opt2": "No",
+                "toolTip": ""
+            },
+            "GreekNum": {
+                "description": "Please enter your Greek VAT number.",
+                "toolTip": "",
+                "title": "",
+                "validationErrorMessage": "Your VAT number must contain 9 digits."
+            }
+        }
+    }
+}
