@@ -1,0 +1,765 @@
+[
+  {
+    "ShpInfReqDef": {
+      "Id": "4198765d-a388-4fa7-bcd8-2e288efbf27d",
+      "Nm": "Return goods relief - TR",
+      "Dsc": "Return goods relief desc",
+      "DrvdFromShpInfReqDef": {},
+      "LedOwnOrgn": {
+        "CtryCd": "TR"
+      },
+      "ApplyAllInd": false,
+      "PrsnDatSenstyClssLvl": "High",
+      "QuickGuideEnabledInd": false,
+      "UICmpt": {
+        "CmptNm": "ReturnedTax",
+        "DisplayTtl": "Returned Goods Duty and Tax Exemption",
+        "Tooltip": "Return goods relief tooltip",
+        "CmptTy": "Composed",
+        "DisplayDsc": {
+          "DisplayTxt": "Return goods relief desc"
+        }
+      },
+      "Ent": [
+        {
+          "Id": "57904adb-0ac8-429f-86ef-ce96f59c2d01",
+          "Nm": "Returned Goods Duty and Tax Exemption",
+          "Dsc": "Returned Goods Duty and Tax Exemption Desc",
+          "isImg": false,
+          "isExcl": false,
+          "isMan": true,
+          "Ent": [
+            {
+              "Id": "720cd361-3733-4935-b14c-5adc4cb8d335",
+              "Nm": "Shipment Customer",
+              "Dsc": "Shipment Customer Entity",
+              "isImg": false,
+              "isExcl": false,
+              "isMan": true,
+              "Att": [
+                {
+                  "Id": "d7a10f4b-1874-4ff6-8bff-a99eceb48f1c",
+                  "Nm": "Customer role type code",
+                  "Dsc": "This is customer role type code attribute which is used to signigy the role of Customer in business transaction.",
+                  "AttTy": "Session",
+                  "isExcl": false,
+                  "isMan": true,
+                  "SessnPrmtId": "RlTyCd",
+                  "Enum": [
+                    {
+                      "Val": "IP",
+                      "DisplayTxt": "importer",
+                      "SrtOvrdSqNo": 1,
+                      "IsDfl": false
+                    },
+                    {
+                      "Val": "SP",
+                      "DisplayTxt": "shipper",
+                      "SrtOvrdSqNo": 2,
+                      "IsDfl": false
+                    },
+                    {
+                      "Val": "RV",
+                      "DisplayTxt": "Receiver",
+                      "SrtOvrdSqNo": 3,
+                      "IsDfl": false
+                    }
+                  ],
+                  "AttMsgPos": [
+                    {
+                      "Ver": "12.030",
+                      "MsgTyCd": "ShpPcdDetailsMsg",
+                      "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpCust/CustRolTyCd"
+                    }
+                  ]
+                },
+                {
+                  "Id": "6ab80195-be42-40a6-8be4-2aa97199247f",
+                  "Nm": "Company Type List",
+                  "Dsc": "Company Type Desc ",
+                  "AttTy": "UserEntry",
+                  "isExcl": false,
+                  "isMan": true,
+                  "UICmpt": {
+                    "CmptNm": "CompyType",
+                    "DisplayTtl": "Company Type",
+                    "Hint": "Select your company type.",
+                    "Tooltip": "",
+                    "CmptTy": "List",
+                    "DisplayDsc": {
+                      "DisplayTxt": ""
+                    },
+                    "Order": 2
+                  },
+                  "Enum": [
+                    {
+                      "Val": "Owned_Firm",
+                      "DisplayTxt": "Individual-owned Company",
+                      "SrtOrd": 1,
+                      "Nm": "Opt1"
+                    },
+                    {
+                      "Val": "Commercial_Firm",
+                      "DisplayTxt": "Commercial Firm",
+                      "SrtOrd": 2,
+                      "Nm": "Opt2"
+                    }
+                  ]
+                },
+                {
+                  "Id": "0fb0972e-126d-4a8f-b829-b8afb4800cb7",
+                  "Nm": "Identification Type List",
+                  "Dsc": "Identification Type Desc ",
+                  "AttTy": "UserEntry",
+                  "isExcl": false,
+                  "isMan": false,
+                  "isHidden": true,
+                  "UICmpt": {
+                    "CmptNm": "IdentyType",
+                    "DisplayTtl": "Identification Type",
+                    "Hint": "Select your company type.",
+                    "Tooltip": "",
+                    "CmptTy": "List",
+                    "DisplayDsc": {
+                      "DisplayTxt": ""
+                    },
+                    "Order": 3
+                  },
+                  "Enum": [
+                    {
+                      "Val": "Identity_Number",
+                      "DisplayTxt": "Turkish Republic Identity Number",
+                      "SrtOrd": 1,
+                      "Nm": "Opt1"
+                    },
+                    {
+                      "Val": "Passport",
+                      "DisplayTxt": "Passport",
+                      "SrtOrd": 2,
+                      "Nm": "Opt2"
+                    }
+                  ],
+                  "Rul": [
+                    {
+                      "RulId": "21558206-1c1b-416c-8761-01c538f212de",
+                      "Nm": "Show Identification type Condition",
+                      "Cond": "**.Att[Id='6ab80195-be42-40a6-8be4-2aa97199247f'].Val='Opt1'",
+                      "AttrMtdt": [
+                        {
+                          "isMan": true,
+                          "isHidden": false
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "Ent": [
+                {
+                  "Id": "2e066d6d-224d-4c93-bb59-2d7dfc50bc3e",
+                  "Nm": "National ID Registration",
+                  "Dsc": "National ID Registration Entity",
+                  "isImg": false,
+                  "isExcl": false,
+                  "isMan": false,
+                  "Att": [
+                    {
+                      "Id": "b9acb792-4b6f-4c09-83eb-ab2edb020f06",
+                      "Nm": "Registration Number Type",
+                      "Dsc": "Registration type code.The discriminator for the different types of registered numbers that may be assigned to a business party.",
+                      "AttTy": "Constant",
+                      "DflVal": "NID",
+                      "isExcl": false,
+                      "isMan": false,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "12.030",
+                          "MsgTyCd": "ShpPcdDetailsMsg",
+                          "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpCust/Rgs/TyCd"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "b20e6a20-fb0c-4bd8-a7c1-598d7767ce22",
+                          "Nm": "Registration Number Type condition",
+                          "Cond": "**.Att[Id='6ab80195-be42-40a6-8be4-2aa97199247f'].Val='Opt1' and **.Att[Id='0fb0972e-126d-4a8f-b829-b8afb4800cb7'].Val='Opt1'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "8f3c9b16-6c7d-4d62-a9f5-222e30fcccd4",
+                      "Nm": "Turkish Republic Identity Number",
+                      "Dsc": "Turkish Republic Identity Number Desc",
+                      "AttTy": "UserEntry",
+                      "isExcl": false,
+                      "isMan": false,
+                      "isHidden": true,
+                      "RegEx": "^\\d{11}$",
+                      "UICmpt": {
+                        "CmptNm": "IdentityNum",
+                        "Hint": "",
+                        "DisplayTtl": "Turkish Republic Identity Number",
+                        "Tooltip": "",
+                        "CmptTy": "TextInput",
+                        "DisplayDsc": {
+                          "DisplayTxt": ""
+                        },
+                        "Order": 4,
+                        "ValTy": "Regex"
+                      },
+                      "AttMsgPos": [
+                        {
+                          "Ver": "12.030",
+                          "MsgTyCd": "ShpPcdDetailsMsg",
+                          "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpCust/Rgs/No"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "25628f4b-148b-41d5-9388-9b3450063b37",
+                          "Nm": "Show Turkish Republic Identity Number condition",
+                          "Cond": "**.Att[Id='6ab80195-be42-40a6-8be4-2aa97199247f'].Val='Opt1' and **.Att[Id='0fb0972e-126d-4a8f-b829-b8afb4800cb7'].Val='Opt1'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true,
+                              "isHidden": false
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Id": "675f1b62-bfb8-40a2-8288-5d83918a5ece",
+                  "Nm": "Passport Registration",
+                  "Dsc": "Passport Registration Entity",
+                  "isImg": false,
+                  "isExcl": false,
+                  "isMan": false,
+                  "Att": [
+                    {
+                      "Id": "a9e84053-c045-42c4-aacd-d89ddd3ceed9",
+                      "Nm": "Passport Registration Number Type",
+                      "Dsc": "Passport Registration type code. The discriminator for the different types of registered numbers that may be assigned to a business party.",
+                      "AttTy": "Constant",
+                      "DflVal": "PAS",
+                      "isExcl": false,
+                      "isMan": false,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "12.030",
+                          "MsgTyCd": "ShpPcdDetailsMsg",
+                          "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpCust/Rgs/TyCd"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "4ddd679d-82b6-4d6a-99f6-b23f523259bf",
+                          "Nm": "Show passporttext field",
+                          "Cond": "**.Att[Id='6ab80195-be42-40a6-8be4-2aa97199247f'].Val='Opt1' and **.Att[Id='0fb0972e-126d-4a8f-b829-b8afb4800cb7'].Val='Opt2'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "b2318a8e-61ed-40cb-b27a-9d243995dedf",
+                      "Nm": "Passport Number",
+                      "Dsc": "Passport Number desc",
+                      "AttTy": "UserEntry",
+                      "isExcl": false,
+                      "isMan": false,
+                      "isHidden": true,
+                      "RegEx": "^[A-Za-z0-9]{1,40}$",
+                      "UICmpt": {
+                        "CmptNm": "TurPassportNo",
+                        "DisplayTtl": "Passport Number",
+                        "Hint": "",
+                        "CmptTy": "TextInput",
+                        "DisplayDsc": {
+                          "DisplayTxt": ""
+                        },
+                        "Order": 6,
+                        "ValTy": "Regex"
+                      },
+                      "AttMsgPos": [
+                        {
+                          "Ver": "12.030",
+                          "MsgTyCd": "ShpPcdDetailsMsg",
+                          "xPath": "ShpCust/Rgs[TyCd='PAS']/No"
+                        },
+                        {
+                          "Ver": "12.050",
+                          "jPath": "$.Cust.Rgs[@.TyCd=='PAS'].No",
+                          "MsgTyCd": "JCM_ShpPcdDetailsMsg"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "2733ec54-36ea-421c-8c17-4318e5e90d32",
+                          "Nm": "Show Passport Number",
+                          "Cond": "**.Att[Id='6ab80195-be42-40a6-8be4-2aa97199247f'].Val='Opt1' and **.Att[Id='0fb0972e-126d-4a8f-b829-b8afb4800cb7'].Val='Opt2'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true,
+                              "isHidden": false
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Id": "beec7d64-2b62-40a7-9d7b-4c4dab45591c",
+              "Nm": "Shipment Document",
+              "Dsc": "Shipment Document",
+              "isImg": false,
+              "isExcl": false,
+              "isMan": false,
+              "Ent": [
+                {
+                  "Id": "65b0d7e2-3e22-414e-b3fd-c6e76c705989",
+                  "Nm": "Returned Goods Duty and Tax Exemption Uploader Entity",
+                  "Dsc": "Returned Goods Duty and Tax Exemption Uploader Entity",
+                  "isImg": true,
+                  "isExcl": false,
+                  "isMan": true,
+                  "Att": [
+                    {
+                      "Id": "35748fbc-d788-46d9-bdba-de301355c6c9",
+                      "Nm": "Document Family Code",
+                      "Dsc": "Document Family Code",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": true,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": "DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocFamCd"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "7407bb1d-3b70-4808-b5a9-3fa778191f3e",
+                      "Nm": "Document Type Code",
+                      "Dsc": "Document Type Code",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": true,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": "DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocTyCd"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "4dfa98e5-6d50-481a-8706-00b9b451a7e5",
+                      "Nm": "Returned Goods Duty and Tax Exemption Img",
+                      "Dsc": "Returned Goods Duty and Tax Exemption Img Desc",
+                      "AttTy": "UserEntry",
+                      "isExcl": false,
+                      "isMan": true,
+                      "MaxFlSz": 6000,
+                      "MaxFlCnt": 20,
+                      "AlwExt": [
+                        "pdf",
+                        "jpeg",
+                        "jpg",
+                        "png",
+                        "bmp",
+                        "docx"
+                      ],
+                      "UICmpt": {
+                        "CmptNm": "ReturnedTaxImg",
+                        "Hint": "Upload File(s)",
+                        "DisplayTtl": "",
+                        "Tooltip": "",
+                        "CmptTy": "FileUploader",
+                        "DisplayDsc": {
+                          "DisplayTxt": "Returned Goods Duty and Tax Exemption"
+                        },
+                        "Order": 1
+                      },
+                      "AttMsgPos": [
+                        {
+                          "Ver": "12.030",
+                          "MsgTyCd": "ShpPcdDetailsMsg",
+                          "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/Img/Loc"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Id": "759e8d5c-c122-4c88-987f-fc18ad25fa70",
+                  "Nm": "Turkish Republic Identity Card Uploader Entity",
+                  "Dsc": "Turkish Republic Identity Card Desc",
+                  "isImg": true,
+                  "isExcl": false,
+                  "isMan": false,
+                  "Att": [
+                    {
+                      "Id": "d8fec4b4-899a-40f3-a400-db7f85ee602f",
+                      "Nm": "Document Family Code",
+                      "Dsc": "GIA Document Family Code",
+                      "AttTy": "Constant",
+                      "DflVal": "PII",
+                      "isExcl": false,
+                      "isMan": false,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": "DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocFamCd"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "c4f2e5e0-433b-4409-8107-935b399f0d61",
+                          "Nm": "Make NID doc family code mandatory",
+                          "Cond": "**.Att[Id='6ab80195-be42-40a6-8be4-2aa97199247f'].Val='Opt1' and **.Att[Id='0fb0972e-126d-4a8f-b829-b8afb4800cb7'].Val='Opt1'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "e9d93550-faa3-4860-991d-f6ad9c90fb72",
+                      "Nm": "Document Type Code",
+                      "Dsc": "Document Type Code",
+                      "AttTy": "Constant",
+                      "DflVal": "NID",
+                      "isExcl": false,
+                      "isMan": false,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": "DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocTyCd"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "d9096801-c230-411a-86b6-466f516a1299",
+                          "Nm": "Make NID doc type mandatory",
+                          "Cond": "**.Att[Id='6ab80195-be42-40a6-8be4-2aa97199247f'].Val='Opt1' and **.Att[Id='0fb0972e-126d-4a8f-b829-b8afb4800cb7'].Val='Opt1'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "e94ddf63-9d11-4ce7-90c0-0dbc480615a7",
+                      "Nm": "Turkish Republic Identity Card Img",
+                      "Dsc": "Turkish Republic Identity Card Img desc",
+                      "AttTy": "UserEntry",
+                      "isExcl": false,
+                      "isMan": false,
+                      "isHidden": true,
+                      "MaxFlSz": 6000,
+                      "MaxFlCnt": 20,
+                      "AlwExt": [
+                        "pdf",
+                        "jpeg",
+                        "jpg",
+                        "png",
+                        "bmp",
+                        "docx"
+                      ],
+                      "UICmpt": {
+                        "CmptNm": "IdentityCard",
+                        "Hint": "Upload File(s)",
+                        "DisplayTtl": "Turkish Republic Identity Card",
+                        "Tooltip": "",
+                        "CmptTy": "FileUploader",
+                        "DisplayDsc": {
+                          "DisplayTxt": ""
+                        },
+                        "Order": 5
+                      },
+                      "AttMsgPos": [
+                        {
+                          "Ver": "12.030",
+                          "MsgTyCd": "ShpPcdDetailsMsg",
+                          "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/Img/Loc"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "20a64069-9b7a-415c-862d-19273cffa54b",
+                          "Nm": "Show Turkish Republic Identity Card Img",
+                          "Cond": "**.Att[Id='6ab80195-be42-40a6-8be4-2aa97199247f'].Val='Opt1' and **.Att[Id='0fb0972e-126d-4a8f-b829-b8afb4800cb7'].Val='Opt1'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true,
+                              "isHidden": false
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Id": "5c895ae2-db51-4dc8-835e-1e6e01a3dd54",
+                  "Nm": "Paasport Image Entity",
+                  "Dsc": "Paasport Image Desc",
+                  "isImg": true,
+                  "isExcl": false,
+                  "isMan": false,
+                  "Att": [
+                    {
+                      "Id": "663d0835-6c0e-4c35-a6ae-e228d6217ed6",
+                      "Nm": "Document Family Code",
+                      "Dsc": "GIA Document Family Code",
+                      "AttTy": "Constant",
+                      "DflVal": "PII",
+                      "isExcl": false,
+                      "isMan": false,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": "DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocFamCd"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "350e0e6b-f7c7-414a-87fd-282cbb1b3d79",
+                          "Nm": "Make passport family code mandatory",
+                          "Cond": "**.Att[Id='6ab80195-be42-40a6-8be4-2aa97199247f'].Val='Opt1' and **.Att[Id='0fb0972e-126d-4a8f-b829-b8afb4800cb7'].Val='Opt2'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "2c43a814-3f0d-4da6-b04b-f5869abbe71f",
+                      "Nm": "Document Type Code",
+                      "Dsc": "Document Type Code",
+                      "AttTy": "Constant",
+                      "DflVal": "PAS",
+                      "isExcl": false,
+                      "isMan": false,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": "DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocTyCd"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "927858db-1c36-423e-89a8-963ef373bb10",
+                          "Nm": "Make passport doc type mandatory",
+                          "Cond": "**.Att[Id='6ab80195-be42-40a6-8be4-2aa97199247f'].Val='Opt1' and **.Att[Id='0fb0972e-126d-4a8f-b829-b8afb4800cb7'].Val='Opt2'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "9b2b7133-b10d-4fe8-9330-c0a1c474c1ea",
+                      "Nm": "Passport Image",
+                      "Dsc": "Passport Image desc",
+                      "AttTy": "UserEntry",
+                      "isExcl": false,
+                      "isMan": false,
+                      "isHidden": true,
+                      "MaxFlSz": 6000,
+                      "MaxFlCnt": 20,
+                      "AlwExt": [
+                        "pdf",
+                        "jpeg",
+                        "jpg",
+                        "png",
+                        "bmp",
+                        "docx"
+                      ],
+                      "UICmpt": {
+                        "CmptNm": "PassportImg",
+                        "Hint": "Upload File(s)",
+                        "DisplayTtl": "Passport Image",
+                        "Tooltip": "",
+                        "CmptTy": "FileUploader",
+                        "DisplayDsc": {
+                          "DisplayTxt": "Please upload a copy of the photo page of your passport"
+                        },
+                        "Order": 7
+                      },
+                      "AttMsgPos": [
+                        {
+                          "Ver" : "12.030",
+                          "MsgTyCd" : "ShpPcdDetailsMsg",
+                          "xPath" : "DocImgMsg/Bd/Doc[DocTyCd=='PAS']/Loc"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "c329885f-7b70-488c-9c93-10755a65c964",
+                          "Nm": "Show Passport Image",
+                          "Cond": "**.Att[Id='6ab80195-be42-40a6-8be4-2aa97199247f'].Val='Opt1' and **.Att[Id='0fb0972e-126d-4a8f-b829-b8afb4800cb7'].Val='Opt2'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true,
+                              "isHidden": false
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Id": "9013330c-2d23-4904-98fc-ebe85fc5220f",
+                  "Nm": "Tax plate Document Entity",
+                  "Dsc": "Tax plate Document Entity Desc",
+                  "isImg": true,
+                  "isExcl": false,
+                  "isMan": false,
+                  "Att": [
+                    {
+                      "Id": "3c081ffe-b71c-44cf-b70a-a2c4d2803146",
+                      "Nm": "Document Family Code",
+                      "Dsc": "GIA Document Family Code",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": false,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": "DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocFamCd"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "227bf0ea-5593-4046-bf12-2a87f74d4500",
+                          "Nm": "Make document family code mandatory",
+                          "Cond": "**.Att[Id='6ab80195-be42-40a6-8be4-2aa97199247f'].Val='Opt2'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "64de711a-67a9-4ed3-b964-3603223b3276",
+                      "Nm": "Document Type Code",
+                      "Dsc": "Document Type Code",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": false,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": "DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocTyCd"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "a42c1754-8caa-4db0-8451-33cfe0f4d969",
+                          "Nm": "Show Document Type Code",
+                          "Cond": "**.Att[Id='6ab80195-be42-40a6-8be4-2aa97199247f'].Val='Opt2'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "d5c35e52-9c02-4448-bc45-02ffe7847887",
+                      "Nm": "Tax plate image Uploader",
+                      "Dsc": "Tax plate image Uploader desc",
+                      "AttTy": "UserEntry",
+                      "isExcl": false,
+                      "isMan": false,
+                      "isHidden": true,
+                      "MaxFlSz": 6000,
+                      "MaxFlCnt": 20,
+                      "AlwExt": [
+                        "pdf",
+                        "jpeg",
+                        "jpg",
+                        "png",
+                        "bmp",
+                        "docx"
+                      ],
+                      "UICmpt": {
+                        "CmptNm": "TaxPlateImg",
+                        "Hint": "Upload File(s)",
+                        "DisplayTtl": "",
+                        "Tooltip": "",
+                        "CmptTy": "FileUploader",
+                        "DisplayDsc": {
+                          "DisplayTxt": "Please upload the tax plate image of your company for the customs clearance of this shipment"
+                        },
+                        "Order": 8
+                      },
+                      "AttMsgPos": [
+                        {
+                          "Ver": "12.030",
+                          "MsgTyCd": "ShpPcdDetailsMsg",
+                          "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/Img/Loc"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "1a552a78-0ca1-4bbc-9553-ac4c21191959",
+                          "Nm": "Show Tax plate image Uploader",
+                          "Cond": "**.Att[Id='6ab80195-be42-40a6-8be4-2aa97199247f'].Val='Opt2'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true,
+                              "isHidden": false
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+]
