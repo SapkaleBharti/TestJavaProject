@@ -1,0 +1,60 @@
+{
+    "SIR": {
+        "RetExport": {
+            "title": "Returned Export",
+            "description": "This import shipment is a returning commercial export.  In order for us  undertake clearance procedure, we must have the complete export paperwork.<br><br>Please attach: the export commercial invoice, the export air waybill and the export customs declaration (If DHL has completed the commercial export, we will retrieve the export declaration from export department). In addition, if the product is returning from a repair, it must be stated on the invoice  whether the goods were repaired under warranty or what is the repair cost.",
+            "toolTip": "",
+            "ReturnText": {
+                "title": "Reason for Return",
+                "description": "Please provide the reason for the return of this shipment.",
+                "toolTip": ""
+            },
+            "ExpAWBImg": {
+                "title": "Export AWB",
+                "formatHint": "Upload File(s)",
+                "description": "The tracking number of the Export shipment.",
+                "toolTip": ""
+            },
+            "RepairType": {
+                "title": "",
+                "description": "Repair Type (if item was not replaced)",
+                "Opt1": "Under Warranty",
+                "Opt2": "Not Under Warranty",
+                "toolTip": ""
+            },
+            "ShipmentDHL": {
+                "title": "Export Representative",
+                "formatHint": "When you sent the parcel (export) did you request Temporary Export ?",
+                "description": "Did you export this shipment with DHL Express?",
+                "Opt1": "Yes",
+                "Opt2": "No",
+                "toolTip": ""
+            },
+            "RetrnShip": {
+                "title": "",
+                "description": "Is your parcel a returned shipment after repair or replacement?",
+                "Opt1": "Yes",
+                "Opt2": "No",
+                "toolTip": ""
+            },
+            "ExpDeclarImg": {
+                "title": "Export Declaration",
+                "description": "The formal declaration submitted to Customs Authorities.",
+                "formatHint": "Upload File(s)",
+                "toolTip": ""
+            },
+            "ExpInvImg": {
+                "title": "Export Commercial Invoice",
+                "description": "Please upload the Commercial Invoice that you submitt to Customs Authoritiies, when you export the shipment.",
+                "formatHint": "Upload File(s)",
+                "toolTip": ""
+            },
+            "InvUploader": {
+                "title": "Invoice",
+                "description": "Please upload a copy of an invoice with either:<br>- the repair costs, or <br>- an indication that the goods were repaired/replaced under warranty at no cost to you.",
+                "formatHint": "Upload File(s)",
+                "toolTip": ""
+            }
+        }
+    }
+}
