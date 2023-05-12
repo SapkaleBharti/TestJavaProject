@@ -1,0 +1,55 @@
+{
+    "SIR": {
+        "ReturnedTax": {
+            "title": "Returned Goods Duty and Tax Exemption",
+            "description": "DHL Express requires a Returned Goods Tax Exemption Petition in order to handle the Duty and Tax exemption of this shipment through customs. ",
+            "toolTip": "",
+            "ReturnedTaxImg": {
+                "title": "",
+                "description": "Please upload a copy of your GERİ GELEN ESYA MUAF DİLEKÇE petition to gain exemption from duties and taxes for the customs clearance of this shipment.",
+                "toolTip": "Upload File(s)"
+            },
+            "IdentityCard": {
+                "title": "Turkish Republic Identity Card",
+                "description": "",
+                "toolTip": "Upload File(s)"
+            },
+            "TaxPlateImg": {
+                "title": "",
+                "description": "Please upload the tax plate image of your company for the customs clearance of this shipment.",
+                "toolTip": "Upload File(s)"
+            },
+            "IdentyType": {
+                "title": "Identification Type",
+                "description": "<Dropdown values:",
+                "Opt1": "Turkish Republic Identity Number",
+                "Opt2": "Passport",
+                "toolTip": "Select your Identification Type"
+            },
+            "PassportImg": {
+                "title": "Passport Image",
+                "description": "Please upload a copy of the photo page of your passport.",
+                "toolTip": "Upload File(s)"
+            },
+            "CompyType": {
+                "title": "Company Type",
+                "description": "Company Type List",
+                "Opt1": " Individual-owned Company",
+                "Opt2": "Commercial Firm",
+
+                "toolTip": "Select your company type."
+            },
+            "TurPassportNo": {
+                "title": "Passport Number ",
+                "description": "",
+                "toolTip": ""
+            },
+            "IdentityNum": {
+                "title": "Turkish Republic Identity Number",
+                "description": "",
+                "toolTip": ""
+            },
+            "validationErrorMessage": "Lütfen dilekçenizin kaşe-imzalı olduğundan emin olunuz. "
+        }
+    }
+}

@@ -1,0 +1,57 @@
+{
+    "SIR": {
+        "ReturnedTax": {
+            "title": "Geri Gelen Eşya Vergi Muafiyeti",
+            "description": "",
+            "formatHint": "DHL Express, gönderinizin gümrük muafiyet işlemlerinin tamamlanabilmesi için sizden Geri Gelen Muafiyet Dilekçesi talep etmektedir.",
+            "toolTip": "",
+            "ReturnedTaxImg": {
+                "title": "",
+                "description": "",
+                "formatHint": "Lütfen GERİ GELEN ESYA MUAF DİLEKÇE kopyasını gönderinizin muafiyet başvurusunu yapabilmemiz için yükleyiniz.",
+                "toolTip": "Dosya(ları) yükleyiniz."
+            },
+            "IdentityCard": {
+                "title": "Türkiye Cumhuriyeti Kimlik Karti",
+                "description": "",
+                "toolTip": "Dosya(ları) yükleyiniz."
+            },
+            "TaxPlateImg": {
+                "title": "",
+                "description": "",
+                "formatHint": "Lütfen vergi levhası görüntüsünü yükleyiniz.",
+                "toolTip": "Dosya(ları) yükleyiniz."
+            },
+            "IdentyType": {
+                "title": "Tanımlama Türü",
+                "description": "<Açılır menüden:",
+                "Opt1": "TC Kimlik Numarası",
+                "Opt2": "Pasaport Numarası",
+                "formatHint": "<Açılır menüden:",
+                "toolTip": "Kimlik Türü Seçin"
+            },
+            "PassportImg": {
+                "title": "Pasaport Görüntüsü (kimlik bilgilerinin yer aldığı sayfa)",
+                "description": "",
+                "formatHint": "Lütfen pasaportunuzun fotoğraflı sayfasının bir kopyasını yükleyin.",
+                "toolTip": "Dosya(ları) yükleyiniz."
+            },
+            "CompyType": {
+                "title": "Şirket türü",
+                "description": "",
+                "formatHint": "1. Şahıs firması",
+                "toolTip": "Firmanızın türünü seçiniz"
+            },
+            "TurPassportNo": {
+                "title": "Pasaport Numarası",
+                "description": "",
+                "toolTip": ""
+            },
+            "IdentityNum": {
+                "title": "Türkiye Cumhuriyeti Kimlik Numarası",
+                "toolTip": "",
+                "description": ""
+            }
+        }
+    }
+}
