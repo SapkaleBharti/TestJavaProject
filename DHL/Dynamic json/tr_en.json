@@ -1,0 +1,62 @@
+{
+    "SIR": {
+        "ReturnedTax": {
+            "title": "Returned Goods Duty and Tax Exemption",
+            "description": "DHL Express requires a Returned Goods Tax Exemption Petition in order to handle the Duty and Tax exemption of this shipment through customs. ",
+            "toolTip": "Please ensure that your documents are stamped and signed.",
+            "PassportImg": {
+                "title": "Passport Image",
+                "description": "Please upload a copy of the photo page of your passport.",
+                "formatHint": "Upload File(s)",
+                "toolTip": ""
+            },
+            "TypeofCompList": {
+                "title": "Company Type",
+                "description": "Company Type desc",
+                "Opt1": "Individual-owned Company",
+                "Opt2": "Commercial Firm",
+                "formatHint": "Select your company type.",
+                "toolTip": ""
+            },
+            "ReturnedTaxImg": {
+                "title": "",
+                "description": "Please upload a copy of your GERİ GELEN ESYA MUAF DİLEKÇE petition to gain exemption from duties and taxes for the customs clearance of this shipment.",
+                "formatHint": "Upload File(s)",
+                "toolTip": ""
+            },
+            "PassportNumText": {
+                "title": "Passport Number ",
+                "description": "",
+                "formatvalidation": "Passport number cannot contain any special characters or spaces",
+                "validationErrorMessage": "Your passport number cannot contain any spaces or special characters.",
+                "toolTip": ""
+            },
+            "IdentityNumImg": {
+                "title": "Turkish Republic Identity Card",
+                "description": "",
+                "formatHint": "Upload File(s)",
+                "toolTip": ""
+            },
+            "IdentityNum": {
+                "title": "Turkish Republic Identity Number",
+                "description": "",
+                "validationErrorMessage": "11 digits, all numbers",
+                "toolTip": ""
+            },
+            "TexPlateImg": {
+                "title": "",
+                "description": "Please upload the tax plate image of your company for the customs clearance of this shipment.",
+                "formatHint": "Upload File(s)",
+                "toolTip": ""
+            },
+            "IdentificationList": {
+                "title": "Identification Type",
+                "description": "Dropdown values",
+                "Opt1": "Turkish Republic Identity Number",
+                "Opt2": "Passport",
+                "formatHint": "Select your Identification Type",
+                "toolTip": ""
+            }
+        }
+    }
+}

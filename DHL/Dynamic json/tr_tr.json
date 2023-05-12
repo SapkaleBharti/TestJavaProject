@@ -1,0 +1,61 @@
+{
+    "SIR": {
+        "ReturnedTax": {
+            "title": "Geri Gelen Eşya Vergi Muafiyeti",
+            "description": "DHL Express, gönderinizin gümrük muafiyet işlemlerinin tamamlanabilmesi için sizden Geri Gelen Muafiyet Dilekçesi talep etmektedir.",
+            "toolTip": "Lütfen dilekçenizin kaşe-imzalı olduğundan emin olunuz. ",
+            "PassportImg": {
+                "title": "Pasaport Görüntüsü (kimlik bilgilerinin yer aldığı sayfa)",
+                "description": "Lütfen pasaportunuzun fotoğraflı sayfasının bir kopyasını yükleyin.",
+                "formatHint": "Dosya(ları) yükleyiniz.",
+                "toolTip": ""
+            },
+            "TypeofCompList": {
+                "title": "Şirket türü",
+                "description": " Şahıs firması, Ticari firma ",
+                "Opt1": "Şahıs firması",
+                "Opt2": "Ticari firma",
+                "formatHint": "Firmanızın türünü seçiniz",
+                "toolTip": ""
+            },
+            "ReturnedTaxImg": {
+                "title": "",
+                "description": "Lütfen GERİ GELEN ESYA MUAF DİLEKÇE kopyasını gönderinizin muafiyet başvurusunu yapabilmemiz için yükleyiniz.",
+                "formatHint": "Dosya(ları) yükleyiniz.",
+                "toolTip": ""
+            },
+            "PassportNumText": {
+                "title": "Pasaport Numarası",
+                "description": "",
+                "validationErrorMessage": "Pasaport numaranız boşluk veya özel karakter içeremez.",
+                "toolTip": ""
+            },
+            "IdentityNumImg": {
+                "title": "Türkiye Cumhuriyeti Kimlik Karti",
+                "description": "",
+                "formatHint": "Dosya(ları) yükleyiniz.",
+                "toolTip": ""
+            },
+            "IdentityNum": {
+                "title": "Türkiye Cumhuriyeti Kimlik Numarası",
+                "description": "",
+                "validationErrorMessage": "TC Kimlik Numaranız 11 haneden oluşmalıdır.",
+                "toolTip": ""
+            },
+            "TexPlateImg": {
+                "title": "",
+                "description": "Lütfen vergi levhası görüntüsünü yükleyiniz.",
+                "formatHint": "Dosya(ları) yükleyiniz.",
+                "toolTip": ""
+            },
+            "IdentificationList": {
+                "title": "Tanımlama Türü",
+                "description": "<Açılır menüden",
+                "Opt1": "TC Kimlik Numarası",
+                "Opt2": "Pasaport Numarası",
+                "formatHint": "Kimlik Türü Seçin",
+                "toolTip": ""
+            }
+        }
+    }
+}
