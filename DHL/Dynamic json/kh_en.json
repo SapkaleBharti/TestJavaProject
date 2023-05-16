@@ -1,0 +1,15 @@
+{
+    "SIR": {
+        "PayReceRequired": {
+            "title": "Broker Notification Fee Payment Confirmation",
+            "description": "To proceed with clearance using your nominated 3rd Party Broker, please pay the Broker Notification Fee to the account below and upload the proof of payment.<br><br>To pay the Fee, you can transfer KHR 67,650.00 to the Bank Account with the following details:<br>- Account Name: DHL EXPRESS CAMBODIA LTD<br>- Account Number: 005186412",
+            "toolTip": "",
+            "PaymentConImg": {
+                "title": "",
+                "description": "",
+                "formatHint": "Upload File(s)",
+                "toolTip": ""
+            }
+        }
+    }
+}

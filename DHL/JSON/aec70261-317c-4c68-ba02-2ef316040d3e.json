@@ -1,0 +1,126 @@
+[
+  {
+    "ShpInfReqDef": {
+      "Id": "aec70261-317c-4c68-ba02-2ef316040d3e",
+      "Nm": "Payment Receipt Required- KH",
+      "Dsc": "Payment Receipt Required Desc",
+      "DrvdFromShpInfReqDef": {},
+      "LedOwnOrgn": {
+        "CtryCd": "KH"
+      },
+      "ApplyAllInd": false,
+      "PrsnDatSenstyClssLvl": "Low",
+      "QuickGuideEnabledInd": false,
+      "UICmpt": {
+        "CmptNm": "PayReceRequired",
+        "DisplayTtl": "Broker Notification Fee Payment Confirmation",
+        "Tooltip": "",
+        "CmptTy": "Composed",
+        "DisplayDsc": {
+          "DisplayTxt": "Broker Notification Fee Payment Confirmation Desc"
+        },
+        "Hint": ""
+      },
+      "Ent": [
+        {
+          "Id": "c2c4c240-012c-4ef4-b48e-3b9524e9fa08",
+          "Nm": "Shipment Document",
+          "Dsc": "Shipment Documentdesc",
+          "isImg": false,
+          "isExcl": false,
+          "isMan": true,
+          "Ent": [
+            {
+              "Id": "712bc275-ecf4-4982-ba37-22ad174a38d9",
+              "Nm": "Payment Confirmation Entity",
+              "Dsc": "Payment Confirmation Entity desc",
+              "isImg": false,
+              "isExcl": false,
+              "isMan": true,
+              "Ent": [
+                {
+                  "Id": "6d418266-6b75-444b-8e78-0475d2e2fc61",
+                  "Nm": "Payment Confirmation uploader",
+                  "Dsc": "Payment Confirmation uploader Desc",
+                  "isImg": true,
+
+                  "isExcl": false,
+                  "isMan": true,
+                  "Att": [
+                    {
+                      "Id": "69f37b68-2bbf-44f3-83e5-87d729cc0b1c",
+                      "Nm": "Document Family Code",
+                      "Dsc": "Document Family Code",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": true,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": "DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocFamCd"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "6c6e8588-abfb-4202-9f44-054ae004a468",
+                      "Nm": "Document Type Code",
+                      "Dsc": "Document Type Code",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": true,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": "DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocTyCd"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "adc93571-7f63-460f-8222-3e26f34d42a8",
+                      "Nm": "Broker Notification Fee Payment Confirmation",
+                      "Dsc": "Broker Notification Fee Payment Confirmation desc",
+                      "AttTy": "UserEntry",
+                      "isExcl": false,
+                      "isMan": true,
+                      "MaxFlSz": 6000,
+                      "MaxFlCnt": 20,
+                      "AlwExt": [
+                        "pdf",
+                        "jpeg",
+                        "jpg",
+                        "png",
+                        "bmp",
+                        "docx"
+                      ],
+                      "UICmpt": {
+                        "CmptNm": "PaymentConImg",
+                        "DisplayTtl": "",
+                        "Hint": "Upload File(s)",
+                        "Tooltip": "",
+                        "CmptTy": "FileUploader",
+                        "DisplayDsc": {
+                          "DisplayTxt": ""
+                        }
+                      },
+                      "AttMsgPos": [
+                        {
+                          "Ver": "12.030",
+                          "MsgTyCd": "ShpPcdDetailsMsg",
+                          "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/Img/Loc"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+]
