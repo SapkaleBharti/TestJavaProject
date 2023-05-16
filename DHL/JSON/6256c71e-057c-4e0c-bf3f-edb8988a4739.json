@@ -1,0 +1,2477 @@
+[
+  {
+    "ShpInfReqDef": {
+      "Id": "6256c71e-057c-4e0c-bf3f-edb8988a4739",
+      "Nm": "Personal Effects relief confirmation - GB",
+      "Dsc": "Personal Effects relief confirmation Desc",
+      "DrvdFromShpInfReqDef": {},
+      "LedOwnOrgn": {
+        "CtryCd": "GB"
+      },
+      "ApplyAllInd": false,
+      "PrsnDatSenstyClssLvl": "VeryHigh",
+      "QuickGuideEnabledInd": false,
+      "UICmpt": {
+        "CmptNm": "PERConfirmation",
+        "DisplayTtl": "",
+        "Tooltip": "",
+        "CmptTy": "Composed",
+        "DisplayDsc": {
+          "DisplayTxt": "Customs Clearance Information Required"
+        },
+        "Hint": ""
+      },
+      "Ent": [
+        {
+          "Id": "0803faf0-e317-4939-936f-2bab97ffe2fa",
+          "Nm": "Reason for the goods coming into the UK entity",
+          "Dsc": "Reason for the goods coming into the UK entity desc",
+          "isImg": false,
+          "isExcl": false,
+          "isMan": true,
+          "Ent": [
+            {
+              "Id": "7ff3fb5d-c8dc-4533-be53-ce44af50f571",
+              "Nm": "Shipment Customer",
+              "Dsc": "Shipment Customer desc",
+              "isImg": false,
+              "isExcl": false,
+              "isMan": true,
+              "Att": [
+                {
+                  "Id": "42e1e9f0-944c-4566-8dec-d6c5b2511940",
+                  "Nm": "Customer role type code",
+                  "Dsc": "Customer role type code desc",
+                  "AttTy": "Session",
+                  "isExcl": false,
+                  "isMan": true,
+                  "SessnPrmtId": "RlTyCd",
+                  "Enum": [
+                    {
+                      "Val": "IP",
+                      "DisplayTxt": "importer",
+                      "SrtOvrdSqNo": 1,
+                      "IsDfl": false
+                    },
+                    {
+                      "Val": "SP",
+                      "DisplayTxt": "shipper",
+                      "SrtOvrdSqNo": 2,
+                      "IsDfl": false
+                    },
+                    {
+                      "Val": "RV",
+                      "DisplayTxt": "Receiver",
+                      "SrtOvrdSqNo": 3,
+                      "IsDfl": false
+                    }
+                  ],
+                  "AttMsgPos": [
+                    {
+                      "Ver": "12.030",
+                      "MsgTyCd": "ShpPcdDetailsMsg",
+                      "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpCust/CustRolTyCd"
+                    }
+                  ]
+                },
+                {
+                  "Id": "ddf6822c-7fc1-4c59-bc88-f9b6211ae6fe",
+                  "Nm": "Reason for the goods coming into the UK",
+                  "Dsc": "Reason for the goods coming into the UK desc",
+                  "AttTy": "UserEntry",
+                  "isExcl": false,
+                  "isMan": true,
+                  "UICmpt": {
+                    "Order": 1,
+                    "CmptNm": "ReasonComUK",
+                    "DisplayTtl": "",
+                    "Hint": "",
+                    "Tooltip": "",
+                    "CmptTy": "List",
+                    "DisplayDsc": {
+                      "DisplayTxt": "What is the reason for the goods coming into the UK"
+                    },
+                    "ValTy": "Standard"
+                  },
+                  "Enum": [
+                    {
+                      "Val": "S_T",
+                      "DisplayTxt": "Studying",
+                      "SrtOrd": 1,
+                      "Nm": "Opt1"
+                    },
+                    {
+                      "Val": "T_V",
+                      "DisplayTxt": "Temporary Visitor",
+                      "SrtOrd": 2,
+                      "Nm": "Opt2"
+                    },
+                    {
+                      "Val": "R_G",
+                      "DisplayTxt": "Returning Goods",
+                      "SrtOrd": 3,
+                      "Nm": "Opt3"
+                    },
+                    {
+                      "Val": "M_UK",
+                      "DisplayTxt": "Moving to UK",
+                      "SrtOrd": 4,
+                      "Nm": "Opt4"
+                    },
+                    {
+                      "Val": "O_T",
+                      "DisplayTxt": "Othe",
+                      "SrtOrd": 5,
+                      "Nm": "Opt5"
+                    }
+                  ],
+                  "AttMsgPos": [
+                    {
+                      "Ver": "12.030",
+                      "MsgTyCd": "ShpPcdDetailsMsg",
+                      "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpCust/CustRolTyCd"
+                    }
+                  ],
+                  "Rul": [
+                    {
+                      "RulId": "81a2c39d-68dd-42f2-91ec-43274c283746",
+                      "Nm": "Show Reason for the goods coming into the UK",
+                      "Cond": "**.Att[Id='c385b1f1-70d3-42a1-83ab-b09fceebcce5'].Val='Opt1'",
+                      "AttrMtdt": [
+                        {
+                          "isMan": true,
+                          "isHidden": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Id": "8b980e4b-f5f5-4c8c-b248-777dca84b963",
+                  "Nm": "Provide reason for the return shipment",
+                  "Dsc": "Provide reason for the return shipment desc",
+                  "AttTy": "UserEntry",
+                  "isExcl": false,
+                  "isMan": false,
+                  "isHidden": true,
+                  "MinL": 1,
+                  "MaxL": 800,
+                  "UICmpt": {
+                    "Order": 8,
+                    "CmptNm": "ReturnText",
+                    "DisplayTtl": "Reason for Return",
+                    "Hint": "",
+                    "CmptTy": "TextArea",
+                    "DisplayDsc": {
+                      "DisplayTxt": "Return shipment desc"
+                    },
+                    "ValTy": "String"
+                  },
+                  "AttMsgPos": [
+                    {
+                      "Ver": "12.030",
+                      "MsgTyCd": "ShpPcdDetailsMsg",
+                      "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/CmrcInv/Ln/DscGds"
+                    }
+                  ],
+                  "Rul": [
+                    {
+                      "RulId": "c97069ee-6154-4177-87ad-0613ff3f9b25",
+                      "Nm": "Rule condition for Return shipment",
+                      "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val='Opt2'",
+                      "AttrMtdt": [
+                        {
+                          "isMan": true,
+                          "isHidden": false
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "Ent": [
+                {
+                  "Id": "181beb24-9acb-4b2b-9839-3798cbc93406",
+                  "Nm": "Business Party",
+                  "Dsc": "Business Party Entity",
+                  "isImg": false,
+                  "isExcl": false,
+                  "isMan": true,
+                  "Ent": [
+                    {
+                      "Id": "206eb8bd-37df-4696-b778-7b81f3695ab7",
+                      "Nm": "Individual Customer",
+                      "Dsc": "Individual Customer Entity",
+                      "isImg": false,
+                      "isExcl": false,
+                      "isMan": true,
+                      "Ent": [
+                        {
+                          "Id": "d4c1b6ad-3a6e-442b-825d-735bacfd1bbf",
+                          "Nm": "Consent for Returned Shipment after repair ",
+                          "Dsc": "Consent for Returned Shipment  after repair Entity",
+                          "isImg": false,
+                          "isExcl": false,
+                          "isMan": true,
+                          "Ent": [
+                            {
+                              "Id": "e51fc277-a311-4724-9dba-341b2d3e8e18",
+                              "Nm": "Consent Returned Shipment after repair Category",
+                              "Dsc": "Consent Returned Shipment after repair Category desc",
+                              "isImg": false,
+                              "isExcl": false,
+                              "isMan": true,
+                              "Att": [
+                                {
+                                  "Id": "34300d47-a91f-48ea-aca4-156d7d8d83ce",
+                                  "Nm": "Consent Category Code",
+                                  "Dsc": "The unique identificaiton of the Consent Purpose",
+                                  "AttTy": "Constant",
+                                  "DflVal": "CSTMS"
+                                },
+                                {
+                                  "Id": "682a8af2-d276-46f7-9da0-a6000eb08e4d",
+                                  "Nm": "Consent Category Name",
+                                  "Dsc": "Consent Category Name",
+                                  "AttTy": "Constant",
+                                  "DflVal": "Customs Consents"
+                                },
+                                {
+                                  "Id": "5c523074-ab59-4ffd-8dfb-9babc95d4940",
+                                  "Nm": "Consent Category Description",
+                                  "Dsc": "Consent Category Desc",
+                                  "AttTy": "Constant",
+                                  "DflVal": "Captures Customs Consents from User"
+                                }
+                              ]
+                            },
+                            {
+                              "Id": "8430861b-38c6-4e53-92a0-5a100bdd0d05",
+                              "Nm": "Consent Purpose Returned Shipment after repair",
+                              "Dsc": "Consent Purpose Returned Shipment after repair desc",
+                              "isImg": false,
+                              "isExcl": false,
+                              "isMan": true,
+                              "Att": [
+                                {
+                                  "Id": "75e0a595-ab28-4e91-9949-fab52cdf82b5",
+                                  "Nm": "Returned Shipment after repair - Radion Button",
+                                  "Dsc": "Returned Shipment after repair - Radion Button description",
+                                  "AttTy": "UserEntry",
+                                  "isExcl": false,
+                                  "isMan": true,
+                                  "UICmpt": {
+                                    "Order": 1,
+                                    "CmptNm": "RetrnShip",
+                                    "DisplayTtl": "",
+                                    "Tooltip": "",
+                                    "CmptTy": "RadioButton",
+                                    "DisplayDsc": {
+                                      "DisplayTxt": "Returned Shipment description"
+                                    },
+                                    "ValTy": "Standard"
+                                  },
+                                  "Enum": [
+                                    {
+                                      "Val": "Yes",
+                                      "DisplayTxt": "Yes",
+                                      "SrtOrd": 1,
+                                      "Nm": "Opt1"
+                                    },
+                                    {
+                                      "Val": "No",
+                                      "DisplayTxt": "No",
+                                      "SrtOrd": 2,
+                                      "Nm": "Opt2"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "Id": "92011bf2-1fa7-40ab-95d7-d90a8081c2c7",
+                                  "Nm": "Purpose Name - Returned Shipment after repair",
+                                  "Dsc": "Purpose Name - Returned Shipment after repair component",
+                                  "AttTy": "Constant",
+                                  "DflVal": "User agree to return parcel shipment after repair",
+                                  "isExcl": false,
+                                  "isMan": true,
+                                  "Rul": [
+                                    {
+                                      "RulId": "ff1f1b35-1404-4c24-a774-cdb2e79853a1",
+                                      "Nm": "User Not agree returned Shipment after repair Rule",
+                                      "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val='Opt2'",
+                                      "AttrMtdt": [
+                                        {
+                                          "DflVal": "User does not agree to return parcel shipment after repair."
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "Id": "d4f8882f-8e24-4252-9679-a78805ef4a72",
+                                  "Nm": "Purpose Description - Returned Shipment after repair",
+                                  "Dsc": "Purpose Description - Returned Shipment after repair component",
+                                  "AttTy": "Constant",
+                                  "DflVal": "User not agree to return parcel shipment after repair.",
+                                  "isExcl": false,
+                                  "isMan": true,
+                                  "Rul": [
+                                    {
+                                      "RulId": "2beaea05-e4d5-425d-af65-3dd355e5f0ce",
+                                      "Nm": "Not agree returned Shipment after repair desc Rule",
+                                      "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val='Opt2'",
+                                      "AttrMtdt": [
+                                        {
+                                          "DflVal": "User does not agree to return parcel shipment after repair."
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "Id": "d7ba6251-8513-4094-a4f4-083214a5bb5c",
+                          "Nm": "Consent Shipment export with DHL",
+                          "Dsc": "Consent Shipment export with DHL Desc",
+                          "isImg": false,
+                          "isExcl": false,
+                          "isMan": false,
+                          "Ent": [
+                            {
+                              "Id": "de1b91aa-4f4b-4387-a58f-245493f01316",
+                              "Nm": "Shipment export with DHL entity",
+                              "Dsc": "Shipment export with DHL Entity desc",
+                              "isImg": false,
+                              "isExcl": false,
+                              "isMan": false,
+                              "Att": [
+                                {
+                                  "Id": "7a4a3a0b-0c89-4f60-95d9-da9bd1c7601d",
+                                  "Nm": "Consent Category Code",
+                                  "Dsc": "The unique identificaiton of the Consent Purpose",
+                                  "AttTy": "Constant",
+                                  "DflVal": "CSTMS"
+                                },
+                                {
+                                  "Id": "3be60771-3e8c-467f-9107-ebad3c510620",
+                                  "Nm": "Consent Category Name",
+                                  "Dsc": "Consent Category Name",
+                                  "AttTy": "Constant",
+                                  "DflVal": "Customs Consents"
+                                },
+                                {
+                                  "Id": "05a6dbcb-e033-4305-bbc8-4a7bdd50517d",
+                                  "Nm": "Consent Category Description",
+                                  "Dsc": "Consent Category Desc",
+                                  "AttTy": "Constant",
+                                  "DflVal": "Captures Customs Consents from User"
+                                }
+                              ]
+                            },
+                            {
+                              "Id": "b17c967b-0c69-4903-bbd9-3d8827f17d9b",
+                              "Nm": "Consent Purpose - Shipment export with DHL",
+                              "Dsc": "Consent Purpose - Shipment export with DHL desc",
+                              "isImg": false,
+                              "isExcl": false,
+                              "isMan": false,
+                              "Att": [
+                                {
+                                  "Id": "917a20fa-f163-454d-b941-fbe3bb21018c",
+                                  "Nm": "Shipment export with DHL - Radio Button",
+                                  "Dsc": "Shipment export with DHL - Radio Button Desc",
+                                  "AttTy": "UserEntry",
+                                  "isExcl": false,
+                                  "isMan": false,
+                                  "isHidden": true,
+                                  "UICmpt": {
+                                    "Order": 5,
+                                    "CmptNm": "ShipmentDHL",
+                                    "DisplayTtl": "Export Representative",
+                                    "Tooltip": "",
+                                    "CmptTy": "RadioButton",
+                                    "DisplayDsc": {
+                                      "DisplayTxt": "Shipment with DHL desc"
+                                    },
+                                    "ValTy": "Standard"
+                                  },
+                                  "Enum": [
+                                    {
+                                      "Val": "Yes",
+                                      "DisplayTxt": "Yes",
+                                      "SrtOrd": 1,
+                                      "Nm": "Opt1"
+                                    },
+                                    {
+                                      "Val": "No",
+                                      "DisplayTxt": "No",
+                                      "SrtOrd": 2,
+                                      "Nm": "Opt2"
+                                    }
+                                  ],
+                                  "Rul": [
+                                    {
+                                      "RulId": "da4cdfc0-21a3-4547-943f-05cb864c8ec8",
+                                      "Nm": "Rule condition for Shipment with DHL",
+                                      "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val='Opt1'",
+                                      "AttrMtdt": [
+                                        {
+                                          "isMan": true,
+                                          "isHidden": false
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "Id": "c33d6bc3-73e7-4c27-82ea-1a344f95a726",
+                                  "Nm": "Purpose Name - Shipment export with DHL Radio Button",
+                                  "Dsc": "Purpose Name - Shipment export with DHL Radio Button desc",
+                                  "AttTy": "Constant",
+                                  "DflVal": "Agree to export shipment with DHL Express",
+                                  "isExcl": false,
+                                  "isMan": false,
+                                  "Rul": [
+                                    {
+                                      "RulId": "fd16b4ee-1b53-422a-a211-4e241795bcd6",
+                                      "Nm": "Not agree Shipment export with DHL purpose name",
+                                      "Cond": "**.Att[Id='917a20fa-f163-454d-b941-fbe3bb21018c'].Val='Opt2'",
+                                      "AttrMtdt": [
+                                        {
+                                          "DflVal": "User doese not agree to export shipment with DHL Express"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "Id": "6cfb1e3b-b505-4195-b811-3513abe6f5b6",
+                                  "Nm": "Purpose Description - Shipment export with DHL Radio button",
+                                  "Dsc": "Purpose Description with a radiobutton component",
+                                  "AttTy": "Constant",
+                                  "DflVal": "Agree to export shipment with DHL Express",
+                                  "isExcl": false,
+                                  "isMan": false,
+                                  "Rul": [
+                                    {
+                                      "RulId": "e95ba789-9599-48a3-b975-c87af6e6a848",
+                                      "Nm": "Not agree Shipment export with DHL purpose Description",
+                                      "Cond": "**.Att[Id='917a20fa-f163-454d-b941-fbe3bb21018c'].Val='Opt2'",
+                                      "AttrMtdt": [
+                                        {
+                                          "DflVal": "User doese not agree to export shipment with DHL Express"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Id": "41dde594-c3ba-454b-bfa1-28034efdb289",
+              "Nm": "Shipment Document",
+              "Dsc": "Document Image desc",
+              "isImg": true,
+              "isExcl": false,
+              "isMan": true,
+              "Ent": [
+                {
+                  "Id": "35248df5-37bf-4e1c-9f2d-7cf179697af8",
+                  "Nm": "Export Commercial Invoice entity",
+                  "Dsc": "Export Commercial Invoice entity desc",
+                  "isImg": true,
+                  "isExcl": false,
+                  "isMan": false,
+                  "Att": [
+                    {
+                      "Id": "b7801753-442f-4b31-b92e-52b9019a4e9c",
+                      "Nm": "Document Family Code",
+                      "Dsc": "Document Family Code desc",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": false,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": "DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocFamCd"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "a66782b4-f541-40aa-8df0-ce72b935b53b",
+                          "Nm": "Rule condition for Export Commercial Invoice",
+                          "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val = 'Opt1'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "40da1304-e0fd-46bc-abb7-0c9cd6e120fc",
+                      "Nm": "Document Type Code",
+                      "Dsc": "Document Type Code desc",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": false,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": "DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocTyCd"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "6a87b668-15f5-410e-b174-94a6cdde73b3",
+                          "Nm": "Rule condition for Export Commercial Invoice",
+                          "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val = 'Opt1'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "30d56ae5-5fed-44ec-b29c-dd234d603c07",
+                      "Nm": "Export Commercial Invoice Uploader",
+                      "Dsc": "Export Commercial Invoice Uploader desc",
+                      "AttTy": "UserEntry",
+                      "isExcl": false,
+                      "isMan": false,
+                      "isHidden": true,
+                      "MaxFlSz": 6000,
+                      "MaxFlCnt": 20,
+                      "AlwExt": [
+                        "pdf",
+                        "jpeg",
+                        "jpg",
+                        "png",
+                        "bmp",
+                        "docx"
+                      ],
+                      "UICmpt": {
+                        "CmptNm": "ExpInvImg",
+                        "DisplayTtl": "Export Commercial Invoice",
+                        "Hint": "Upload File(s)",
+                        "Tooltip": "",
+                        "CmptTy": "FileUploader",
+                        "DisplayDsc": {
+                          "DisplayTxt": "Export Commercial Invoice"
+                        },
+                        "Order": 3
+                      },
+                      "AttMsgPos": [
+                        {
+                          "Ver": "12.030",
+                          "MsgTyCd": "ShpPcdDetailsMsg",
+                          "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/Img/Loc"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "cb7f19e3-e59d-4cab-942f-ca083d04e42d",
+                          "Nm": "Rule condition for Export Commercial Invoice",
+                          "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val = 'Opt1'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true,
+                              "isHidden": false
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Id": "f7bbbc1e-9e58-4de9-ba1a-dd2e13952ac3",
+                  "Nm": "Export AWB entity",
+                  "Dsc": "Export AWB entity desc",
+                  "isImg": true,
+                  "isExcl": false,
+                  "isMan": false,
+                  "Att": [
+                    {
+                      "Id": "2fc875df-d396-40c0-b1de-4ec7c8278ccd",
+                      "Nm": "Document Family Code",
+                      "Dsc": "Document Family Code desc",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": false,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": "DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocFamCd"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "56242bdf-17ad-4410-bd32-0fc4af2e2384",
+                          "Nm": "Rule condition for Export AWB",
+                          "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val = 'Opt1'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "13a097f6-6ed7-47ff-af19-d13b82a5d39e",
+                      "Nm": "Document Type Code",
+                      "Dsc": "Document Type Code desc",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": false,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": "DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocTyCd"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "135594a6-c55b-4b52-9c88-03cd17d6c0db",
+                          "Nm": "Rule condition for Export AWB",
+                          "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val = 'Opt1'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "d473ad24-93b3-4aeb-b158-0e73e5a2fbbc",
+                      "Nm": "Export AWB Uploader",
+                      "Dsc": "Export AWB Uploader desc",
+                      "AttTy": "UserEntry",
+                      "isExcl": false,
+                      "isMan": false,
+                      "isHidden": true,
+                      "MaxFlSz": 6000,
+                      "MaxFlCnt": 20,
+                      "AlwExt": [
+                        "pdf",
+                        "jpeg",
+                        "jpg",
+                        "png",
+                        "bmp",
+                        "docx"
+                      ],
+                      "UICmpt": {
+                        "CmptNm": "ExpAWBImg",
+                        "DisplayTtl": "",
+                        "Hint": "Upload File(s)",
+                        "Tooltip": "",
+                        "CmptTy": "FileUploader",
+                        "DisplayDsc": {
+                          "DisplayTxt": "Export AWB desc"
+                        },
+                        "Order": 4
+                      },
+                      "AttMsgPos": [
+                        {
+                          "Ver": "12.030",
+                          "MsgTyCd": "ShpPcdDetailsMsg",
+                          "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/Img/Loc"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "d6e5f259-6fe8-4bf8-9243-c341a115001d",
+                          "Nm": "Rule condition for Stamp Original Invoice",
+                          "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val = 'Opt1'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true,
+                              "isHidden": false
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Id": "0a2e034d-c45a-4257-a78e-9d05caeef657",
+                  "Nm": "Export Declaration entity",
+                  "Dsc": "Export Declaration entity desc",
+                  "isImg": true,
+                  "isExcl": false,
+                  "isMan": false,
+                  "Att": [
+                    {
+                      "Id": "8b6cc875-6330-47c5-b03d-ba2779a81e41",
+                      "Nm": "Document Family Code",
+                      "Dsc": "Document Family Code desc",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": false,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": " DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocFamCd"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "65bcf8f8-88e2-4dd2-9479-d3c1d2f1cf4e",
+                          "Nm": "Rule condition for Export Declaration",
+                          "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val = 'Opt1' and **.Att[Id='917a20fa-f163-454d-b941-fbe3bb21018c'].Val = 'Opt2'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "25995cc2-498f-48d8-bbc9-7f185126998e",
+                      "Nm": "Document Type Code",
+                      "Dsc": "Document Type Code desc",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": false,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": " DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocTyCd"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "85305c23-5f24-4c3d-8950-cbb748b423b5",
+                          "Nm": "Rule condition for Export Declaration",
+                          "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val = 'Opt1' and **.Att[Id='917a20fa-f163-454d-b941-fbe3bb21018c'].Val = 'Opt2'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "170a58fc-6fd7-4e9c-99c0-d89129566bb2",
+                      "Nm": "Export Declaration Img",
+                      "Dsc": "Export Declaration uploader desc",
+                      "AttTy": "UserEntry",
+                      "isExcl": false,
+                      "isMan": false,
+                      "isHidden": true,
+                      "MaxFlSz": 6000,
+                      "MaxFlCnt": 20,
+                      "AlwExt": [
+                        "pdf",
+                        "jpeg",
+                        "jpg",
+                        "png",
+                        "bmp",
+                        "docx"
+                      ],
+                      "UICmpt": {
+                        "Order": 6,
+                        "CmptNm": "ExpDeclarImg",
+                        "DisplayTtl": "Export Declaration",
+                        "Hint": "Upload File(s)",
+                        "CmptTy": "FileUploader",
+                        "DisplayDsc": {
+                          "DisplayTxt": "Export Declaration desc"
+                        }
+                      },
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": " DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/Img/Loc"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "43217b05-472f-46a0-b33d-099ce6d58ab2",
+                          "Nm": "Rule condition for Export Declaration",
+                          "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val = 'Opt1' and **.Att[Id='917a20fa-f163-454d-b941-fbe3bb21018c'].Val = 'Opt2'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true,
+                              "isHidden": false
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Id": "7ef1a883-06a4-4ad0-9bc3-b0d4d33c2703",
+                  "Nm": "Invoice Uploader Entity",
+                  "Dsc": "Invoice Uploader Desc",
+                  "isImg": true,
+                  "isExcl": false,
+                  "isMan": false,
+                  "Att": [
+                    {
+                      "Id": "e70cd173-8212-4d8c-aa52-85fe52d809c9",
+                      "Nm": "Document Family Code",
+                      "Dsc": "Document Family Code desc",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": false,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": " DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocFamCd"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "09898e12-815f-4db9-8424-8e35cfd85437",
+                          "Nm": "Rule condition for Invoice Uploader",
+                          "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val = 'Opt1'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "15243252-f8f9-4ccc-a90f-2fae811bbbac",
+                      "Nm": "Document Type Code",
+                      "Dsc": "Document Type Code desc",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": false,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": " DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocTyCd"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "9b795b05-043d-4494-8a47-32767d2ffcda",
+                          "Nm": "Rule condition for Invoice Uploader",
+                          "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val = 'Opt1'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "ebff245c-df75-4b26-b39e-db224ff1a89e",
+                      "Nm": "Invoice Uploader Img",
+                      "Dsc": "Invoice Uploader Img desc",
+                      "AttTy": "UserEntry",
+                      "isExcl": false,
+                      "isMan": false,
+                      "isHidden": true,
+                      "MaxFlSz": 6000,
+                      "MaxFlCnt": 20,
+                      "AlwExt": [
+                        "pdf",
+                        "jpeg",
+                        "jpg",
+                        "png",
+                        "bmp",
+                        "docx"
+                      ],
+                      "UICmpt": {
+                        "Order": 7,
+                        "CmptNm": "InvUploader",
+                        "DisplayTtl": "Invoice",
+                        "Hint": "Upload File(s)",
+                        "CmptTy": "FileUploader",
+                        "DisplayDsc": {
+                          "DisplayTxt": "Invoice desc"
+                        }
+                      },
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": " DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/Img/Loc"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "87db3ae8-7c66-417b-9249-4970d2e254e2",
+                          "Nm": "Rule condition for Invoice Uploader",
+                          "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val = 'Opt1'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true,
+                              "isHidden": false
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Id": "13f2d9e8-da55-4214-88e1-2205cf4916f1",
+              "Nm": "Shipment Document",
+              "Dsc": "Document Image desc",
+              "isImg": true,
+              "isExcl": false,
+              "isMan": true,
+              "Ent": [
+                {
+                  "Id": "f87583c2-8ae8-4df1-9bb5-c0babbb1e260",
+                  "Nm": "Export Commercial Invoice entity",
+                  "Dsc": "Export Commercial Invoice entity desc",
+                  "isImg": true,
+                  "isExcl": false,
+                  "isMan": false,
+                  "Att": [
+                    {
+                      "Id": "ab019822-14c8-462a-8432-05f88d3473c8",
+                      "Nm": "Document Family Code",
+                      "Dsc": "Document Family Code desc",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": false,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": "DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocFamCd"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "2e5c079a-c839-470d-9a12-be6923195e1e",
+                          "Nm": "Rule condition for Export Commercial Invoice",
+                          "Cond": "**.Att[Id=''].Val = 'Opt1'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "d9c5c386-6403-49a2-98a3-ba2e603995f0",
+                      "Nm": "Document Type Code",
+                      "Dsc": "Document Type Code desc",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": false,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": "DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocTyCd"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "b779821f-2d24-45e0-ba65-4b1ee9782de7",
+                          "Nm": "Rule condition for Export Commercial Invoice",
+                          "Cond": "**.Att[Id=''].Val = 'Opt1'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "30d56ae5-5fed-44ec-b29c-dd234d603c07",
+                      "Nm": "Export Commercial Invoice Uploader",
+                      "Dsc": "Export Commercial Invoice Uploader desc",
+                      "AttTy": "UserEntry",
+                      "isExcl": false,
+                      "isMan": false,
+                      "isHidden": true,
+                      "MaxFlSz": 6000,
+                      "MaxFlCnt": 20,
+                      "AlwExt": [
+                        "pdf",
+                        "jpeg",
+                        "jpg",
+                        "png",
+                        "bmp",
+                        "docx"
+                      ],
+                      "UICmpt": {
+                        "CmptNm": "ExpInvImg",
+                        "DisplayTtl": "Export Commercial Invoice",
+                        "Hint": "Upload File(s)",
+                        "Tooltip": "",
+                        "CmptTy": "FileUploader",
+                        "DisplayDsc": {
+                          "DisplayTxt": "Export Commercial Invoice"
+                        },
+                        "Order": 3
+                      },
+                      "AttMsgPos": [
+                        {
+                          "Ver": "12.030",
+                          "MsgTyCd": "ShpPcdDetailsMsg",
+                          "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/Img/Loc"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "cb7f19e3-e59d-4cab-942f-ca083d04e42d",
+                          "Nm": "Rule condition for Export Commercial Invoice",
+                          "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val = 'Opt1'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true,
+                              "isHidden": false
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Id": "f7bbbc1e-9e58-4de9-ba1a-dd2e13952ac3",
+                  "Nm": "Export AWB entity",
+                  "Dsc": "Export AWB entity desc",
+                  "isImg": true,
+                  "isExcl": false,
+                  "isMan": false,
+                  "Att": [
+                    {
+                      "Id": "2fc875df-d396-40c0-b1de-4ec7c8278ccd",
+                      "Nm": "Document Family Code",
+                      "Dsc": "Document Family Code desc",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": false,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": "DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocFamCd"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "56242bdf-17ad-4410-bd32-0fc4af2e2384",
+                          "Nm": "Rule condition for Export AWB",
+                          "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val = 'Opt1'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "13a097f6-6ed7-47ff-af19-d13b82a5d39e",
+                      "Nm": "Document Type Code",
+                      "Dsc": "Document Type Code desc",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": false,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": "DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocTyCd"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "135594a6-c55b-4b52-9c88-03cd17d6c0db",
+                          "Nm": "Rule condition for Export AWB",
+                          "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val = 'Opt1'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "d473ad24-93b3-4aeb-b158-0e73e5a2fbbc",
+                      "Nm": "Export AWB Uploader",
+                      "Dsc": "Export AWB Uploader desc",
+                      "AttTy": "UserEntry",
+                      "isExcl": false,
+                      "isMan": false,
+                      "isHidden": true,
+                      "MaxFlSz": 6000,
+                      "MaxFlCnt": 20,
+                      "AlwExt": [
+                        "pdf",
+                        "jpeg",
+                        "jpg",
+                        "png",
+                        "bmp",
+                        "docx"
+                      ],
+                      "UICmpt": {
+                        "CmptNm": "ExpAWBImg",
+                        "DisplayTtl": "",
+                        "Hint": "Upload File(s)",
+                        "Tooltip": "",
+                        "CmptTy": "FileUploader",
+                        "DisplayDsc": {
+                          "DisplayTxt": "Export AWB desc"
+                        },
+                        "Order": 4
+                      },
+                      "AttMsgPos": [
+                        {
+                          "Ver": "12.030",
+                          "MsgTyCd": "ShpPcdDetailsMsg",
+                          "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/Img/Loc"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "d6e5f259-6fe8-4bf8-9243-c341a115001d",
+                          "Nm": "Rule condition for Stamp Original Invoice",
+                          "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val = 'Opt1'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true,
+                              "isHidden": false
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Id": "0a2e034d-c45a-4257-a78e-9d05caeef657",
+                  "Nm": "Export Declaration entity",
+                  "Dsc": "Export Declaration entity desc",
+                  "isImg": true,
+                  "isExcl": false,
+                  "isMan": false,
+                  "Att": [
+                    {
+                      "Id": "8b6cc875-6330-47c5-b03d-ba2779a81e41",
+                      "Nm": "Document Family Code",
+                      "Dsc": "Document Family Code desc",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": false,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": " DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocFamCd"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "65bcf8f8-88e2-4dd2-9479-d3c1d2f1cf4e",
+                          "Nm": "Rule condition for Export Declaration",
+                          "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val = 'Opt1' and **.Att[Id='917a20fa-f163-454d-b941-fbe3bb21018c'].Val = 'Opt2'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "25995cc2-498f-48d8-bbc9-7f185126998e",
+                      "Nm": "Document Type Code",
+                      "Dsc": "Document Type Code desc",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": false,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": " DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocTyCd"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "85305c23-5f24-4c3d-8950-cbb748b423b5",
+                          "Nm": "Rule condition for Export Declaration",
+                          "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val = 'Opt1' and **.Att[Id='917a20fa-f163-454d-b941-fbe3bb21018c'].Val = 'Opt2'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "170a58fc-6fd7-4e9c-99c0-d89129566bb2",
+                      "Nm": "Export Declaration Img",
+                      "Dsc": "Export Declaration uploader desc",
+                      "AttTy": "UserEntry",
+                      "isExcl": false,
+                      "isMan": false,
+                      "isHidden": true,
+                      "MaxFlSz": 6000,
+                      "MaxFlCnt": 20,
+                      "AlwExt": [
+                        "pdf",
+                        "jpeg",
+                        "jpg",
+                        "png",
+                        "bmp",
+                        "docx"
+                      ],
+                      "UICmpt": {
+                        "Order": 6,
+                        "CmptNm": "ExpDeclarImg",
+                        "DisplayTtl": "Export Declaration",
+                        "Hint": "Upload File(s)",
+                        "CmptTy": "FileUploader",
+                        "DisplayDsc": {
+                          "DisplayTxt": "Export Declaration desc"
+                        }
+                      },
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": " DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/Img/Loc"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "43217b05-472f-46a0-b33d-099ce6d58ab2",
+                          "Nm": "Rule condition for Export Declaration",
+                          "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val = 'Opt1' and **.Att[Id='917a20fa-f163-454d-b941-fbe3bb21018c'].Val = 'Opt2'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true,
+                              "isHidden": false
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Id": "7ef1a883-06a4-4ad0-9bc3-b0d4d33c2703",
+                  "Nm": "Invoice Uploader Entity",
+                  "Dsc": "Invoice Uploader Desc",
+                  "isImg": true,
+                  "isExcl": false,
+                  "isMan": false,
+                  "Att": [
+                    {
+                      "Id": "e70cd173-8212-4d8c-aa52-85fe52d809c9",
+                      "Nm": "Document Family Code",
+                      "Dsc": "Document Family Code desc",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": false,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": " DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocFamCd"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "09898e12-815f-4db9-8424-8e35cfd85437",
+                          "Nm": "Rule condition for Invoice Uploader",
+                          "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val = 'Opt1'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "15243252-f8f9-4ccc-a90f-2fae811bbbac",
+                      "Nm": "Document Type Code",
+                      "Dsc": "Document Type Code desc",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": false,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": " DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocTyCd"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "9b795b05-043d-4494-8a47-32767d2ffcda",
+                          "Nm": "Rule condition for Invoice Uploader",
+                          "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val = 'Opt1'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "ebff245c-df75-4b26-b39e-db224ff1a89e",
+                      "Nm": "Invoice Uploader Img",
+                      "Dsc": "Invoice Uploader Img desc",
+                      "AttTy": "UserEntry",
+                      "isExcl": false,
+                      "isMan": false,
+                      "isHidden": true,
+                      "MaxFlSz": 6000,
+                      "MaxFlCnt": 20,
+                      "AlwExt": [
+                        "pdf",
+                        "jpeg",
+                        "jpg",
+                        "png",
+                        "bmp",
+                        "docx"
+                      ],
+                      "UICmpt": {
+                        "Order": 7,
+                        "CmptNm": "InvUploader",
+                        "DisplayTtl": "Invoice",
+                        "Hint": "Upload File(s)",
+                        "CmptTy": "FileUploader",
+                        "DisplayDsc": {
+                          "DisplayTxt": "Invoice desc"
+                        }
+                      },
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": " DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/Img/Loc"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "87db3ae8-7c66-417b-9249-4970d2e254e2",
+                          "Nm": "Rule condition for Invoice Uploader",
+                          "Cond": "**.Att[Id='75e0a595-ab28-4e91-9949-fab52cdf82b5'].Val = 'Opt1'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true,
+                              "isHidden": false
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Id": "1d313cd2-3157-485b-9152-e3b617bf2769",
+              "Nm": "Shipment Document",
+              "Dsc": "Document Image Entity",
+              "isImg": false,
+              "isExcl": false,
+              "isMan": false,
+              "Ent": [
+                {
+                  "Id": "f0fa0142-33b7-4535-bdce-f8487d407eef",
+                  "Nm": "Business Party",
+                  "Dsc": "Business Party Entity",
+                  "isImg": false,
+                  "isExcl": false,
+                  "isMan": false,
+                  "Ent": [
+                    {
+                      "Id": "ad4e6f75-3650-46ef-b0f4-150c900a6a13",
+                      "Nm": "Consignee Address",
+                      "Dsc": "Consignee Address Entity",
+                      "isImg": false,
+                      "isExcl": false,
+                      "isMan": false,
+                      "Ent": [
+                        {
+                          "Id": "bd0be96c-f3c9-40f7-8e0d-a4fb54b061d9",
+                          "Nm": "Format Address",
+                          "Dsc": "Structured Address Field",
+                          "isImg": false,
+                          "isExcl": false,
+                          "isMan": false,
+                          "Att": [
+                            {
+                              "Id": "22d8fbf5-fb84-4f37-aad5-9845b17e7928",
+                              "Nm": "Format Type Code",
+                              "Dsc": "Format Type Code",
+                              "AttTy": "Constant",
+                              "DflVal": "LINES",
+                              "isExcl": false,
+                              "isMan": false,
+                              "AttMsgPos": [
+                                {
+                                  "Ver": "12.030",
+                                  "MsgTyCd": "ShpPcdDetailsMsg",
+                                  "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/CmrcInv/Ln/DscGds"
+                                }
+                              ]
+                            },
+                            {
+                              "Id": "bc2a530d-34de-4e90-b644-8aed26c5901e",
+                              "Nm": "Line Number",
+                              "Dsc": "Line Number",
+                              "AttTy": "Constant",
+                              "DflVal": 1,
+                              "isExcl": false,
+                              "isMan": false,
+                              "AttMsgPos": [
+                                {
+                                  "Ver": "12.030",
+                                  "MsgTyCd": "ShpPcdDetailsMsg",
+                                  "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/CmrcInv/Ln/DscGds"
+                                }
+                              ]
+                            },
+                            {
+                              "Id": "8156bc91-da6f-4cf6-8d8c-f2f2216e8f8d",
+                              "Nm": "When did you arrive in the UK",
+                              "Dsc": "When did you arrive in the UK desc",
+                              "AttTy": "UserEntry",
+                              "isExcl": false,
+                              "isMan": false,
+                              "isHidden": true,
+                              "MinL": 1,
+                              "MaxL": 800,
+                              "UICmpt": {
+                                "Order": 9,
+                                "CmptNm": "ArriveInUk",
+                                "DisplayTtl": "",
+                                "CmptTy": "TextArea",
+                                "DisplayDsc": {
+                                  "DisplayTxt": ""
+                                },
+                                "ValTy": "String"
+                              },
+                              "AttMsgPos": [
+                                {
+                                  "Ver": "12.030",
+                                  "MsgTyCd": "ShpPcdDetailsMsg",
+                                  "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/CmrcInv/Ln/DscGds"
+                                }
+                              ],
+                              "Rul": [
+                                {
+                                  "RulId": "4cf943e3-d4ee-4c23-9aa2-8544b2ef6791",
+                                  "Nm": "Show arrive in the UK",
+                                  "Cond": "**.Att[Id='fbdbe116-b1c8-49b1-85ad-f926a70cbb94'].Val='Opt2' and **.Att[Id='ca72cd53-12a0-4404-901e-ef64ed9bf4eb'].Val='Opt2'",
+                                  "AttrMtdt": [
+                                    {
+                                      "isMan": true,
+                                      "isHidden": false
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Id": "99e85d67-7587-47c6-86f3-1e3d2299eefb",
+                              "Nm": "Confirm the date you are due to leave the UK",
+                              "Dsc": "Confirm the date you are due to leave the UK desc",
+                              "AttTy": "UserEntry",
+                              "isExcl": false,
+                              "isMan": false,
+                              "isHidden": true,
+                              "MinL": 1,
+                              "MaxL": 800,
+                              "UICmpt": {
+                                "Order": 10,
+                                "CmptNm": "DueToLeaveUK",
+                                "DisplayTtl": "",
+                                "Hint": "",
+                                "CmptTy": "TextArea",
+                                "DisplayDsc": {
+                                  "DisplayTxt": ""
+                                },
+                                "ValTy": "String"
+                              },
+                              "AttMsgPos": [
+                                {
+                                  "Ver": "12.030",
+                                  "MsgTyCd": "ShpPcdDetailsMsg",
+                                  "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/CmrcInv/Ln/DscGds"
+                                }
+                              ],
+                              "Rul": [
+                                {
+                                  "RulId": "99b95e3c-7bcd-47f0-82a9-9f26d2fb2535",
+                                  "Nm": "Rule condition for Confirm the date you are due to leave the UK",
+                                  "Cond": "**.Att[Id='fbdbe116-b1c8-49b1-85ad-f926a70cbb94'].Val='Opt2' and **.Att[Id='ca72cd53-12a0-4404-901e-ef64ed9bf4eb'].Val='Opt2'",
+                                  "AttrMtdt": [
+                                    {
+                                      "isMan": true,
+                                      "isHidden": false
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Id": "b45c9cb6-c4e4-4868-9924-77fe2f5f794c",
+                              "Nm": "Confirm the reason for your visit to the UK",
+                              "Dsc": "Confirm the reason for your visit to the UK desc",
+                              "AttTy": "UserEntry",
+                              "isExcl": false,
+                              "isMan": false,
+                              "isHidden": true,
+                              "MinL": 1,
+                              "MaxL": 800,
+                              "UICmpt": {
+                                "Order": 11,
+                                "CmptNm": "ReasonVisitUK",
+                                "DisplayTtl": "",
+                                "Hint": "",
+                                "CmptTy": "TextArea",
+                                "DisplayDsc": {
+                                  "DisplayTxt": ""
+                                },
+                                "ValTy": "String"
+                              },
+                              "AttMsgPos": [
+                                {
+                                  "Ver": "12.030",
+                                  "MsgTyCd": "ShpPcdDetailsMsg",
+                                  "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/CmrcInv/Ln/DscGds"
+                                }
+                              ],
+                              "Rul": [
+                                {
+                                  "RulId": "d02888c0-b788-473d-822d-d4ffcc8a022c",
+                                  "Nm": "Rule condition for Confirm the reason for your visit to the UK",
+                                  "Cond": "**.Att[Id='fbdbe116-b1c8-49b1-85ad-f926a70cbb94'].Val='Opt2' and **.Att[Id='ca72cd53-12a0-4404-901e-ef64ed9bf4eb'].Val='Opt2'",
+                                  "AttrMtdt": [
+                                    {
+                                      "isMan": true,
+                                      "isHidden": false
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Id": "fc1c234d-e2cf-4590-b3fb-74accf296264",
+                              "Nm": "Confirm your Nationality and Country of Residence",
+                              "Dsc": "Confirm your Nationality and Country of Residence desc",
+                              "AttTy": "UserEntry",
+                              "isExcl": false,
+                              "isMan": false,
+                              "isHidden": true,
+                              "MinL": 1,
+                              "MaxL": 800,
+                              "UICmpt": {
+                                "Order": 12,
+                                "CmptNm": "",
+                                "DisplayTtl": "ConNationalityResi",
+                                "Hint": "",
+                                "CmptTy": "TextArea",
+                                "DisplayDsc": {
+                                  "DisplayTxt": ""
+                                },
+                                "ValTy": "String"
+                              },
+                              "AttMsgPos": [
+                                {
+                                  "Ver": "12.030",
+                                  "MsgTyCd": "ShpPcdDetailsMsg",
+                                  "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/CmrcInv/Ln/DscGds"
+                                }
+                              ],
+                              "Rul": [
+                                {
+                                  "RulId": "ed84c95c-ac99-410b-a0ab-31425d6fc921",
+                                  "Nm": "Rule condition for Confirm your Nationality and Country of Residence",
+                                  "Cond": "**.Att[Id='fbdbe116-b1c8-49b1-85ad-f926a70cbb94'].Val='Opt2' and **.Att[Id='ca72cd53-12a0-4404-901e-ef64ed9bf4eb'].Val='Opt2'",
+                                  "AttrMtdt": [
+                                    {
+                                      "isMan": true,
+                                      "isHidden": false
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Id": "20bc6c0f-1204-4090-a912-dfe5c9b44828",
+              "Nm": "Consent Returning Goods",
+              "Dsc": "Consent Returning Goods Desc",
+              "isImg": false,
+              "isExcl": false,
+              "isMan": false,
+              "Ent": [
+                {
+                  "Id": "4b362b94-c238-4355-b6d4-31f6b9a48ce3",
+                  "Nm": "Returning Goods Entity",
+                  "Dsc": "Returning Goods Entity desc",
+                  "isImg": false,
+                  "isExcl": false,
+                  "isMan": false,
+                  "Att": [
+                    {
+                      "Id": "2650012e-1a21-49df-b933-20f4f8cd8b6d",
+                      "Nm": "Consent Category Code",
+                      "Dsc": "The unique identificaiton of the Consent Purpose",
+                      "AttTy": "Constant",
+                      "DflVal": "CSTMS"
+                    },
+                    {
+                      "Id": "d3183c71-4a93-41e8-841e-961db1c13977",
+                      "Nm": "Consent Category Name",
+                      "Dsc": "Consent Category Name",
+                      "AttTy": "Constant",
+                      "DflVal": "Customs Consents"
+                    },
+                    {
+                      "Id": "a86dd642-cd10-41b5-93cf-2df793082ba4",
+                      "Nm": "Consent Category",
+                      "Dsc": "Consent Category Desc",
+                      "AttTy": "Constant",
+                      "DflVal": "Captures Customs Consents from User"
+                    }
+                  ]
+                },
+                {
+                  "Id": "470374e4-028a-4bde-9887-c13fbcbd587b",
+                  "Nm": "Consent Purpose - Returning Goods",
+                  "Dsc": "Consent Purpose - Returning Goods desc",
+                  "isImg": false,
+                  "isExcl": false,
+                  "isMan": false,
+                  "Att": [
+                    {
+                      "Id": "d53446db-4f41-4937-95a3-ed9be8289d25",
+                      "Nm": "Returning Goods - Radio Button",
+                      "Dsc": "Returning Goods - Radio Button Desc",
+                      "AttTy": "UserEntry",
+                      "isExcl": false,
+                      "isMan": false,
+                      "isHidden": true,
+                      "UICmpt": {
+                        "Order": 13,
+                        "CmptNm": "ReturGoods",
+                        "DisplayTtl": "",
+                        "Tooltip": "",
+                        "CmptTy": "RadioButton",
+                        "DisplayDsc": {
+                          "DisplayTxt": "Do the goods originate from the UK"
+                        },
+                        "ValTy": "Standard"
+                      },
+                      "Enum": [
+                        {
+                          "Val": "Yes",
+                          "DisplayTxt": "Yes",
+                          "SrtOrd": 1,
+                          "Nm": "Opt1"
+                        },
+                        {
+                          "Val": "No",
+                          "DisplayTxt": "No",
+                          "SrtOrd": 2,
+                          "Nm": "Opt2"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "b082633d-57c0-497e-9377-2f96dbd317d4",
+                          "Nm": "Rule condition for Returning Goods",
+                          "Cond": "**.Att[Id='fbdbe116-b1c8-49b1-85ad-f926a70cbb94'].Val='Opt3'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true,
+                              "isHidden": false
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "fbf7e76b-e00a-4edc-b792-c2df60653146",
+                      "Nm": "Purpose Name - Returning Goods Radio Button",
+                      "Dsc": "Purpose Name - Returning Goods Button desc",
+                      "AttTy": "Constant",
+                      "DflVal": "Agree to Returning Goods",
+                      "isExcl": false,
+                      "isMan": false,
+                      "Rul": [
+                        {
+                          "RulId": "252ad908-08c7-4bcb-aad5-04db0acdd564",
+                          "Nm": "Not agree Returning Goods",
+                          "Cond": "**.Att[Id='fbdbe116-b1c8-49b1-85ad-f926a70cbb94'].Val='Opt3'",
+                          "AttrMtdt": [
+                            {
+                              "DflVal": "Not agree to Returning Goods"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "69da3d87-867e-4078-b3b6-39b8416e17ef",
+                      "Nm": "Purpose Description - Radio button",
+                      "Dsc": "Purpose Description with a radiobutton component",
+                      "AttTy": "Constant",
+                      "DflVal": "Agree to Returning Goods",
+                      "isExcl": false,
+                      "isMan": false,
+                      "Rul": [
+                        {
+                          "RulId": "2f7a41c6-aff1-4561-a8ec-d5c7ed28b926",
+                          "Nm": "Not agree Purpose Description",
+                          "Cond": "**.Att[Id='fbdbe116-b1c8-49b1-85ad-f926a70cbb94'].Val='Opt3'",
+                          "AttrMtdt": [
+                            {
+                              "DflVal": "User does not agree Returning Goods "
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Id": "0e775ac9-b9e9-4465-a4bb-52855de6162f",
+              "Nm": "Confirm the reason for the goods returning to the UK",
+              "Dsc": "Confirm the reason for the goods returning to the UK desc",
+              "AttTy": "UserEntry",
+              "isExcl": false,
+              "isMan": false,
+              "isHidden": true,
+              "MinL": 1,
+              "MaxL": 800,
+              "UICmpt": {
+                "Order": 14,
+                "CmptNm": "ReasonForReturnUK",
+                "DisplayTtl": "",
+                "Hint": "",
+                "CmptTy": "TextArea",
+                "DisplayDsc": {
+                  "DisplayTxt": "Confirm the reason for the goods returning to the UK"
+                },
+                "ValTy": "String"
+              },
+              "AttMsgPos": [
+                {
+                  "Ver": "12.030",
+                  "MsgTyCd": "ShpPcdDetailsMsg",
+                  "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/CmrcInv/Ln/DscGds"
+                }
+              ],
+              "Rul": [
+                {
+                  "RulId": "502a0dcf-8ca5-4de8-85f7-fc191678ed92",
+                  "Nm": "Rule condition for goods returning to the UK",
+                  "Cond": "**.Att[Id='fbdbe116-b1c8-49b1-85ad-f926a70cbb94'].Val='Opt3' and **.Att[Id='d53446db-4f41-4937-95a3-ed9be8289d25'].Val='Opt1'",
+                  "AttrMtdt": [
+                    {
+                      "isMan": true,
+                      "isHidden": false
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Id": "9e2f0215-757e-40b6-87e7-5113e735f70b",
+              "Nm": "For how long have you owned the goods",
+              "Dsc": "For how long have you owned the goods desc",
+              "AttTy": "UserEntry",
+              "isExcl": false,
+              "isMan": false,
+              "isHidden": true,
+              "MinL": 1,
+              "MaxL": 800,
+              "UICmpt": {
+                "Order": 15,
+                "CmptNm": "OwnedTheGoods",
+                "DisplayTtl": "",
+                "Hint": "",
+                "CmptTy": "TextArea",
+                "DisplayDsc": {
+                  "DisplayTxt": "For how long have you owned the goods"
+                },
+                "ValTy": "String"
+              },
+              "AttMsgPos": [
+                {
+                  "Ver": "12.030",
+                  "MsgTyCd": "ShpPcdDetailsMsg",
+                  "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/CmrcInv/Ln/DscGds"
+                }
+              ],
+              "Rul": [
+                {
+                  "RulId": "3947ac15-607e-40f7-848c-dd16c6768191",
+                  "Nm": "Rule condition for how long have you owned the goods",
+                  "Cond": "**.Att[Id='fbdbe116-b1c8-49b1-85ad-f926a70cbb94'].Val='Opt3' and **.Att[Id='d53446db-4f41-4937-95a3-ed9be8289d25'].Val='Opt1'",
+                  "AttrMtdt": [
+                    {
+                      "isMan": true,
+                      "isHidden": false
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Id": "a45a5e1e-a9c7-466c-86ea-bb76991a2fc9",
+              "Nm": "In which country were the goods purchased",
+              "Dsc": "In which country were the goods purchased desc",
+              "AttTy": "UserEntry",
+              "isExcl": false,
+              "isMan": false,
+              "isHidden": true,
+              "MinL": 1,
+              "MaxL": 80,
+              "UICmpt": {
+                "Order": 16,
+                "CmptNm": "CountryGoodPurchse",
+                "DisplayTtl": "",
+                "Hint": "",
+                "CmptTy": "TextArea",
+                "DisplayDsc": {
+                  "DisplayTxt": "In which country were the goods purchased"
+                },
+                "ValTy": "String"
+              },
+              "AttMsgPos": [
+                {
+                  "Ver": "12.030",
+                  "MsgTyCd": "ShpPcdDetailsMsg",
+                  "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/CmrcInv/Ln/DscGds"
+                }
+              ],
+              "Rul": [
+                {
+                  "RulId": "a7fcd964-3a59-41d0-b948-2f5008b24718",
+                  "Nm": "Rule condition for In which country were the goods purchased",
+                  "Cond": "**.Att[Id='c385b1f1-70d3-42a1-83ab-b09fceebcce5'].Val='Opt3' and **.Att[Id='d53446db-4f41-4937-95a3-ed9be8289d25'].Val='Opt1'",
+                  "AttrMtdt": [
+                    {
+                      "isMan": true,
+                      "isHidden": false
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Id": "a1e7eb3d-5e36-4a06-a23b-ff4dcad4c7f8",
+              "Nm": "Departure date from the UK",
+              "Dsc": "Departure date from the UK desc",
+              "AttTy": "UserEntry",
+              "isExcl": false,
+              "isMan": false,
+              "isHidden": true,
+              "MinL": 1,
+              "MaxL": 800,
+              "UICmpt": {
+                "Order": 17,
+                "CmptNm": "DepatureDateUK",
+                "DisplayTtl": "",
+                "Hint": "",
+                "CmptTy": "TextArea",
+                "DisplayDsc": {
+                  "DisplayTxt": "Departure date from the UK"
+                },
+                "ValTy": "String"
+              },
+              "AttMsgPos": [
+                {
+                  "Ver": "12.030",
+                  "MsgTyCd": "ShpPcdDetailsMsg",
+                  "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/CmrcInv/Ln/DscGds"
+                }
+              ],
+              "Rul": [
+                {
+                  "RulId": "452f3b62-26c8-41d1-b3fd-8bb97fb00b74",
+                  "Nm": "Rule condition for Departure date from the UK",
+                  "Cond": "**.Att[Id='c385b1f1-70d3-42a1-83ab-b09fceebcce5'].Val='Opt3' and **.Att[Id='d53446db-4f41-4937-95a3-ed9be8289d25'].Val='Opt1'",
+                  "AttrMtdt": [
+                    {
+                      "isMan": true,
+                      "isHidden": false
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Id": "711aba67-8b46-43c9-92c3-a8f16f83bf46",
+              "Nm": "Provide a full explanation for why the goods are being imported into the UK",
+              "Dsc": "Provide a full explanation for why the goods are being imported into the UK desc",
+              "AttTy": "UserEntry",
+              "isExcl": false,
+              "isMan": false,
+              "isHidden": true,
+              "MinL": 1,
+              "MaxL": 800,
+              "UICmpt": {
+                "Order": 18,
+                "CmptNm": "FEGoodsbeingUK",
+                "DisplayTtl": "",
+                "Hint": "",
+                "CmptTy": "TextArea",
+                "DisplayDsc": {
+                  "DisplayTxt": "Provide a full explanation for why the goods are being imported into the UK"
+                },
+                "ValTy": "String"
+              },
+              "AttMsgPos": [
+                {
+                  "Ver": "12.030",
+                  "MsgTyCd": "ShpPcdDetailsMsg",
+                  "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/CmrcInv/Ln/DscGds"
+                }
+              ],
+              "Rul": [
+                {
+                  "RulId": "a11b2bdd-75b7-44ee-b42a-9cc39c92be8f",
+                  "Nm": "Rule condition for provide a full explanation",
+                  "Cond": "**.Att[Id='c385b1f1-70d3-42a1-83ab-b09fceebcce5'].Val='Opt3' and **.Att[Id='d53446db-4f41-4937-95a3-ed9be8289d25'].Val='Opt2'",
+                  "AttrMtdt": [
+                    {
+                      "isMan": true,
+                      "isHidden": false
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Id": "b2fdfd73-b208-4597-8a11-913807df1b5b",
+              "Nm": "Consent TOR1 reference or document",
+              "Dsc": "Consent TOR1 reference or document Desc",
+              "isImg": false,
+              "isExcl": false,
+              "isMan": false,
+              "Ent": [
+                {
+                  "Id": "e5619177-9fe9-48de-92ea-db5446e028d2",
+                  "Nm": "Do you have a TOR1 reference or document",
+                  "Dsc": "Do you have a TOR1 reference or document desc",
+                  "isImg": false,
+                  "isExcl": false,
+                  "isMan": false,
+                  "Att": [
+                    {
+                      "Id": "ca02dc09-e771-4537-84b1-f190c5791c23",
+                      "Nm": "Consent Category Code",
+                      "Dsc": "The unique identificaiton of the Consent Purpose",
+                      "AttTy": "Constant",
+                      "DflVal": "CSTMS"
+                    },
+                    {
+                      "Id": "c10d7b08-27b0-4b6d-aa66-94233a4103e4",
+                      "Nm": "Consent Category Name",
+                      "Dsc": "Consent Category Name",
+                      "AttTy": "Constant",
+                      "DflVal": "Customs Consents"
+                    },
+                    {
+                      "Id": "b18ae33f-3ea8-477f-a12a-5177fdfbe932",
+                      "Nm": "Consent Category",
+                      "Dsc": "Consent Category Desc",
+                      "AttTy": "Constant",
+                      "DflVal": "Captures Customs Consents from User"
+                    }
+                  ]
+                },
+                {
+                  "Id": "834422d9-e10b-4a8d-8a1b-0ff8fe52cfa2",
+                  "Nm": "Consent Purpose - TOR1 reference or document",
+                  "Dsc": "Consent Purpose - TOR1 reference or document desc",
+                  "isImg": false,
+                  "isExcl": false,
+                  "isMan": false,
+                  "Att": [
+                    {
+                      "Id": "0680e59c-0fb2-4c56-a40c-1f23329fdeaa",
+                      "Nm": "TOR1 reference or document - Radio Button",
+                      "Dsc": "TOR1 reference or document - Radio Button Desc",
+                      "AttTy": "UserEntry",
+                      "isExcl": false,
+                      "isMan": false,
+                      "isHidden": true,
+                      "UICmpt": {
+                        "Order": 19,
+                        "CmptNm": "TOR1RefeDocument",
+                        "DisplayTtl": "",
+                        "Tooltip": "",
+                        "CmptTy": "RadioButton",
+                        "DisplayDsc": {
+                          "DisplayTxt": "Do you have a TOR1 reference or document"
+                        },
+                        "ValTy": "Standard"
+                      },
+                      "Enum": [
+                        {
+                          "Val": "Yes",
+                          "DisplayTxt": "Yes",
+                          "SrtOrd": 1,
+                          "Nm": "Opt1"
+                        },
+                        {
+                          "Val": "No",
+                          "DisplayTxt": "No",
+                          "SrtOrd": 2,
+                          "Nm": "Opt2"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "9234ce4f-695d-4752-b18b-1d6df1ef907c",
+                          "Nm": "Rule condition for TOR1 reference or document",
+                          "Cond": "**.Att[Id='fbdbe116-b1c8-49b1-85ad-f926a70cbb94'].Val='Opt4'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true,
+                              "isHidden": false
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "27852ad0-ea1d-4e92-82e8-acf93ecd364c",
+                      "Nm": "Purpose Name - TOR1 reference or document Radio Button",
+                      "Dsc": "Purpose Name - TOR1 reference or document desc",
+                      "AttTy": "Constant",
+                      "DflVal": "Agree to TOR1 reference or document",
+                      "isExcl": false,
+                      "isMan": false,
+                      "Rul": [
+                        {
+                          "RulId": "505f1ef0-1459-4148-9f08-21b078d55892",
+                          "Nm": "Not agree TOR1 reference or document",
+                          "Cond": "**.Att[Id='fbdbe116-b1c8-49b1-85ad-f926a70cbb94'].Val='Opt4'",
+                          "AttrMtdt": [
+                            {
+                              "DflVal": "Not TOR1 reference or document"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "be9ccbe8-5732-4d4e-a1f3-cabd6b387fa5",
+                      "Nm": "Purpose Description - Radio button",
+                      "Dsc": "Purpose Description with a radiobutton component",
+                      "AttTy": "Constant",
+                      "DflVal": "Agree to TOR1 reference or document",
+                      "isExcl": false,
+                      "isMan": false,
+                      "Rul": [
+                        {
+                          "RulId": "258dfbb1-fba9-442e-a47a-031961a804b2",
+                          "Nm": "Not agree Purpose Description",
+                          "Cond": "**.Att[Id='fbdbe116-b1c8-49b1-85ad-f926a70cbb94'].Val='Opt4'",
+                          "AttrMtdt": [
+                            {
+                              "DflVal": "User does not agree TOR1 reference or document "
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Id": "c4bbb9a9-d1af-4e20-8f53-0207b545c81a",
+              "Nm": "Provide transfer of Residency reference number or upload document / evidence below",
+              "Dsc": "Provide transfer of Residency reference number or upload document / evidence below desc",
+              "AttTy": "UserEntry",
+              "isExcl": false,
+              "isMan": false,
+              "isHidden": true,
+              "MinL": 1,
+              "MaxL": 800,
+              "UICmpt": {
+                "Order": 20,
+                "CmptNm": "TranOfResiRefeNum",
+                "DisplayTtl": "",
+                "Hint": "",
+                "CmptTy": "TextArea",
+                "DisplayDsc": {
+                  "DisplayTxt": "Please provide Transfer of Residency reference number or upload document / evidence below"
+                },
+                "ValTy": "String"
+              },
+              "AttMsgPos": [
+                {
+                  "Ver": "12.030",
+                  "MsgTyCd": "ShpPcdDetailsMsg",
+                  "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/CmrcInv/Ln/DscGds"
+                }
+              ],
+              "Rul": [
+                {
+                  "RulId": "5f8b9a1f-5164-4959-bcd6-ccd04f6303cf",
+                  "Nm": "Rule condition for Provide transfer of Residency reference number or upload document",
+                  "Cond": "**.Att[Id='fbdbe116-b1c8-49b1-85ad-f926a70cbb94'].Val='Opt4' and **.Att[Id='0680e59c-0fb2-4c56-a40c-1f23329fdeaa'].Val='Opt1'",
+                  "AttrMtdt": [
+                    {
+                      "isMan": true,
+                      "isHidden": false
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Id": "c4bbb9a9-d1af-4e20-8f53-0207b545c81a",
+              "Nm": "Please provide a full explanation for goods coming into the UK",
+              "Dsc": "Please provide a full explanation for goods coming into the UK desc",
+              "AttTy": "UserEntry",
+              "isExcl": false,
+              "isMan": false,
+              "isHidden": true,
+              "MinL": 1,
+              "MaxL": 800,
+              "UICmpt": {
+                "Order": 23,
+                "CmptNm": "ProvideGoodComUK",
+                "DisplayTtl": "",
+                "Hint": "",
+                "CmptTy": "TextArea",
+                "DisplayDsc": {
+                  "DisplayTxt": "Please provide Transfer of Residency reference number or upload document / evidence below"
+                },
+                "ValTy": "String"
+              },
+              "AttMsgPos": [
+                {
+                  "Ver": "12.030",
+                  "MsgTyCd": "ShpPcdDetailsMsg",
+                  "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/CmrcInv/Ln/DscGds"
+                }
+              ],
+              "Rul": [
+                {
+                  "RulId": "81ccf929-3328-4686-9e0c-2fa05c54d6c4",
+                  "Nm": "Rule condition for Provide transfer of Residency reference number or upload document",
+                  "Cond": "**.Att[Id='fbdbe116-b1c8-49b1-85ad-f926a70cbb94'].Val='Opt5'",
+                  "AttrMtdt": [
+                    {
+                      "isMan": true,
+                      "isHidden": false
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Id": "5967c5e3-d07b-43a8-b711-6c4fb9202e4a",
+              "Nm": "Document upload entity",
+              "Dsc": "Document upload entity desc",
+              "isImg": true,
+              "isExcl": false,
+              "isMan": false,
+              "Att": [
+                {
+                  "Id": "aa0868a9-2731-4153-91da-d56f8ac59647",
+                  "Nm": "Document Family Code",
+                  "Dsc": "Document Family Code desc",
+                  "AttTy": "Constant",
+                  "DflVal": "ENT",
+                  "isExcl": false,
+                  "isMan": false,
+                  "AttMsgPos": [
+                    {
+                      "Ver": "3.002",
+                      "MsgTyCd": "DocImgMsg",
+                      "xPath": "DocImgMsg/Bd/Doc/DocFamCd"
+                    }
+                  ],
+                  "Rul": [
+                    {
+                      "RulId": "600941a4-8d81-4c32-b825-386db5c86d43",
+                      "Nm": "Show Temporary Visitor Uploader",
+                      "Cond": "**.Att[Id='fbdbe116-b1c8-49b1-85ad-f926a70cbb94'].Val='Opt4'",
+                      "AttrMtdt": [
+                        {
+                          "isMan": true,
+                          "isHidden": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Id": "4cc44d29-c825-4466-8813-c3cd93e14249",
+                  "Nm": "Document Type Code",
+                  "Dsc": "Document Type Code desc",
+                  "AttTy": "Constant",
+                  "DflVal": "ENT",
+                  "isExcl": false,
+                  "isMan": false,
+                  "AttMsgPos": [
+                    {
+                      "Ver": "3.002",
+                      "MsgTyCd": "DocImgMsg",
+                      "xPath": "DocImgMsg/Bd/Doc/DocTyCd"
+                    }
+                  ],
+                  "Rul": [
+                    {
+                      "RulId": "d4362f74-1659-466a-846c-947412798be5",
+                      "Nm": "Show Temporary Visitor Uploader",
+                      "Cond": "**.Att[Id='fbdbe116-b1c8-49b1-85ad-f926a70cbb94'].Val='Opt4'",
+                      "AttrMtdt": [
+                        {
+                          "isMan": true,
+                          "isHidden": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Id": "c6bb4227-40f5-45fd-bb38-052f7ea6b9c1",
+                  "Nm": "Upload TOR1 document",
+                  "Dsc": "Upload TOR1 document desc",
+                  "AttTy": "UserEntry",
+                  "isExcl": false,
+                  "isMan": false,
+                  "isHidden": true,
+                  "MaxFlSz": 6000,
+                  "MaxFlCnt": 21,
+                  "AlwExt": [
+                    "pdf",
+                    "jpeg",
+                    "jpg",
+                    "png",
+                    "bmp",
+                    "docx"
+                  ],
+                  "UICmpt": {
+                    "CmptNm": "TOR1docUploader",
+                    "DisplayTtl": "",
+                    "Hint": "",
+                    "Tooltip": "",
+                    "CmptTy": "FileUploader",
+                    "DisplayDsc": {
+                      "DisplayTxt": ""
+                    },
+                    "Order": 21
+                  },
+                  "AttMsgPos": [
+                    {
+                      "Ver": "12.030",
+                      "MsgTyCd": "ShpPcdDetailsMsg",
+                      "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/Img/Loc"
+                    }
+                  ],
+                  "Rul": [
+                    {
+                      "RulId": "78c3cb26-9bc5-4b2b-b04a-2000799ebd4f",
+                      "Nm": "Show TOR1 document Upload",
+                      "Cond": "**.Att[Id='fbdbe116-b1c8-49b1-85ad-f926a70cbb94'].Val='Opt4' and **.Att[Id='0680e59c-0fb2-4c56-a40c-1f23329fdeaa'].Val='Opt1'",
+                      "AttrMtdt": [
+                        {
+                          "isMan": true,
+                          "isHidden": false
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Id": "0b6986c4-4d42-42b3-8ba4-68718abebd26",
+              "Nm": "Export goods coming into the UK",
+              "Dsc": "Export goods coming into the UK desc",
+              "isImg": true,
+              "isExcl": false,
+              "isMan": false,
+              "Att": [
+                {
+                  "Id": "d52f2739-2a30-4963-bc4f-b822a570bd23",
+                  "Nm": "Document Family Code",
+                  "Dsc": "Document Family Code desc",
+                  "AttTy": "Constant",
+                  "DflVal": "ENT",
+                  "isExcl": false,
+                  "isMan": false,
+                  "AttMsgPos": [
+                    {
+                      "Ver": "3.002",
+                      "MsgTyCd": "DocImgMsg",
+                      "xPath": "DocImgMsg/Bd/Doc/DocFamCd"
+                    }
+                  ],
+                  "Rul": [
+                    {
+                      "RulId": "bf9c5b76-ae49-48a1-b3d2-b8b2630e756b",
+                      "Nm": "Rule condition for goods coming into the UK",
+                      "Cond": "**.Att[Id='fbdbe116-b1c8-49b1-85ad-f926a70cbb94'].Val ='Opt4'",
+                      "AttrMtdt": [
+                        {
+                          "isMan": true
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Id": "4d54e7d1-c0b1-40ce-90f4-aa0a7fd3efbb",
+                  "Nm": "Document Type Code",
+                  "Dsc": "Document Type Code desc",
+                  "AttTy": "Constant",
+                  "DflVal": "ENT",
+                  "isExcl": false,
+                  "isMan": false,
+                  "AttMsgPos": [
+                    {
+                      "Ver": "3.002",
+                      "MsgTyCd": "DocImgMsg",
+                      "xPath": "DocImgMsg/Bd/Doc/DocTyCd"
+                    }
+                  ],
+                  "Rul": [
+                    {
+                      "RulId": "13bbb790d0-148e-45ec-b368-e38fa3644c2e",
+                      "Nm": "Rule condition for goods coming into the UK",
+                      "Cond": "**.Att[Id='fbdbe116-b1c8-49b1-85ad-f926a70cbb94'].Val ='Opt4'",
+                      "AttrMtdt": [
+                        {
+                          "isMan": true
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Id": "d473ad24-93b3-4aeb-b158-0e73e5a2fbbc",
+                  "Nm": "Please provide a full explanation for goods coming into the UK",
+                  "Dsc": "Please provide a full explanation for goods coming into the UK desc",
+                  "AttTy": "UserEntry",
+                  "isExcl": false,
+                  "isMan": false,
+                  "isHidden": true,
+                  "MaxFlSz": 6000,
+                  "MaxFlCnt": 22,
+                  "AlwExt": [
+                    "pdf",
+                    "jpeg",
+                    "jpg",
+                    "png",
+                    "bmp",
+                    "docx"
+                  ],
+                  "UICmpt": {
+                    "CmptNm": "GoodsComIntoUK",
+                    "DisplayTtl": "",
+                    "Hint": "",
+                    "Tooltip": "",
+                    "CmptTy": "FileUploader",
+                    "DisplayDsc": {
+                      "DisplayTxt": "Please provide a full explanation for goods coming into the UK"
+                    },
+                    "Order": 22
+                  },
+                  "AttMsgPos": [
+                    {
+                      "Ver": "12.030",
+                      "MsgTyCd": "ShpPcdDetailsMsg",
+                      "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/Img/Loc"
+                    }
+                  ],
+                  "Rul": [
+                    {
+                      "RulId": "d6e5f259-6fe8-4bf8-9243-c341a115001d",
+                      "Nm": "Rule condition explanation for goods coming into the UK",
+                      "Cond": "**.Att[Id='fbdbe116-b1c8-49b1-85ad-f926a70cbb94'].Val='Opt4'and **.Att[Id='0680e59c-0fb2-4c56-a40c-1f23329fdeaa'].Val='Opt2'",
+                      "AttrMtdt": [
+                        {
+                          "isMan": true,
+                          "isHidden": false
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+]
