@@ -1,7 +1,7 @@
 [
   {
     "ShpInfReqDef": {
-      "Id": " aec70261-317c-4c68-ba02-2ef316040d3e",
+      "Id": "aec70261-317c-4c68-ba02-2ef316040d3e",
       "Nm": "Payment Receipt Required- KH",
       "Dsc": "Payment Receipt Required Desc",
       "DrvdFromShpInfReqDef": {},
@@ -81,7 +81,7 @@
                     },
                     {
                       "Id": "adc93571-7f63-460f-8222-3e26f34d42a8",
-                      "Nm": "Broker Notification Fee Payment Confirmation ",
+                      "Nm": "Broker Notification Fee Payment Confirmation",
                       "Dsc": "Broker Notification Fee Payment Confirmation desc",
                       "AttTy": "UserEntry",
                       "isExcl": false,
