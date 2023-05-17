@@ -1,0 +1,106 @@
+{
+    "SIR": {
+        "CustCleInfo": {
+            "title": "Customs Clearance Information Required",
+            "description": "",
+            "toolTip": "",
+            "LeaveDt": {
+                "title": "",
+                "description": "Please confirm when you are due to leave the UK?",
+                "toolTip": ""
+            },
+            "GoodsOrgn": {
+                "title": "",
+                "description": "Do the goods originate from the UK?",
+                "Opt1": "Yes",
+                "Opt2": "No",
+                "toolTip": ""
+            },
+            "VistRsn": {
+                "title": "",
+                "description": "Please confirm the reason for your visit to the UK?",
+                "toolTip": ""
+            },
+            "ResnComUK": {
+                "title": "",
+                "description": "What is the reason for the goods coming into the UK?",
+                "Opt1": "Studying",
+                "Opt2": "Temporary Vistor",
+                "Opt3": "Returning Goods",
+                "Opt4": "Moving to UK",
+                "Opt5": "Other",
+                "toolTip": ""
+            },
+            "GoodsComgRsn": {
+                "title": "",
+                "description": "Please provide a full explanation for why the goods are being imported into the UK?",
+                "toolTip": ""
+            },
+            "TOR1Doc": {
+                "title": "",
+                "description": "Do you have a TOR1 reference or document?",
+                "Opt1": "Yes",
+                "Opt2": "No",
+                "formatHint": "TOR1 (transfer of residence relief) can be used to claim relief from customs charges due on personal belongings and other goods, when transferring your place of residence to the UK.",
+                "toolTip": ""
+            },
+            "VisitUK": {
+                "title": "",
+                "description": "For how long are you visiting the UK?",
+                "Opt1": "Over 2 years",
+                "Opt2": "Under 2 years",
+                "toolTip": ""
+            },
+            "NationalityDrpDwn": {
+                "title": "",
+                "description": "Please confirm your Nationality.",
+                "toolTip": ""
+            },
+            "GoodsRetnRsn": {
+                "title": "",
+                "description": "Confirm the reason for the goods returning to the UK?",
+                "toolTip": ""
+            },
+            "CountryResd": {
+                "title": "",
+                "description": "Please confirm your Country of Residence.",
+                "toolTip": ""
+            },
+            "TORIImg": {
+                "title": "",
+                "description": "Upload TOR1 document",
+                "toolTip": ""
+            },
+            "ArriveDt": {
+                "title": "",
+                "description": "On what date did you arrive in the UK?",
+                "toolTip": ""
+            },
+            "EnrolImg": {
+                "title": "",
+                "description": "Please upload a copy of your Enrolment or Placement letter if you have a copy to process duty and tax exemptions for this shipment.",
+                "toolTip": ""
+            },
+            "TransRefNum": {
+                "toolTip": "",
+                "description": "Please provide Transfer of Residency reference number or upload document / evidence below",
+                "title": ""
+            },
+            "OwndGoods": {
+                "title": "",
+                "toolTip": "",
+                "description": "For how long have you owned the goods?"
+            },
+            "DeptDt": {
+                "title": "",
+                "description": "Departure date from the UK?",
+                "toolTip": ""
+            },
+            "GoodsCountry": {
+                "title": "",
+                "description": "In which country were the goods purchased?",
+                "toolTip": ""
+            }
+        }
+    }
+}
