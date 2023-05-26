@@ -1,0 +1,112 @@
+[
+  {
+    "ShpInfReqDef": {
+      "Id": "ebf95dbb-e491-4d60-a341-be882d76183e",
+      "Nm": "Goods Description & HS Code- HR",
+      "Dsc": "Goods Description & HS Code desc",
+      "DrvdFromShpInfReqDef": {},
+      "LedOwnOrgn": {
+        "CtryCd": "HR"
+      },
+      "ApplyAllInd": false,
+      "PrsnDatSenstyClssLvl": "Low",
+      "QuickGuideEnabledInd": false,
+      "UICmpt": {
+        "CmptNm": "GoodsShipDesc",
+        "DisplayTtl": "Goods (Shipment Content) Description",
+        "Tooltip": "",
+        "CmptTy": "Composed",
+        "DisplayDsc": {
+          "DisplayTxt": ""
+        },
+        "Hint": ""
+      },
+      "Ent": [
+        {
+          "Id": "5dc4c2fc-561e-4e7f-a578-ab1431aed218",
+          "Nm": "Goods Description & HS Code entity",
+          "Dsc": "Goods Description & HS Codedesc",
+          "isImg": false,
+          "isExcl": false,
+          "isMan": true,
+          "Ent": [
+            {
+              "Id": "4e6960f0-1281-4055-8fa6-8e185f689ab0",
+              "Nm": "Shipment Customer",
+              "Dsc": "Shipment customer roles and their details",
+              "isImg": false,
+              "isExcl": false,
+              "isMan": true,
+              "Att": [
+                {
+                  "Id": "1f418d9f-f987-48e3-a04d-b91850da4373",
+                  "Nm": "Customer role type code",
+                  "Dsc": "This is customer role type code attribute which is used to signigy the role of Customer in business transaction.",
+                  "AttTy": "Session",
+                  "isExcl": false,
+                  "isMan": true,
+                  "SessnPrmtId": "RlTyCd",
+                  "Enum": [
+                    {
+                      "Val": "IP",
+                      "DisplayTxt": "importer",
+                      "SrtOvrdSqNo": 1,
+                      "IsDfl": false
+                    },
+                    {
+                      "Val": "SP",
+                      "DisplayTxt": "shipper",
+                      "SrtOvrdSqNo": 2,
+                      "IsDfl": false
+                    },
+                    {
+                      "Val": "RV",
+                      "DisplayTxt": "Receiver",
+                      "SrtOvrdSqNo": 3,
+                      "IsDfl": false
+                    }
+                  ],
+                  "AttMsgPos": [
+                    {
+                      "Ver": "12.030",
+                      "MsgTyCd": "ShpPcdDetailsMsg",
+                      "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpCust/CustRolTyCd"
+                    }
+                  ]
+                },
+                {
+                  "Id": "fddb1e40-120a-476a-879c-d3bf0a9af64a",
+                  "Nm": "Description of all goods included in the shipment",
+                  "Dsc": "Description of all goods included in the shipment desc",
+                  "AttTy": "UserEntry",
+                  "isExcl": false,
+                  "isMan": true,
+                  "MinL": 1,
+                  "MaxL": 800,
+                  "UICmpt": {
+                    "Order": 1,
+                    "CmptNm": "DescOfGoodShip",
+                    "DisplayTtl": "",
+                    "Hint": "",
+                    "CmptTy": "TextArea",
+                    "DisplayDsc": {
+                      "DisplayTxt": "Please provide a detailed description of all goods included in the shipment."
+                    },
+                    "ValTy": "String"
+                  },
+                  "AttMsgPos": [
+                    {
+                      "Ver": "12.030",
+                      "MsgTyCd": "ShpPcdDetailsMsg",
+                      "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/CmrcInv/Ln/DscGds"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+]
