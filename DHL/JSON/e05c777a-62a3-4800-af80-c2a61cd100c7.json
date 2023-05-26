@@ -1,0 +1,125 @@
+[
+  {
+    "ShpInfReqDef": {
+      "Id": "e05c777a-62a3-4800-af80-c2a61cd100c7",
+      "Nm": "Import License Required - HR",
+      "Dsc": "Import License Required desc",
+      "DrvdFromShpInfReqDef": {},
+      "LedOwnOrgn": {
+        "CtryCd": "HR"
+      },
+      "ApplyAllInd": false,
+      "PrsnDatSenstyClssLvl": "Low",
+      "QuickGuideEnabledInd": false,
+      "UICmpt": {
+        "CmptNm": "ImpLicRequ",
+        "DisplayTtl": "Import License",
+        "Tooltip": "",
+        "CmptTy": "Composed",
+        "DisplayDsc": {
+          "DisplayTxt": ""
+        },
+        "Hint": ""
+      },
+      "Ent": [
+        {
+          "Id": "8eb6b6ae-aba0-479a-a6f3-f42a2fc07eb5",
+          "Nm": "Import License Required entity",
+          "Dsc": "Import License Required desc",
+          "isImg": false,
+          "isExcl": false,
+          "isMan": true,
+          "Ent": [
+            {
+              "Id": "abbccf7c-6618-4ae2-ac00-e86514affc0c",
+              "Nm": "Shipment Document",
+              "Dsc": "Document Image",
+              "isImg": false,
+              "isExcl": false,
+              "isMan": true,
+              "Ent": [
+                {
+                  "Id": "2a775f70-41c9-4a3e-a452-5a2022ab14f5",
+                  "Nm": "Upload an Import License or Compliance Certification Uploder",
+                  "Dsc": "Upload an Import License or Compliance Certification Uploder desc",
+                  "isImg": true,
+                  "isExcl": false,
+                  "isMan": true,
+                  "Att": [
+                    {
+                      "Id": "5435598a-d8fe-46a7-8947-5433c23449b1",
+                      "Nm": "Document Family Code",
+                      "Dsc": "GIA Document Family Code",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": true,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": " DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocFamCd"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "7152c05f-5252-4598-8ffa-000d54f52d0d",
+                      "Nm": "Document Type Code",
+                      "Dsc": "GIA Document Type Code",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": true,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": " DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocTyCd"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "b74855cc-3dc1-464d-99f8-2abb041f30d0",
+                      "Nm": "Upload an Import License or Compliance Certification",
+                      "Dsc": "Upload an Import License or Compliance Certification desc",
+                      "AttTy": "UserEntry",
+                      "isExcl": false,
+                      "isMan": true,
+                      "MaxFlSz": 6000,
+                      "MaxFlCnt": 20,
+                      "AlwExt": [
+                        "pdf",
+                        "jpeg",
+                        "jpg",
+                        "png",
+                        "bmp",
+                        "docx"
+                      ],
+                      "UICmpt": {
+                        "CmptNm": "ImpLicUpload",
+                        "DisplayTtl": "",
+                        "Hint": "Upload File(s)",
+                        "CmptTy": "FileUploader",
+                        "DisplayDsc": {
+                          "DisplayTxt": "Please upload an Import License or Compliance Certification desc"
+                        },
+                        "Order": 1
+                      },
+                      "AttMsgPos": [
+                        {
+                          "Ver": "12.030",
+                          "MsgTyCd": "ShpPcdDetailsMsg",
+                          "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/Img/Loc"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+]
