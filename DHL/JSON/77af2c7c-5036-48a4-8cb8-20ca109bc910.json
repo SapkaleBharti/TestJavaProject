@@ -1,0 +1,802 @@
+[
+  {
+    "ShpInfReqDef": {
+      "Id": "77af2c7c-5036-48a4-8cb8-20ca109bc910",
+      "Nm": "Consignee ID required - SV",
+      "Dsc": "Consignee ID required desc",
+      "DrvdFromShpInfReqDef": {},
+      "LedOwnOrgn": {
+        "CtryCd": "SV"
+      },
+      "ApplyAllInd": false,
+      "PrsnDatSenstyClssLvl": "VeryHigh",
+      "QuickGuideEnabledInd": false,
+      "UICmpt": {
+        "CmptNm": "PersIden",
+        "DisplayTtl": "Personal Identification",
+        "Tooltip": "Personal Identification Tooltip",
+        "CmptTy": "Composed",
+        "DisplayDsc": {
+          "DisplayTxt": "Personal Identification desc"
+        }
+      },
+      "Ent": [
+        {
+          "Id": "6b32289d-1875-4254-a19f-a3155d64dbee",
+          "Nm": "Consignee ID required Entity",
+          "Dsc": "Consignee ID required entity desc",
+          "isImg": false,
+          "isExcl": false,
+          "isMan": true,
+          "Ent": [
+            {
+              "Id": "296c572d-4d75-43c3-ae2b-16f8c23bde99",
+              "Nm": "Shipment Customer",
+              "Dsc": "Shipment Customer Entity",
+              "isImg": false,
+              "isExcl": false,
+              "isMan": true,
+              "Att": [
+                {
+                  "Id": "a1a71ec1-6923-451c-bcc2-d8c3f6047911",
+                  "Nm": "Customer role type code",
+                  "Dsc": "This is customer role type code attribute which is used to signigy the role of Customer in business transaction. A code that uniquely identifies a customer role.",
+                  "AttTy": "Session",
+                  "isExcl": false,
+                  "isMan": true,
+                  "SessnPrmtId": "RlTyCd",
+                  "Enum": [
+                    {
+                      "Val": "IP",
+                      "DisplayTxt": "importer",
+                      "SrtOvrdSqNo": 1,
+                      "IsDfl": false
+                    },
+                    {
+                      "Val": "SP",
+                      "DisplayTxt": "shipper",
+                      "SrtOvrdSqNo": 2,
+                      "IsDfl": false
+                    },
+                    {
+                      "Val": "RV",
+                      "DisplayTxt": "Receiver",
+                      "SrtOvrdSqNo": 3,
+                      "IsDfl": false
+                    }
+                  ],
+                  "AttMsgPos": [
+                    {
+                      "Ver": "12.030",
+                      "MsgTyCd": "ShpPcdDetailsMsg",
+                      "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpCust/CustRolTyCd"
+                    }
+                  ]
+                },
+                {
+                  "Id": "7f2129a7-80e8-467d-bc71-795d9856b0c2",
+                  "Nm": "Identification Type",
+                  "Dsc": "Identification Type Desc ",
+                  "AttTy": "UserEntry",
+                  "isExcl": false,
+                  "isMan": false,
+                  "isHidden": true,
+                  "UICmpt": {
+                    "CmptNm": "IdenTypLis",
+                    "DisplayTtl": "Identification Type",
+                    "Hint": "Select Your Identification Type",
+                    "Tooltip": "",
+                    "CmptTy": "List",
+                    "DisplayDsc": {
+                      "DisplayTxt": ""
+                    },
+                    "Order": 2
+                  },
+                  "Enum": [
+                    {
+                      "Val": "NID",
+                      "DisplayTxt": "El Salvador National Identification",
+                      "SrtOrd": 1,
+                      "Nm": "Opt1"
+                    },
+                    {
+                      "Val": "PAS",
+                      "DisplayTxt": "Passport",
+                      "SrtOrd": 2,
+                      "Nm": "Opt2"
+                    }
+                  ],
+                  "AttMsgPos": [
+                    {
+                      "Ver": "3.002",
+                      "MsgTyCd": "DocImgMsg",
+                      "xPath": "DocImgMsg/Bd/Doc/DocTyCd"
+                    }
+                  ],
+                  "Rul": [
+                    {
+                      "RulId": "171a06b7-3bef-4bb7-ae0d-27b8e38ffa73",
+                      "Nm": "Show Identification type Condition",
+                      "Cond": "**.Att[Id='3208a0b5-d832-4ea0-851c-a08d54149f9b'].Val='Opt1' and **.Att[Id='50698d51-0433-441e-9789-563b73f98fe7'].Val='Opt1' or **.Att[Id='3208a0b5-d832-4ea0-851c-a08d54149f9b'].Val='Opt2' and **.Att[Id='50698d51-0433-441e-9789-563b73f98fe7'].Val='Opt2'",
+                      "AttrMtdt": [
+                        {
+                          "isMan": true,
+                          "isHidden": false
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "Ent": [
+                {
+                  "Id": "cdd7a02a-2d90-42cd-a770-67edd9d741a1",
+                  "Nm": "Business Party",
+                  "Dsc": "Business Party Entity",
+                  "isImg": false,
+                  "isExcl": false,
+                  "isMan": true,
+                  "Ent": [
+                    {
+                      "Id": "cbb2bb4e-84f2-40bb-9fc1-9b8fd62040be",
+                      "Nm": "Individual Customer",
+                      "Dsc": "Individual Customer Entity",
+                      "isImg": false,
+                      "isExcl": false,
+                      "isMan": true,
+                      "Ent": [
+                        {
+                          "Id": "dba0efbc-19d6-41bd-97e8-ba656cc49984",
+                          "Nm": "Consent for Identification Details",
+                          "Dsc": "Consent for Identification Details Entity",
+                          "isImg": false,
+                          "isExcl": false,
+                          "isMan": true,
+                          "Ent": [
+                            {
+                              "Id": "16c67e70-713e-47f0-8d86-773e228bf4b1",
+                              "Nm": "Consent Identification Details Category ",
+                              "Dsc": "Consent Category Entity",
+                              "isImg": false,
+                              "isExcl": false,
+                              "isMan": true,
+                              "Att": [
+                                {
+                                  "Id": "c3cafd4b-7895-4398-b870-656512c7bde8",
+                                  "Nm": "Consent Category Code",
+                                  "Dsc": "The unique identificaiton of the Consent Purpose",
+                                  "AttTy": "Constant",
+                                  "DflVal": "CSTMS"
+                                },
+                                {
+                                  "Id": "3854c4fe-ed15-4b98-91d4-c8fe9d257db4",
+                                  "Nm": "Consent Category Name",
+                                  "Dsc": "Consent Category Name",
+                                  "AttTy": "Constant",
+                                  "DflVal": "Customs Consents"
+                                },
+                                {
+                                  "Id": "56551e5a-e5e1-4094-9dcd-271b1ef5ea95",
+                                  "Nm": "Consent Category Description",
+                                  "Dsc": "Consent Category Desc",
+                                  "AttTy": "Constant",
+                                  "DflVal": "Captures Customs Consents from User"
+                                }
+                              ]
+                            },
+                            {
+                              "Id": "6df280f6-9fa9-4e6e-ac5e-69cee1e02217",
+                              "Nm": "Consent Purpose Identification Details - Radio button",
+                              "Dsc": "Consent purpose with a radiobutton component",
+                              "isImg": false,
+                              "isExcl": false,
+                              "isMan": true,
+                              "Att": [
+                                {
+                                  "Id": "3208a0b5-d832-4ea0-851c-a08d54149f9b",
+                                  "Nm": "Identification Details registered with Customs",
+                                  "Dsc": "Identification Details registered with Customs description",
+                                  "AttTy": "UserEntry",
+                                  "isExcl": false,
+                                  "isMan": true,
+                                  "UICmpt": {
+                                    "CmptNm": "",
+                                    "DisplayTtl": "IdeDetRegcust",
+                                    "Tooltip": "",
+                                    "CmptTy": "RadioButton",
+                                    "DisplayDsc": {
+                                      "DisplayTxt": "Are your Identification Details registered with Customs"
+                                    },
+                                    "ValTy": "Standard",
+                                    "Order": 1
+                                  },
+                                  "Enum": [
+                                    {
+                                      "Val": "Yes",
+                                      "DisplayTxt": "Yes",
+                                      "SrtOrd": 1,
+                                      "Nm": "Opt1"
+                                    },
+                                    {
+                                      "Val": "No",
+                                      "DisplayTxt": "No",
+                                      "SrtOrd": 2,
+                                      "Nm": "Opt2"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "Id": "adf53047-83bd-41e7-8721-91fbad065ada",
+                                  "Nm": "Purpose Name - Radio button",
+                                  "Dsc": "Purpose Name with a radiobutton component",
+                                  "AttTy": "Constant",
+                                  "DflVal": "Agree to Identification Details registered with Customs",
+                                  "isExcl": false,
+                                  "isMan": true,
+                                  "Rul": [
+                                    {
+                                      "RulId": "3f83e1f3-9c99-4eba-a200-a3bc280e71a6",
+                                      "Nm": "Not Agree Identification Details ",
+                                      "Cond": "**.Att[Id='3208a0b5-d832-4ea0-851c-a08d54149f9b'].Val='Opt2'",
+                                      "AttrMtdt": [
+                                        {
+                                          "DflVal": "User does not agree Identification Details registered with Customs"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "Id": "7eeab543-10f4-4eb7-b3a0-33eb02f897ea",
+                                  "Nm": "Purpose Description - Radio button",
+                                  "Dsc": "Purpose Description with a radiobutton component",
+                                  "AttTy": "Constant",
+                                  "DflVal": "Agree to Identification Details registered with Customs",
+                                  "isExcl": false,
+                                  "isMan": true,
+                                  "Rul": [
+                                    {
+                                      "RulId": "f73691d2-3aa9-41d8-8b61-760f76aee3c2",
+                                      "Nm": "Not Agree Identification Details desc",
+                                      "Cond": "**.Att[Id='3208a0b5-d832-4ea0-851c-a08d54149f9b'].Val='Opt2'",
+                                      "AttrMtdt": [
+                                        {
+                                          "DflVal": "User does not agree Identification Details registered with Customs"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Id": "2aa35b6f-3e90-4417-92c3-b145c70a8754",
+                  "Nm": "Registration",
+                  "isImg": false,
+                  "isExcl": false,
+                  "isMan": false,
+                  "Att": [
+                    {
+                      "Id": "ad150ec4-85cd-4e8b-942b-2afd2c7d21bb",
+                      "Nm": "Tax Identification Number Type",
+                      "AttTy": "Constant",
+                      "DflVal": "NID",
+                      "isExcl": false,
+                      "isMan": false,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "12.030",
+                          "MsgTyCd": "ShpPcdDetailsMsg",
+                          "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpCust/Rgs/TyCd"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "0ba6cd52-d71b-48c5-8cb9-57112d8f71ea",
+                          "Nm": "Show Company VAT Number",
+                          "Cond": "**.Att[Id='33a5b5bd-89d5-468b-91c0-29b54b73c7a3'].Val='Opt1'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "4f128367-7f29-4073-899c-888022096ddd",
+                      "Nm": "Tax Identification Number",
+                      "Dsc": "Tax Identification Number desc",
+                      "AttTy": "UserEntry",
+                      "isExcl": false,
+                      "isMan": false,
+                      "isHidden": true,
+                      "RegEx": "^[0-14]{14}$",
+                      "UICmpt": {
+                        "Order": 3,
+                        "CmptNm": "TaxIdenNum",
+                        "Hint": "Tax ID Number",
+                        "DisplayTtl": "Tax Identification Number",
+                        "Tooltip": "",
+                        "CmptTy": "TextInput",
+                        "DisplayDsc": {
+                          "DisplayTxt": ""
+                        },
+                        "ValTy": "Regex"
+                      },
+                      "AttMsgPos": [
+                        {
+                          "Ver": "12.030",
+                          "MsgTyCd": "ShpPcdDetailsMsg",
+                          "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpCust/Rgs/No"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "e2c96781-802a-48c3-87d0-aeba77f6c96b",
+                          "Nm": "Show Tax Identification Number",
+                          "Cond": "**.Att[Id='50698d51-0433-441e-9789-563b73f98fe7'].Val='Opt1'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true,
+                              "isHidden": false
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Id": "bc099049-0dc7-4658-a187-b96c6daf12ea",
+                  "Nm": "Passport Registration",
+                  "Dsc": "Passport Registration Entity",
+                  "isImg": false,
+                  "isExcl": false,
+                  "isMan": false,
+                  "Att": [
+                    {
+                      "Id": "c77954fd-c990-459f-b403-5398eae244a7",
+                      "Nm": "Passport Registration Number Type",
+                      "Dsc": "Passport Registration type code desc",
+                      "AttTy": "Constant",
+                      "DflVal": "PAS",
+                      "isExcl": false,
+                      "isMan": false,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "12.030",
+                          "MsgTyCd": "ShpPcdDetailsMsg",
+                          "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpCust/Rgs/TyCd"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "a2600242-000c-460d-927f-7496e7734879",
+                          "Nm": "Show Passport Number text field",
+                          "Cond": "**.Att[Id='50698d51-0433-441e-9789-563b73f98fe7'].Val='Opt2'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "bdbab406-0ba7-4b4b-adfa-2209d2f69083",
+                      "Nm": "Passport Number",
+                      "Dsc": "Passport Number desc",
+                      "AttTy": "UserEntry",
+                      "isExcl": false,
+                      "isMan": false,
+                      "isHidden": true,
+                      "RegEx": "^[A-Za-z0-9]{1,40}$",
+                      "UICmpt": {
+                        "Order": 4,
+                        "CmptNm": "PassNumText",
+                        "DisplayTtl": "Passport Number",
+                        "Hint": "Passport Number",
+                        "CmptTy": "TextInput",
+                        "DisplayDsc": {
+                          "DisplayTxt": "Passport number desc"
+                        },
+                        "ValTy": "Regex"
+                      },
+                      "AttMsgPos": [
+                        {
+                          "Ver": "12.030",
+                          "MsgTyCd": "ShpPcdDetailsMsg",
+                          "xPath": "ShpCust/Rgs[TyCd='PAS']/No"
+                        },
+                        {
+                          "Ver": "12.050",
+                          "jPath": "$.Cust.Rgs[@.TyCd=='PAS'].No",
+                          "MsgTyCd": "JCM_ShpPcdDetailsMsg"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "962eb7cd-3ed1-4a67-9318-81785e1a1872",
+                          "Nm": "Show Passport Number text field",
+                          "Cond": "**.Att[Id='50698d51-0433-441e-9789-563b73f98fe7'].Val='Opt2'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true,
+                              "isHidden": false
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "Id": "1d61e97e-a7f0-49d7-8e61-caba37cd9ea2",
+              "Nm": "Shipment Document",
+              "Dsc": "Document Image",
+              "isImg": false,
+              "isExcl": false,
+              "isMan": true,
+              "Ent": [
+                {
+                  "Id": "c9e886a7-b770-4b17-9a1b-b3533e0378b5",
+                  "Nm": "Business Party",
+                  "Dsc": "Business Party",
+                  "isImg": false,
+                  "isExcl": false,
+                  "isMan": false,
+                  "Ent": [
+                    {
+                      "Id": "530328aa-f6ac-4c19-a6eb-cf60ea272a5e",
+                      "Nm": "Individual",
+                      "Dsc": "Business Party- Individual",
+                      "isImg": false,
+                      "isExcl": false,
+                      "isMan": false,
+                      "Att": [
+                        {
+                          "Id": "feb47664-8bcc-4660-804b-a5d796b7cf44",
+                          "Nm": "Full Name",
+                          "Dsc": "Full Name desc",
+                          "AttTy": "UserEntry",
+                          "isExcl": false,
+                          "isMan": false,
+                          "isHidden": true,
+                          "MinL": 1,
+                          "MaxL": 40,
+                          "UICmpt": {
+                            "Order": 5,
+                            "CmptNm": "FullNmtext",
+                            "DisplayTtl": "Full Name",
+                            "Hint": "Name",
+                            "Tooltip": "",
+                            "CmptTy": "TextInput",
+                            "DisplayDsc": {
+                              "DisplayTxt": "Please provide your name desc"
+                            },
+                            "ValTy": "String"
+                          },
+                          "AttMsgPos": [
+                            {
+                              "Ver": "12.030",
+                              "MsgTyCd": "ShpPcdDetailsMsg",
+                              "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/BsnPty/Indv/Nm"
+                            }
+                          ],
+                          "Rul": [
+                            {
+                              "RulId": "a2600242-000c-460d-927f-7496e7734879",
+                              "Nm": "Show Full name text field",
+                              "Cond": "**.Att[Id='3208a0b5-d832-4ea0-851c-a08d54149f9b'].Val='Opt1'",
+                              "AttrMtdt": [
+                                {
+                                  "isMan": true,
+                                  "isHidden": false
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Id": "4138e88c-22ee-449b-b91d-6a468edec9c7",
+                  "Nm": "Customs Registration Form",
+                  "Dsc": "Customs Registration Form entity",
+                  "isImg": true,
+                  "isExcl": false,
+                  "isMan": true,
+                  "Att": [
+                    {
+                      "Id": "28ec76c7-be0e-4492-8d35-11e06718b5b1",
+                      "Nm": "Document Family Code",
+                      "Dsc": "GIA Document Family Code",
+                      "AttTy": "Constant",
+                      "DflVal": "ENT",
+                      "isExcl": false,
+                      "isMan": true,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": " DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocFamCd"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "9d7715c2-eea9-45c0-81a3-06c72b0b36b0",
+                      "Nm": "Document Type Code",
+                      "Dsc": "GIA Document Type Code",
+                      "AttTy": "Constant",
+                      "DflVal": "CPA",
+                      "isExcl": false,
+                      "isMan": true,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": " DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocTyCd"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "2dabe807-6014-4b49-9ab2-6e4c612a764b",
+                      "Nm": "Customs Registration Form",
+                      "Dsc": "Customs Registration Form desc",
+                      "AttTy": "UserEntry",
+                      "isExcl": false,
+                      "isMan": false,
+                      "isHidden": true,
+                      "MaxFlSz": 6000,
+                      "MaxFlCnt": 20,
+                      "AlwExt": [
+                        "pdf",
+                        "jpeg",
+                        "jpg",
+                        "png",
+                        "bmp",
+                        "docx"
+                      ],
+                      "UICmpt": {
+                        "CmptNm": "CusRegForm",
+                        "DisplayTtl": "Customs Registration Form",
+                        "Hint": "Upload File(s)",
+                        "CmptTy": "FileUploader",
+                        "DisplayDsc": {
+                          "DisplayTxt": "Description Customs Registration Form {CRForm}",
+                          "DscCmpt": [
+                            {
+                              "Val": "CRForm",
+                              "DisplayTxt": "form",
+                              "Ty": "file",
+                              "Ky": "CRForm"
+                            }
+                          ]
+                        },
+                        "Order": 6
+                      },
+                      "AttMsgPos": [
+                        {
+                          "Ver": "12.030",
+                          "MsgTyCd": "ShpPcdDetailsMsg",
+                          "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/Img/Loc"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "c908f1fc-b152-4226-8aac-47636c90a295",
+                          "Nm": "Show Customs Registration Form",
+                          "Cond": "**.Att[Id='3208a0b5-d832-4ea0-851c-a08d54149f9b'].Val='Opt2'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true,
+                              "isHidden": false
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Id": "e3d2722a-ad61-4418-87d1-be97324bab67",
+                  "Nm": "Tax Identification Document",
+                  "Dsc": "Tax Identification Image",
+                  "isImg": true,
+                  "isExcl": false,
+                  "isMan": true,
+                  "Att": [
+                    {
+                      "Id": "53fdde46-9de2-449d-89ed-4a2724654013",
+                      "Nm": "Document Family Code",
+                      "Dsc": "GIA Document Family Code",
+                      "AttTy": "Constant",
+                      "DflVal": "PII",
+                      "isExcl": false,
+                      "isMan": true,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": " DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocFamCd"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "75f14785-de91-43c3-8b12-3bc5d74dc88a",
+                      "Nm": "Document Type Code",
+                      "Dsc": "Document Type Code",
+                      "AttTy": "Constant",
+                      "DflVal": "NID",
+                      "isExcl": false,
+                      "isMan": true,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": " DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocTyCd"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "01b34b55-a89a-45f7-b65f-ae8b97d830df",
+                      "Nm": "Tax Identification Document Uploader",
+                      "Dsc": "Tax Identification Document desc",
+                      "AttTy": "UserEntry",
+                      "isExcl": false,
+                      "isMan": true,
+                      "isHidden": false,
+                      "MaxFlSz": 6000,
+                      "MaxFlCnt": 20,
+                      "AlwExt": [
+                        "pdf",
+                        "jpeg",
+                        "jpg",
+                        "png",
+                        "bmp",
+                        "docx"
+                      ],
+                      "UICmpt": {
+                        "Order": 8,
+                        "CmptNm": "TaxIdeDoc",
+                        "DisplayTtl": "Tax Identification Document",
+                        "Hint": "Upload File(s)",
+                        "Tooltip": "",
+                        "CmptTy": "FileUploader",
+                        "DisplayDsc": {
+                          "DisplayTxt": "Tax Identification Document desc"
+                        }
+                      },
+                      "AttMsgPos": [
+                        {
+                          "Ver": "12.030",
+                          "MsgTyCd": "ShpPcdDetailsMsg",
+                          "xPath": "ShpPcdDetailsMsg/Bd/Shp/ShpDoc/Img/Loc"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "63412707-8444-4f86-8a8c-5b1feeb88e1f",
+                          "Nm": "Show Tax Identification Document",
+                          "Cond": "**.Att[Id='50698d51-0433-441e-9789-563b73f98fe7'].Val='Opt1'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true,
+                              "isHidden": false
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Id": "a8b172a6-e45b-4b31-8828-b44fe6c1c3b3",
+                  "Nm": "Passport Image from the customer",
+                  "Dsc": "Passport Image Entity",
+                  "isImg": true,
+                  "isExcl": false,
+                  "isMan": false,
+                  "Att": [
+                    {
+                      "Id": "9d052ff4-a1a6-4942-837d-8447f600f8fb",
+                      "Nm": "Document Family Code",
+                      "Dsc": "Document Family Code",
+                      "AttTy": "Constant",
+                      "DflVal": "PII",
+                      "isExcl": false,
+                      "isMan": false,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": " DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocFamCd"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "4c1f0b1a-f8fd-4763-976c-97108b58706a",
+                      "Nm": "Document Type Code",
+                      "Dsc": "Document Type Code",
+                      "AttTy": "Constant",
+                      "DflVal": "PAS",
+                      "isExcl": false,
+                      "isMan": false,
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": " DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/DocTyCd"
+                        }
+                      ]
+                    },
+                    {
+                      "Id": "5a6aa942-c31c-4830-9dcd-1ff9d18d4e6c",
+                      "Nm": "Passport Image uploder",
+                      "Dsc": "Passport Image desc",
+                      "AttTy": "UserEntry",
+                      "isExcl": false,
+                      "isMan": false,
+                      "isHidden": true,
+                      "MaxFlSz": 6000,
+                      "MaxFlCnt": 20,
+                      "AlwExt": [
+                        "pdf",
+                        "jpeg",
+                        "jpg",
+                        "png",
+                        "bmp",
+                        "docx"
+                      ],
+                      "UICmpt": {
+                        "CmptNm": "PassImgUplod",
+                        "DisplayTtl": "Passport image",
+                        "Hint": "Upload File(s)",
+                        "CmptTy": "FileUploader",
+                        "DisplayDsc": {
+                          "DisplayTxt": "Please upload a copy of the photo page of your passport."
+                        },
+                        "Order": 9
+                      },
+                      "AttMsgPos": [
+                        {
+                          "Ver": "3.002",
+                          "MsgTyCd": " DocImgMsg",
+                          "xPath": "DocImgMsg/Bd/Doc/Img/Loc"
+                        }
+                      ],
+                      "Rul": [
+                        {
+                          "RulId": "8ae3b2f0-0d30-4288-90ca-ee17d21ba818",
+                          "Nm": "Show Passport file uploader",
+                          "Cond": "**.Att[Id='50698d51-0433-441e-9789-563b73f98fe7'].Val='Opt2'",
+                          "AttrMtdt": [
+                            {
+                              "isMan": true,
+                              "isHidden": false
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+]
